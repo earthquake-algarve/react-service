@@ -1,8 +1,7 @@
 import Navbar from './components/Navbar'
-/* import Services from './pages/Services'
-import About from './pages/About'
-import Contacts from './pages/Contacts'
-import Careers from './pages/Careers'*/
+import Favorites from './pages/Favorites'
+import ShoppingCart from './pages/ShoppingCart'
+import Login from './pages/Login'
 import Home from './pages/Home' 
 import {Route , Routes} from 'react-router-dom'
 
@@ -13,10 +12,9 @@ export default function App() {
       <div className="App">
         <Routes>
           <Route path='/' element={<Home />} />
-          {/*<Route path='/about' element={<About />} />
-          <Route path='/services' element={<Services />} />
-          <Route path='/careers' element={<Careers />} />
-          <Route path='/contact' element={<Contacts />} /> */}
+          <Route path='/favorites' element={<Favorites />} />
+          <Route path='/shoppingcart' element={<ShoppingCart />} />
+          <Route path='/login' element={<Login />} />
         </Routes>
 
       </div>

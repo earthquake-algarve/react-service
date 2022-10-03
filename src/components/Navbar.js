@@ -2,8 +2,6 @@ import {Link} from 'react-router-dom'
 import { MagnifyingGlass, Heart, ShoppingCart, Login, Menu } from '../Icons'
 
 
-
-
 export default function Navbar() {
 
     return (
@@ -13,7 +11,7 @@ export default function Navbar() {
                     LOGO
                 </Link>
                 <ul>
-                    <Link to="/"><MagnifyingGlass /></Link>
+                    <Link ><MagnifyingGlass /></Link>
                     <Link to='/favorites'><Heart /></Link>
                     <Link to='/shoppingcart'><ShoppingCart /></Link>
                     <Link to='/login'><Login /></Link>
