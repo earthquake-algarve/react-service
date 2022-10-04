@@ -11,11 +11,14 @@ export default function Navbar() {
                     LOGO
                 </Link>
                 <ul>
-                    <Link ><MagnifyingGlass /></Link>
+                    <form action="">
+                        <input type="search"/>
+                        <i className='fa fa-search' ><MagnifyingGlass /></i>
+                    </form>
                     <Link to='/favorites'><Heart /></Link>
                     <Link to='/shoppingcart'><ShoppingCart /></Link>
                     <Link to='/login'><Login /></Link>
-                    <Link to="/menu"><Menu /></Link>
+                    <Link ><Menu /></Link>
                 </ul>
             </nav>
         </>
