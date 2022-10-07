@@ -2,12 +2,15 @@ import {Link} from 'react-router-dom'
 import { MagnifyingGlass, Heart, ShoppingCart, Login, Menu } from '../Icons'
 
 
+
 export default function Navbar() {
     function expandSearchBar(){
-        const searchbar = document.getElementById('searchbar')
+        const searchBar = document.getElementById('searchbar')
+        const searchLink = document.getElementById('search-link')
         const search = document.getElementById('search')
         const icon= document.getElementById('icon')
-        searchbar.classList.toggle('active')
+        searchBar.classList.toggle('active')
+        searchLink.classList.toggle('active')
         search.classList.toggle('active')
         icon.classList.toggle('active')
     }
@@ -23,9 +26,6 @@ export default function Navbar() {
         }
     }
 
-
-
-
     return (
         <>
             <nav className="topnav">
@@ -38,7 +38,7 @@ export default function Navbar() {
                         <i className='fa fa-search' ><MagnifyingGlass /></i>
                     </form> */}
                     <div className="search-bar" id='searchbar'>
-                        <Link>
+                        <Link id='search-link'>
                             <input type="text" className='search' id="search" />
                             <div className='icon' >
                                 <i id='icon'  onClick={expandSearchBar} >
@@ -60,8 +60,22 @@ export default function Navbar() {
                         <Link>Contact</Link>
                     </div>
 
-                    <div className='menu-hamburger'>
+                    {/* <div className='menu-hamburger'>
                         <Link className='menu-icon' onClick={expandMenu}><Menu /></Link>
+                    </div> */}
+
+                    <nav class="navbar navbar-dark bg-dark">
+                        <div class="container-fluid">
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                            </button>
+                        </div>
+                    </nav>
+                    <div class="collapse" id="navbarToggleExternalContent">
+                        <div class="bg-dark p-4">
+                            <h5 class="text-white h4">Collapsed content</h5>
+                            <span class="text-muted">Toggleable via the navbar brand.</span>
+                        </div>
                     </div>
                     
                 </ul>

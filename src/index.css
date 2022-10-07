@@ -19,7 +19,6 @@ code {
   display: flex;
   justify-content: space-between;
   align-items: center;
- /*  height:3rem; */
 
 }
 
@@ -113,18 +112,12 @@ form:hover .fa{
 .topnav .example-links{
   display: none;
 }
-.topnav .a .menu-icon{
-  display: block;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
 
 
 .search-bar{
   position:relative;
-}
 
+}
 
 .search-bar input[type="text"] {
   margin-left: 5px;
@@ -133,9 +126,9 @@ form:hover .fa{
   width: 0px;
   height: 35px;
   border-radius: 3px;
-  transition: all 0.s ease;
-}
+  transition: all 0.8s ease;
 
+}
 
 .search-bar .icon {
   display: flex;
@@ -150,31 +143,32 @@ form:hover .fa{
   transition: all 0.8 ease; 
 }
 
-.search-bar .icon:hover {
-  background: #FFFF;
-} 
 
 .search-bar .icon i {
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 80%;
   transform: translate(-50%, -50%);
   cursor: pointer;
 }
 
 .search-bar .icon .active {
-  right: 35px;
+  right: 10px;
   transition: all 0.8s ease;
 } 
 
 
-.search-bar .icon .active:hover {
+/* .search-bar .icon .active:hover {
   background: none;
-}
+} */
 .search-bar input[type="text"].active {
   width: 200px;
   transition: all 0.8s ease;
   border-radius: 50px;
+
+}
+.search-link.active:hover{
+  background: none;
 
 }
 
