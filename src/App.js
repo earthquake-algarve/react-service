@@ -1,4 +1,4 @@
-import Navbar from './components/Navbar'
+import Header from './components/Header'
 import Favorites from './pages/Favorites'
 import ShoppingCart from './pages/ShoppingCart'
 import Login from './pages/Login'
@@ -9,7 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 export default function App() {
   return (
     <>
-      <Navbar />
+      <Header />
       <div className="App">
         <Routes>
           <Route path='/' element={<Home />} />
