@@ -1,10 +1,11 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import './cards.css'
 
 export default function Cards() {
   return (
-    <Card style={{margin: '5rem' , width: '18rem' }}>
-      <Card.Img variant="top" src="holder.js/100px180" />
+    <Card className='cards'>
+      <img src="../img/benagil.jpg" width={300} height={240}/>
       <Card.Body>
         <Card.Title>Grutas de Benagil</Card.Title>
         <Card.Text>

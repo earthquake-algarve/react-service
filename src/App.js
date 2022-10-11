@@ -11,7 +11,7 @@ export default function App() {
   return (
     <>
       <Header />
-      <Cards />
+      
       <div className="App">
         <Routes>
           <Route path='/' element={<Home />} />
