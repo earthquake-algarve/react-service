@@ -4,3 +4,22 @@
     max-width: 300px;
     min-height: 300px;
 }
+
+.card-img-overlay{
+    margin: 170px 0 0 155px;
+}
+
+.card-body{
+    display: flex;
+    justify-content: space-between;
+    padding:7px;
+    
+}
+.card-text{
+    margin-left: 20px;
+
+}
+
+.card{
+    box-shadow: 5px 10px 18px #888888;
+}
