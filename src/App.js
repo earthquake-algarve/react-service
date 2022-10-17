@@ -1,5 +1,4 @@
 import Header from './components/Header'
-import Cards from './components/Cards'
 import Favorites from './pages/Favorites'
 import ShoppingCart from './pages/ShoppingCart'
 import Login from './pages/Login'

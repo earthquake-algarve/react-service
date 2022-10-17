@@ -1,14 +1,16 @@
 import React from 'react'
-import Cards from '../components/Cards'
+import MainCard from '../components/MainCard'
 import CarouselCards from '../components/Carousel'
+import Slider from '../components/Slider'
 
 
 export default function Home() {
 
     return (
         <div>
-            <Cards />
-            <CarouselCards />
+            <MainCard />
+            {/* <CarouselCards /> */}
+            <Slider />
         </div>
     )
 }

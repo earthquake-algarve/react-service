@@ -1,4 +1,4 @@
-.cards{
+.mainCard{
     top: 100px;
     margin:0 auto;
     max-width: 300px;
@@ -6,7 +6,7 @@
 }
 
 .card-img-overlay{
-    margin: 170px 0 0 155px;
+    margin: 130px 0 0 155px;
 }
 
 .card-body{
