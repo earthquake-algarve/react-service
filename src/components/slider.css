@@ -1,4 +1,4 @@
-#main-slider-container{
+/* #main-slider-container{
     width: 90%;
     height: 305px;
 }
@@ -76,7 +76,7 @@
     margin-right: 5px;
     box-shadow: 2px 2px 2px 2px rgb(0 0 0 / 12%);
     cursor: pointer;
-}
+} */
 
 .uk-slider-container-offset{
     margin-top: 150px;
@@ -98,4 +98,11 @@
 .uk-card-title{
     font-size: 18px;
     font-weight: bold;
+}
+
+.uk-card-body {
+    border: 1px solid lightgray;
+    border-radius: 25px;
+    height: 220px;
+
 }
