@@ -23,7 +23,7 @@ export default function Slider() {
                             <li>
                                 <div className="uk-card-body uk-card-default">
                                     <div className="uk-card-media-top">
-                                        <img src={`https://contes-toten-api.herokuapp.com/passeio/get/${i}`} width="100%" height="150" alt="" />
+                                        <img src={`https://contes-toten-api.herokuapp.com/passeio/get/${i}`} width="200" height="150" alt="" />
                                         <p className="uk-card-title">Benagil</p>
                                         <Button>Book now</Button>
                                     </div>
