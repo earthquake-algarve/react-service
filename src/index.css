@@ -1,3 +1,8 @@
+body{
+  height: 100vh;
+  width: 100vw;
+}
+
 #logo, #search, #favorites, #shoppingcart, #login, #news, #about, #contact{
   text-decoration: none;
   color: black;
