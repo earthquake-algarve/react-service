@@ -7,7 +7,6 @@ import { useState, useEffect } from 'react'
 
 export default function Slider() {
 
-    const array = [1, 2, 3, 4, 5, 6]
     const [passeios, setPasseios] = useState([])
 
     useEffect(() => {
@@ -15,10 +14,6 @@ export default function Slider() {
             .then(response => response.json())
             .then(data => setPasseios(data))
     },[])
-
-    
-
-    console.log(passeios)
 
     return (
         <>
@@ -28,13 +23,14 @@ export default function Slider() {
 
                     <ul className="uk-slider-items uk-child-width-1-2 uk-grid">
 
-                        {array.map(i => {
+                        {passeios.map(i => {
+                            console.log(i)
                             return (
                                 <li>
-                                    <div className="uk-card-body uk-card-default">
+                                    <div className="uk-card-body uk-card-default" style={{padding: 0}}>
                                         <div className="uk-card-media-top">
-                                            <img src={`https://contes-toten-api.herokuapp.com/passeio/get/${i}`} width="200" height="150" alt="" />
-                                            <p className="uk-card-title">Benagil</p>
+                                            <img src={`https://contes-toten-api.herokuapp.com/passeio/get/${i.id}`} style={{width:"100%", height:"150px", borderRadius:"5px"}} alt="" />
+                                            <p className="uk-card-title">{i.nome}</p>
                                             <Button id="btn-book-slider">Book now</Button>
                                         </div>
                                     </div>
