@@ -3,41 +3,51 @@ import "uikit/dist/css/uikit.min.css";
 import "uikit/dist/css/uikit-core.min.css";
 import { Button } from 'react-bootstrap'
 import './slider.css'
-
-
+import { useState, useEffect } from 'react'
 
 export default function Slider() {
 
-    const array = [1,2,3,4,5,6]
+    const array = [1, 2, 3, 4, 5, 6]
+    const [passeios, setPasseios] = useState([])
+
+    useEffect(() => {
+        fetch('https://contes-toten-api.herokuapp.com/passeio/getall')
+            .then(response => response.json())
+            .then(data => setPasseios(data))
+    },[])
+
+    
+
+    console.log(passeios)
 
     return (
         <>
-        <div className="uk-slider-container-offset" uk-slider="true">
+            <div className="uk-slider-container-offset" uk-slider="true">
 
-            <div className="uk-position-relative uk-visible-toggle uk-light" tabIndex="-1">
+                <div className="uk-position-relative uk-visible-toggle uk-light" tabIndex="-1">
 
-                <ul className="uk-slider-items uk-child-width-1-2 uk-grid">
+                    <ul className="uk-slider-items uk-child-width-1-2 uk-grid">
 
-                    {array.map(i => {
-                        return (
-                            <li>
-                                <div className="uk-card-body uk-card-default">
-                                    <div className="uk-card-media-top">
-                                        <img src={`https://contes-toten-api.herokuapp.com/passeio/get/${i}`} width="200" height="150" alt="" />
-                                        <p className="uk-card-title">Benagil</p>
-                                        <Button id="btn-book-slider">Book now</Button>
+                        {array.map(i => {
+                            return (
+                                <li>
+                                    <div className="uk-card-body uk-card-default">
+                                        <div className="uk-card-media-top">
+                                            <img src={`https://contes-toten-api.herokuapp.com/passeio/get/${i}`} width="200" height="150" alt="" />
+                                            <p className="uk-card-title">Benagil</p>
+                                            <Button id="btn-book-slider">Book now</Button>
+                                        </div>
                                     </div>
-                                </div>
-                            </li>
-                        )
-                    })};
+                                </li>
+                            )
+                        })};
 
-                </ul>
+                    </ul>
+                </div>
+
+                <ul className="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
+
             </div>
-
-            <ul className="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
-
-        </div>
         </>
     )
 }
