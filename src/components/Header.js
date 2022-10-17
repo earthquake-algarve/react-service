@@ -1,11 +1,9 @@
 import { Link } from 'react-router-dom';
-import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
-import { MagnifyingGlass, Heart, ShoppingCart, Login, Menu } from '../Icons'
+import { MagnifyingGlass, Heart, ShoppingCart, Login } from '../Icons'
 
 
 
@@ -37,15 +35,6 @@ export default function Header() {
                                   <Link to="/about" id='about'>About</Link>
                                   <Link to="/contact" id='contact'>Contact</Link>
                               </Nav>
-  {/*                             <Form className="d-flex">
-                              <Form.Control
-                                  type="search"
-                                  placeholder="Search"
-                                  className="me-2"
-                                  aria-label="Search"
-                              />
-                              <Button variant="outline-success">Search</Button>
-                              </Form> */}
                           </Offcanvas.Body>
                       </Navbar.Offcanvas>
           
