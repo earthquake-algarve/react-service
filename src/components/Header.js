@@ -13,10 +13,10 @@ export default function Header() {
           <Container fluid className='container'>
               {[false, 'sm', 'md', 'lg', 'xl', 'xxl'].map((expand) => (
                   <Navbar key={expand}  expand={expand} className="navbar-custom" variant='light' fixed='top'>
-                      <Link to="/home" id='logo'>LOGO </Link>
+                      <Link to="/" id='logo'>LOGO </Link>
                       <Link id='search'><MagnifyingGlass /></Link>
                       <Link to="/favorites" id='favorites'><Heart /></Link>
-                      <Link to="shoppingcart" id='shoppingcart'><ShoppingCart /></Link>
+                      <Link to="/shoppingcart" id='shoppingcart'><ShoppingCart /></Link>
                       <Link to="/login" id='login'><Login /></Link>
                       <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
                       <Navbar.Offcanvas
