@@ -5,7 +5,7 @@ import { Button } from 'react-bootstrap'
 import './slider.css'
 
 
-//mudar o width dos cards dentro do slider
+
 export default function Slider() {
 
     const array = [1,2,3,4,5,6]
@@ -25,7 +25,7 @@ export default function Slider() {
                                     <div className="uk-card-media-top">
                                         <img src={`https://contes-toten-api.herokuapp.com/passeio/get/${i}`} width="200" height="150" alt="" />
                                         <p className="uk-card-title">Benagil</p>
-                                        <Button>Book now</Button>
+                                        <Button id="btn-book-slider">Book now</Button>
                                     </div>
                                 </div>
                             </li>
