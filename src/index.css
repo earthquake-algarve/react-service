@@ -1,6 +1,7 @@
 body{
   height: 100vh;
   width: 100vw;
+  display: standalone;
 }
 
 #logo, #search, #favorites, #shoppingcart, #login, #news, #about, #contact{
