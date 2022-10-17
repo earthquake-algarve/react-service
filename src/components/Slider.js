@@ -8,7 +8,7 @@ import './slider.css'
 //mudar o width dos cards dentro do slider
 export default function Slider() {
 
-    const array = [6, 7, 8, 9, 10]
+    const array = [1,2,3,4,5]
 
     return (
         <>
@@ -21,15 +21,15 @@ export default function Slider() {
                     {array.map(i => {
                         return (
                             <li>
-                            <div className="uk-card-body uk-card-default">
-                                <div className="uk-card-media-top">
-                                    <img src={`https://contes-toten-api.herokuapp.com/passeio/get/${i}`} width="100" height="150" alt="" />
-                                    <h6 className="uk-card-title">Benagil</h6>
-                                    <Button>Book now</Button>
+                                <div className="uk-card-body uk-card-default">
+                                    <div className="uk-card-media-top">
+                                        <img src={`https://contes-toten-api.herokuapp.com/passeio/get/${i}`} width="200" height="150" alt="" />
+                                        <p className="uk-card-title">Benagil</p>
+                                        <Button>Book now</Button>
+                                    </div>
                                 </div>
-                            </div>
-                        </li>
-                            )
+                            </li>
+                        )
                     })};
 
                 </ul>

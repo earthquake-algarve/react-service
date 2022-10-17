@@ -84,5 +84,18 @@
 
 
 .btn.btn-primary:hover{
+    background-color: #72af43;
+    color: black;
+    border: none;
+}
 
+.uk-card-media-top{
+    display: flex;
+    flex-direction:column ;
+    align-items: center;
+}
+
+.uk-card-title{
+    font-size: 18px;
+    font-weight: bold;
 }
