@@ -1,6 +1,6 @@
 import React from 'react'
-import MainCard from '../components/MainCard'
-import Slider from '../components/Slider'
+import MainCard from '../components/mainCard/MainCard'
+import Slider from '../components/slider/Slider'
 
 
 export default function Home() {
