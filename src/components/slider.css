@@ -13,6 +13,11 @@
     border: none;
 }
 
+#btn-book-slider:focus{
+    background-color: #72af43;
+
+}
+
 .uk-card-media-top{
     display: flex;
     flex-direction:column ;
