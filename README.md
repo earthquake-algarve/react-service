@@ -39,6 +39,10 @@ icons: svg       https://heroicons.com/
 
 
 
+
+
+
 [X] Página inicial
+
 [ ] Página de login
 
