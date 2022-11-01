@@ -38,3 +38,11 @@ icons: svg       https://heroicons.com/
 </svg>
 
 
+
+
+
+
+[X] Página inicial
+
+[ ] Página de login
+
