@@ -1,4 +1,4 @@
-import Header from './components/Header'
+import Header from './components/header/Header'
 import Favorites from './pages/Favorites'
 import ShoppingCart from './pages/ShoppingCart'
 import Login from './pages/Login'
