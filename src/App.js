@@ -1,6 +1,6 @@
 import Header from './components/header/Header'
 import Favorites from './pages/Favorites'
-import ShoppingCart from './pages/ShoppingCart'
+import ShoppingCart from './pages/shoppingCart/ShoppingCart'
 import Login from './pages/Login'
 import Home from './pages/Home' 
 import {Route , Routes} from 'react-router-dom'

@@ -121,14 +121,9 @@ export default function ShoppingCart() {
                             <b className="finalizar-compra-b">Finalizar compra</b>
                         </div>
 
-                        
                     </div>
 
                 </div>
-
-                
-
-
 
             </div>
         </>
