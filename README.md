@@ -39,7 +39,7 @@ icons: svg       https://heroicons.com/
 
 
 
-
+Now we are an organization
 
 
 [X] Página inicial
