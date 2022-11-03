@@ -1,7 +1,7 @@
 import Header from './components/header/Header'
 import Details from './pages/details/Details'
 import ShoppingCart from './pages/shoppingCart/ShoppingCart'
-import Login from './pages/Login'
+import Login from './pages/login/Login'
 import Home from './pages/Home' 
 import Checkout from './pages//checkout/Checkout' 
 import {Route , Routes} from 'react-router-dom'
