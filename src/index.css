@@ -52,7 +52,7 @@ body{
   display: standalone;
 }
 
-#logo, #search, #favorites, #shoppingcart, #login, #news, #about, #contact{
+#logo, #search, #favorites,#checkout, #shoppingcart, #login, #news, #about, #contact{
   text-decoration: none;
   color: black;
 }

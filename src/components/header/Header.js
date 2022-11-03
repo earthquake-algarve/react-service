@@ -3,7 +3,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
-import { MagnifyingGlass, Heart, ShoppingCart, Login } from '../../Icons'
+import { MagnifyingGlass, Heart, ShoppingCart, Login, CheckoutIcon } from '../../Icons'
 
 
 
@@ -15,8 +15,8 @@ export default function Header() {
                   <Navbar key={expand}  expand={expand} className="navbar-custom" variant='light' fixed='top'>
                       <Link to="/" id='logo'>LOGO </Link>
                       <Link id='search'><MagnifyingGlass /></Link>
-                      <Link to="/favorites" id='favorites'><Heart /></Link>
                       <Link to="/shoppingcart" id='shoppingcart'><ShoppingCart /></Link>
+                      <Link to="/checkout" id='checkout'><CheckoutIcon /></Link>
                       <Link to="/login" id='login'><Login /></Link>
                       <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
                       <Navbar.Offcanvas
