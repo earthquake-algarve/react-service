@@ -13,7 +13,7 @@ export default function ShoppingCart() {
                     </div>
 
                     <div className="items-60">
-                        <span>2 items</span>
+                        <span className='span'>2 items</span>
                         <span className="span"> | 60€</span>
                     </div>
                 </div>
@@ -119,6 +119,7 @@ export default function ShoppingCart() {
 
                         <div className="finalizar-compra-div">
                             <b className="finalizar-compra-b">Finalizar compra</b>
+
                         </div>
 
                     </div>

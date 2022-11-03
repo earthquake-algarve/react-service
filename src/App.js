@@ -1,5 +1,5 @@
 import Header from './components/header/Header'
-import Favorites from './pages/Favorites'
+import Details from './pages/details/Details'
 import ShoppingCart from './pages/shoppingCart/ShoppingCart'
 import Login from './pages/Login'
 import Home from './pages/Home' 
@@ -14,7 +14,7 @@ export default function App() {
       <div className="App">
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/favorites' element={<Favorites />} />
+          <Route path='/favorites' element={<Details />} />
           <Route path='/shoppingcart' element={<ShoppingCart />} />
           <Route path='/login' element={<Login />} />
         </Routes>

@@ -240,6 +240,7 @@
   }
   .span {
     color: var(--color-black);
+    font-size: 15px;
   }
   .items-60,
   .resumo-top-div {
