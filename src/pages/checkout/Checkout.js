@@ -15,15 +15,15 @@ const Checkout = () => {
         <b className="payment-b">Payment</b>
 
         <div className="carto-de-credito">
-            <CheckoutIcon/> 
+            <CheckoutIcon /> 
             <div className="crypto-currency-div">Credit card</div>
-            <input type="checkbox" className="checkbox-icon" />
+            <input type="checkbox" className="checkbox-icon"/>
         </div>        
 
         <div className="mbway-div">
             <img className="icon" alt="" src="../icon2.svg" />
             <div className="crypto-currency-div">MBWay</div>
-            <input type="checkbox" className="checkbox-icon" />
+        <input type="checkbox" className="checkbox-icon" />
         </div>
 
         <div className="paypal-div">

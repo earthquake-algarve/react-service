@@ -1,5 +1,6 @@
 import React from 'react'
 import './shoppingCart.css'
+import { Heart,BinIcon, ArrowDown } from '../../Icons';
 
 
 export default function ShoppingCart() {
@@ -16,23 +17,22 @@ export default function ShoppingCart() {
                         <span className='span'>2 items</span>
                         <span className="span"> | 60€</span>
                     </div>
-                </div>
+                </div> 
+                
+
 
                 <div className="item1-div">
-                    <div className="conteudo-item2-div">
-                        <img className="akar-iconsheart" alt="" src="../akariconsheart.svg" />
-
-                        <img
-                            className="ridelete-bin-6-line-icon"
-                            alt=""
-                            src="../rideletebin6line.svg"
-                        />
+                    <div className="conteudo-item1-div">
+                        <div className="icons-heart-bin">
+                            <Heart />
+                            <BinIcon />
+                        </div>
 
                         <div className="img-item2-div">
                             <img
                             className="slidesplash-755x470-icon"
                             alt=""
-                            src="../zoolagos@2x.png"
+                            src="https://contes-toten-api.herokuapp.com/passeio/get/2"
                             />
                         </div>
 
@@ -41,12 +41,9 @@ export default function ShoppingCart() {
                         <div className="data-30112022-div">Data: 31/11/2022</div>
 
                         <div className="quantidade-div">
-                            <img
-                            className="dashiconsarrow-down-alt21"
-                            alt=""
-                            src="../dashiconsarrowdownalt2.svg"
-                            />
-                            <div className="quantidade-1-div">Quantidade 1</div>
+                            <div className="quantidade-1-div">Quantidade: 1
+                            <ArrowDown />
+                            </div>
                         </div>
 
                     </div>
@@ -60,7 +57,7 @@ export default function ShoppingCart() {
                             <img
                             className="slidesplash-755x470-icon"
                             alt=""
-                            src="../slidesplash-755x470@2x.png"
+                            src="https://contes-toten-api.herokuapp.com/passeio/get/4"
                             />
                         </div>
 
@@ -69,12 +66,9 @@ export default function ShoppingCart() {
                         <div className="data-30112022-div">Data: 30/11/2022</div>
 
                         <div className="quantidade-div">
-                            <img
-                            className="dashiconsarrow-down-alt21"
-                            alt=""
-                            src="../dashiconsarrowdownalt2.svg"
-                            />
-                            <div className="quantidade-1-div">Quantidade 1</div>
+                            <div className="quantidade-1-div">Quantidade: 1
+                            <ArrowDown />
+                            </div>
                         </div>
 
                     </div>

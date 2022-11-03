@@ -78,14 +78,7 @@
     width: 248px;
     height: 23px;
   }
-  .dashiconsarrow-down-alt2 {
-    position: absolute;
-    top: 4px;
-    left: 204px;
-    width: 15px;
-    height: 15px;
-    overflow: hidden;
-  }
+
   .promo-code-div {
     position: absolute;
     top: 35px;
@@ -94,8 +87,7 @@
     height: 23px;
   }
   .summary-p {
-    margin-block-start: 0;
-    margin-block-end: 0;
+    font-size: 20px;
   }
   .summary-b {
     position: absolute;
@@ -157,14 +149,6 @@
   .data-30112022-div {
     top: 34px;
   }
-  .dashiconsarrow-down-alt21 {
-    position: absolute;
-    top: 2px;
-    left: 174px;
-    width: 15px;
-    height: 15px;
-    overflow: hidden;
-  }
   .quantidade-1-div {
     position: absolute;
     top: 0;
@@ -180,28 +164,20 @@
     width: 189px;
     height: 20px;
   }
-  .conteudo-item2-div,
+ 
   .item2-div {
     position: absolute;
-    top: 11px;
-    left: 0;
     width: 340px;
-    height: 125px;
-  }
-  .item2-div {
     top: 272px;
     left: 10px;
-    background-color: var(--color-white);
-    border-top: 0 solid var(--color-gray);
-    border-right: 0 solid var(--color-gray);
-    border-bottom: 1px solid var(--color-gray);
-    border-left: 0 solid var(--color-gray);
+    border-bottom: 1px solid lightgray;
     box-sizing: border-box;
     height: 148px;
     overflow: hidden;
+    margin-top:15px;
   }
-  .akar-iconsheart {
-    top: 94px;
+/*   .akar-iconsheart {
+    top: 194px;
     left: 210px;
     width: 24px;
     height: 24px;
@@ -217,24 +193,30 @@
     height: 24px;
     top: 92px;
     left: 245px;
-  }
+  } */
+.icons-heart-bin{
+  top: 194px;
+  left: 210px;
+
+
+}
+
+
   .item1-div {
     top: 124px;
     left: 10px;
-    background-color: var(--color-white);
-    border-top: 1px solid var(--color-gray);
-    border-right: 0 solid var(--color-gray);
-    border-bottom: 1px solid var(--color-gray);
-    border-left: 0 solid var(--color-gray);
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
     box-sizing: border-box;
     width: 340px;
     height: 148px;
+    position: absolute;
+    overflow: hidden;
   }
   .shopping-cart-div {
     position: absolute;
     top: 0;
     left: 0;
-    display: inline-block;
     width: 141px;
     height: 26px;
   }
@@ -245,13 +227,12 @@
   .items-60,
   .resumo-top-div {
     position: absolute;
-    width: 141px;
+    width: 300px;
   }
   .items-60 {
     top: 26px;
     left: 0;
     font-size: var(--font-size-base);
-    display: inline-block;
     height: 21px;
     color: var(--color-gray);
   }
@@ -261,57 +242,10 @@
     height: 47px;
     text-align: center;
     font-size: 20px;
-  }
-  .heroiconsmagnifying-glass {
-    position: relative;
-    width: 25px;
-    height: 25px;
-    flex-shrink: 0;
-    overflow: hidden;
-  }
-  .icones-div {
-    position: absolute;
-    top: 0;
-    left: 78px;
-    background-color: var(--color-beige);
-    width: 226px;
-    height: 50px;
     display: flex;
-    flex-direction: row;
-    padding: 19px;
-    box-sizing: border-box;
-    align-items: center;
-    justify-content: space-between;
+
   }
-  .logo-div1 {
-    position: absolute;
-    top: 18px;
-    left: 22px;
-    display: inline-block;
-  }
-  .logo-div {
-    left: 0;
-    background-color: var(--color-beige);
-    width: 78px;
-    overflow: hidden;
-  }
-  .logo-div,
-  .menu-icon,
-  .navbar-div {
-    position: absolute;
-    top: 0;
-    height: 50px;
-  }
-  .menu-icon {
-    left: 304px;
-    width: 56px;
-    overflow: hidden;
-  }
-  .navbar-div {
-    left: 0;
-    width: 360px;
-    font-size: 12px;
-  }
+
   .pgina-de-shoppingcart {
     position: relative;
     background-color: var(--color-white);
