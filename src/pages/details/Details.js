@@ -1,16 +1,17 @@
 import React from 'react'
 import "./details.css";
+import { ArrowLeft, Calendar } from '../../Icons';
 
 const EventoDetalhes = () => {
   return (
     <div className="evento-detalhes-div">
         
-        <b className="voltar-b">{`<- voltar`}</b>
+        <a className="voltar-b" href='/'><ArrowLeft/>Voltar</a>
 
         <div className="card-detalhes-div">
             <div className="card-detalhes-div1">
                 <div className="img-div">
-                <img className="benagil-2-icon" alt="" src="../benagil-2@2x.png" />
+                <img className="benagil-2-icon" alt="" src="https://contes-toten-api.herokuapp.com/passeio/get/1" />
                 </div>
                 <div className="detalhes-div">
                     <div className="titulo-div">
@@ -34,8 +35,11 @@ const EventoDetalhes = () => {
                     </div>
 
                     <div className="data-div">
-                        <img className="calendrio-icon" alt="" src="../calendrio.svg" />
-                        <b className="data-02112022-b">Data: 02/11/2022</b>
+
+                        <div className="data-02112022-b">Data: 02/11/2022
+                        </div>
+                        <div className="calendario"><Calendar /></div>
+                        
                     </div>
 
                     <div className="horrio-div">

@@ -20,31 +20,29 @@
   display: none;
   text-align: center;
 }
-.calendrio-icon {
-  top: 0;
-  left: 135px;
-  width: 52px;
-  overflow: hidden;
+.calendario{
+  top:-1px;
+  left:140px;
+  position: relative;
 }
-.calendrio-icon,
-.data-02112022-b,
-.data-div {
-  position: absolute;
-  height: 35px;
-}
+
 .data-02112022-b {
   top: 0;
   left: 0;
   display: flex;
   align-items: center;
-  width: 220px;
+  width: 150px;
+  font-weight: bold;
+  position: absolute;
 }
 .data-div {
   top: 160px;
   left: 12px;
-  background-color: var(--color-white);
   width: 172px;
   overflow: hidden;
+  display: flex;
+  position:absolute;
+  
 }
 .localidade-b {
   position: absolute;
@@ -237,6 +235,13 @@
   display: flex;
   align-items: center;
   height: 17px;
+  color: black;
+  text-decoration: none;
+}
+
+.voltar-b:hover{
+  color: gray;
+  text-decoration: none;
 }
 .evento-detalhes-div {
   position: relative;

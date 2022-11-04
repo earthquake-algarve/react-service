@@ -52,7 +52,11 @@ export default function ShoppingCart() {
 
                 <div className="item2-div">
                     <div className="conteudo-item2-div">
-                        <img className="icons" alt="" src="../icons.svg" />
+                        <div className="icons">
+                            <Heart />
+                            <BinIcon />
+                        </div>
+
                         <div className="img-item2-div">
                             <img
                             className="slidesplash-755x470-icon"

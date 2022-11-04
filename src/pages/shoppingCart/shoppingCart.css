@@ -114,7 +114,7 @@
     overflow: hidden;
   }
   .icons {
-    position: absolute;
+    position: relative;
     top: 92px;
     left: 210px;
     width: 59px;
@@ -132,7 +132,6 @@
     object-fit: cover;
   }
   .img-item2-div {
-    background-color: var(--color-white);
     overflow: hidden;
   }
   .data-30112022-div,
@@ -166,7 +165,7 @@
   }
  
   .item2-div {
-    position: absolute;
+    position: relative;
     width: 340px;
     top: 272px;
     left: 10px;
@@ -175,6 +174,7 @@
     height: 148px;
     overflow: hidden;
     margin-top:15px;
+    
   }
 /*   .akar-iconsheart {
     top: 194px;
@@ -195,9 +195,9 @@
     left: 245px;
   } */
 .icons-heart-bin{
-  top: 194px;
+  top: 100px;
   left: 210px;
-
+  position: relative;
 
 }
 
