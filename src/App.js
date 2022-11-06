@@ -2,6 +2,7 @@ import Header from './components/header/Header'
 import Details from './pages/details/Details'
 import ShoppingCart from './pages/shoppingCart/ShoppingCart'
 import Login from './pages/login/Login'
+//import SignUp from './pages/login/Signup'
 import Home from './pages/Home' 
 import Checkout from './pages//checkout/Checkout' 
 import {Route , Routes} from 'react-router-dom'
@@ -18,6 +19,7 @@ export default function App() {
           <Route path='/details' element={<Details />} />
           <Route path='/checkout' element={<Checkout />} />
           <Route path='/shoppingcart' element={<ShoppingCart />} />
+          {/* <Route path='/signup' element={<SignUp />} /> */}
           <Route path='/login' element={<Login />} />
         </Routes>
 

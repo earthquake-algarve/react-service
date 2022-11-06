@@ -1,0 +1,71 @@
+.login-container{
+    margin: 150px 50px 50px 50px;
+    border: 1px solid lightgray;
+    border-radius: 15px;
+}
+
+.login-title{
+    background: #555;
+    color: white;
+    font-weight: bold;
+    border: 1px solid #555;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.login-logo{
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+label{
+    margin-left: 15px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.email-input , .password-input{
+    border: 1px solid lightgray;
+    border-radius: 15px;
+    height: 35px;
+    padding: 15px;
+}
+
+.button-div{
+    display: flex;
+    justify-content: center;
+}
+.button-submit{
+    width: 115px;
+    margin-top: 30px;
+    border-radius: 20px;
+    background: #84C253;
+    border: 1px solid #84C253;
+    font-weight: bold;
+}
+
+.signup-redirect{
+    margin: 20px 0;
+    border-top: 1px solid lightgray;
+    padding-top: 15px;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.signup-redirect a{
+    text-decoration: none;
+    color: black;
+}
+
+.signup-redirect a:hover{
+    color: black;
+}

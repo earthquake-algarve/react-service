@@ -1,11 +1,37 @@
 import React from 'react'
+import './login.css'
 
 
 export default function Login() {
 
     return (
-        <div>
-            <h1>Login</h1>
-        </div>
+        <>
+            <div className='login-container'>
+                <div className="login-title">Login</div>
+
+                <div className='login-logo'>
+                    <img src="img/logo.png" alt='logo'></img>
+                </div>
+
+                <div className='login-data'>
+                    <form>
+                        <label for="email-input">E-mail</label>
+                        <input type="text" name="email" id="email-input " placeholder="example@example.com" className='email-input'/>
+
+                        <label for="password-input">Password</label>
+                        <input type="password" name="password" className='password-input' id="password-input"/>
+
+                        <div className="button-div">
+                            <input type="submit"  value="Login" className='button-submit'/>
+                        </div>                        
+                    </form>
+                </div>
+
+                <div className='signup-redirect'>
+                    Not registered? <a href='/signup'> Sign up</a>
+                </div>
+
+            </div>
+        </>
     )
 }
