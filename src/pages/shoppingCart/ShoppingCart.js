@@ -115,8 +115,14 @@ export default function ShoppingCart() {
 
 
 
-                        <div className="finalizar-compra-div">
-                            <b className="finalizar-compra-b">Finalizar compra</b>
+                        <div className="redirect-div">
+                            <div className='continuar-compra'>
+                                <a href="/" className="continuar-compra-link">Continuar compra</a>
+                            </div>
+                            
+                            <div className='finalizar-compra'>
+                                <a href="/checkout" className="finalizar-compra-link">Finalizar compra</a>
+                            </div>
 
                         </div>
 

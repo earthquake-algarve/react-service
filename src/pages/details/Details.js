@@ -48,7 +48,7 @@ const EventoDetalhes = () => {
 
                 </div>
                 <div className="button-adicionar-div1">
-                    <b className="your-text-in-here">Adicionar ao carrinho</b>
+                    <a  href="/shoppingcart" className="your-text-in-here">Adicionar ao carrinho</a>
                 </div>
             </div>
 

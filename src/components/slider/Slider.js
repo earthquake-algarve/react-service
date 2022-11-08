@@ -31,7 +31,7 @@ export default function Slider() {
                                         <div className="uk-card-media-top">
                                             <img src={`https://contes-toten-api.herokuapp.com/passeio/get/${i.id}`} style={{width:"100%", height:"150px", borderRadius:"5px"}} alt="" />
                                             <p className="uk-card-title">{i.nome}</p>
-                                            <Button id="btn-book-slider">Book now</Button>
+                                            <Button href="/details" id="btn-book-slider">Book now</Button>
                                         </div>
                                     </div>
                                 </li>
