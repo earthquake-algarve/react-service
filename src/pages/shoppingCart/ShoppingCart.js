@@ -1,6 +1,6 @@
 import React from 'react'
 import './shoppingCart.css'
-import { Heart,BinIcon, ArrowDown } from '../../Icons';
+import { Heart,BinIcon } from '../../Icons';
 
 
 export default function ShoppingCart() {
@@ -42,7 +42,7 @@ export default function ShoppingCart() {
 
                         <div className="quantidade-div">
                             <div className="quantidade-1-div">Quantidade: 
-                            {/* <ArrowDown /> */}
+
                                 <select>
                                     <option>1</option>
                                     <option>2</option>
