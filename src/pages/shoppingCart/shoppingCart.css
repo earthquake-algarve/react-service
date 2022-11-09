@@ -1,3 +1,8 @@
+select{
+  border: none
+
+}
+
 .continuar-compra , .finalizar-compra{
   width: 130px;
 }

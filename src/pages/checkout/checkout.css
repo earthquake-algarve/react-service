@@ -55,9 +55,7 @@
     width: 85px;
     height: 25px;
   }
-  .span {
-    color: var(--color-black);
-  }
+
   .check-out-div,
   .items-60 {
     position: absolute;
@@ -71,7 +69,6 @@
     top: 0;
     left: 5px;
     font-size: 20px;
-
     color: black;
     text-align: left;
     width: 141px;
@@ -79,7 +76,7 @@
   }
   .resumo-top-div {
     position: absolute;
-    top: 65px;
+    top: 85px;
     left: 32px;
     width: 300px;
     height: 26px;
@@ -89,14 +86,11 @@
   }
   .pgina-de-checkout {
     position: relative;
-    background-color: var(--color-white);
     width: 100%;
     height: 640px;
     overflow: hidden;
     text-align: left;
-    font-size: var(--font-size-lg);
-    color: var(--color-black);
-    font-family: var(--font-inter);
+
   }
 
 .aqui{

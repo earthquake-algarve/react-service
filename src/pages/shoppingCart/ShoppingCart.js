@@ -41,8 +41,20 @@ export default function ShoppingCart() {
                         <div className="data-30112022-div">Data: 31/11/2022</div>
 
                         <div className="quantidade-div">
-                            <div className="quantidade-1-div">Quantidade: 1
-                            <ArrowDown />
+                            <div className="quantidade-1-div">Quantidade: 
+                            {/* <ArrowDown /> */}
+                                <select>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                    <option>9</option>
+                                    <option>10</option>
+                                </select>
                             </div>
                         </div>
 
@@ -70,8 +82,20 @@ export default function ShoppingCart() {
                         <div className="data-30112022-div">Data: 30/11/2022</div>
 
                         <div className="quantidade-div">
-                            <div className="quantidade-1-div">Quantidade: 1
-                            <ArrowDown />
+                            <div className="quantidade-1-div">Quantidade: 
+                            {/* <ArrowDown /> */}
+                            <select>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                    <option>9</option>
+                                    <option>10</option>
+                                </select>
                             </div>
                         </div>
 

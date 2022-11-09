@@ -1,8 +1,16 @@
 import "./checkout.css";
+import {ArrowLeft} from "../../Icons";
+
+function popup(){
+    alert("paid");
+}
+
 
 const Checkout = () => {
   return (
+    
     <div className="pgina-de-checkout">
+        <a className="voltar-b" href='/'><ArrowLeft/>Voltar</a>
         <div className="resumo-top-div">
             <div className="check-out-div">Check-out</div>
             <div className="items-60">
@@ -40,7 +48,7 @@ const Checkout = () => {
         </div>
 
         <div>
-            <button className="aqui" >Pagar</button>
+            <button className="aqui" onClick={popup}>Pagar</button>
         </div>
         
     </div>
