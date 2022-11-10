@@ -4,6 +4,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { MagnifyingGlass, ShoppingCart, Login, CheckoutIcon } from '../../Icons'
+import './header.css'
 
 
 
@@ -14,7 +15,15 @@ export default function Header() {
               {[false, 'sm', 'md', 'lg', 'xl', 'xxl'].map((expand) => (
                   <Navbar key={expand}  expand={expand} className="navbar-custom" variant='light' fixed='top'>
                       <Link to="/" id='logo'>LOGO </Link>
-                      <Link id='search'><MagnifyingGlass /></Link>
+
+                      <div className='search-box'>
+                        <form>
+                            <input type="text" class="search-click"/>
+                            <Link className='search-btn' id='search'><MagnifyingGlass /></Link>
+
+                        </form>
+                      </div>
+
                       <Link to="/shoppingcart" id='shoppingcart'><ShoppingCart /></Link>
                       <Link to="/checkout" id='checkout'><CheckoutIcon /></Link>
                       <Link to="/login" id='login'><Login /></Link>

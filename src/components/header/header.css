@@ -1,0 +1,35 @@
+
+
+.search-click {
+    border: 1px solid #ccc;
+    outline: none;
+    border-radius: 50px;
+    width: 50px;
+    height: 40px;
+    transition: all 0.7s;
+}
+.search-click:focus {
+    width: 300px;
+    padding-left: 50px;
+    border: none;
+}
+.search-click {
+    position: relative;
+    overflow: hidden;
+    height: 40px;
+}
+.search-click input {
+    background: transparent;
+    border: 1px solid #ccc;
+    outline: none;
+    position: absolute;
+    width: 300px;
+    height: 40px;
+    left: 0%;
+    padding: 10px;
+}
+
+.search-btn{
+    float: left;
+    
+}
