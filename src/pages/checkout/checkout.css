@@ -1,4 +1,4 @@
-.checkbox-icon {
+/* .checkbox-icon {
     left: 240px;
     width: 20px;
     overflow: hidden;
@@ -105,5 +105,82 @@
     font-weight: bold;
     border-radius: 50px;
     border: 1px solid #84c253;
-}
+} */
   
+.page-checkout{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 80px;
+  margin-left: 5%;
+  width: 90vw;
+  align-items: center;
+  font-family: sans-serif;
+}
+
+.back{
+  width: 100%;
+  display: flex;
+}
+.voltar{
+  text-decoration: none;
+  color: black;
+  margin-bottom: 20px;
+}
+.voltar:hover{
+  text-decoration: none;
+  color: black;
+}
+
+.resumo-top{
+  width: 90%;
+}
+.checkout{
+  font-size: 19px;
+  font-weight: 550;
+}
+
+.items span:nth-child(1){
+  color: rgb(73, 73, 73)
+}
+
+.payment-div{
+  width: 90%;
+  display: flex;
+  font-weight: bold;
+}
+
+.cartao-de-credito, .mbway, .paypal, .crypto-div{
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.icon-title{
+  display: flex;
+}
+
+img{
+  margin-right: 8px;
+}
+
+.payment-order{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.pay-button{
+  width: 300px;
+  height: 40px;
+  text-align: center;
+  font-weight: bold;
+  background: #84c253;
+  border-radius: 50px;
+  border: 1px solid #84c253;
+  margin-top: 20px;
+}
+.pay-button:hover{
+  background: #71a847;
+}
