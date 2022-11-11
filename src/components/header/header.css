@@ -1,35 +1,48 @@
-
-
-.search-click {
-    border: 1px solid #ccc;
-    outline: none;
-    border-radius: 50px;
-    width: 50px;
-    height: 40px;
-    transition: all 0.7s;
+:root {
+    --w: 100%;
 }
-.search-click:focus {
-    width: 300px;
-    padding-left: 50px;
-    border: none;
+
+.search {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
 }
-.search-click {
+
+.search-input {
+    visibility: hidden;
+    width: 0;
+    transition: visibility 0s, 1s;
+    border-radius: 40px;
+}
+
+.search .search-btn:hover + .search-input {
+    width: var(--w);
+    visibility: visible;
+}
+
+.search .search-btn:hover ~ #shoppingcart,
+.search .search-btn:hover ~ #checkout,
+.search .search-btn:hover ~ #login {
+    display: none;
+}
+
+.search .search-input:focus {
+    width: var(--w);
+    visibility: visible;
     position: relative;
-    overflow: hidden;
-    height: 40px;
-}
-.search-click input {
-    background: transparent;
-    border: 1px solid #ccc;
-    outline: none;
-    position: absolute;
-    width: 300px;
-    height: 40px;
-    left: 0%;
-    padding: 10px;
+    padding-left: 28px;
+    outline: unset;
 }
 
-.search-btn{
-    float: left;
-    
+.search .search-input:focus + #shoppingcart,
+.search .search-input:focus ~ #checkout,
+.search .search-input:focus ~ #login {
+    display: none;
 }
+
+.search-btn {
+    position: absolute;
+    margin-left: 7px;
+    z-index: 10;
+}
+
