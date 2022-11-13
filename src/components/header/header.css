@@ -10,6 +10,7 @@
 
 .search-input {
     visibility: hidden;
+    padding-left: 28px;
     width: 0;
     transition: visibility 0s, 1s;
     border-radius: 40px;
@@ -18,6 +19,17 @@
 .search .search-btn:hover + .search-input {
     width: var(--w);
     visibility: visible;
+}
+
+.search-input:hover {
+    width: var(--w);
+    visibility: visible;
+}
+
+.search-input:hover ~ #shoppingcart,
+.search-input:hover ~ #checkout,
+.search-input:hover ~ #login {
+    display: none;
 }
 
 .search .search-btn:hover ~ #shoppingcart,
