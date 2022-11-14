@@ -1,4 +1,4 @@
-.adicionar-ao-carrinho {
+/* .adicionar-ao-carrinho {
   position: absolute;
   top: 0;
   left: 0;
@@ -264,5 +264,101 @@
   text-align: left;
   font-size: var(--font-size-base);
   color: var(--color-black);
-  font-family: var(--font-inter);
+  font-family: var(--font-inter);*/
+
+.details-page{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 80px;
+  margin-left: 5%;
+  width: 90vw;
+  align-items: center;
+  font-family: sans-serif;
+}
+
+.back{
+  text-decoration: none;
+  color: black;
+  margin-bottom: 20px;
+  align-self: flex-start;
+}
+
+.back::after {
+  content: "Voltar";
+  margin-left: 5px;
+  vertical-align: text-top;
+}
+
+.back:hover{
+  text-decoration: none;
+  color: black;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.img-div{
+  margin-bottom: 20px;
+  width: 80%;
+}
+.img-div img{
+  border-radius: 20px;
+
+  width: 100%;
+}
+
+.details{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: bold;
+}
+
+.title-price-div{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.description, .duration, .localidade, .date-div, .horario{
+  margin-bottom: 10px;
+  width: 100%;
+  display: flex;
+}
+
+.date-div{
+  align-items: center;
+}
+.calendar{
+  margin-left: 10px;
+  background: none; 
+  border: none;
+}
+
+.button-adicionar{
+  background: #84c253;
+  width: 80%;
+  height: 40px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+}
+.add-to-cart{
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+.add-to-cart:hover{
+  text-decoration: none;
+  color: black;
+
 }
