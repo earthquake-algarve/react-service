@@ -9,15 +9,19 @@
   font-family: sans-serif;
 }
 
-.back{
-  width: 100%;
-  display: flex;
-}
 .voltar{
   text-decoration: none;
   color: black;
   margin-bottom: 20px;
+  align-self: flex-start;
 }
+
+.voltar::after {
+  content: "Voltar";
+  margin-left: 5px;
+  vertical-align: text-top;
+}
+
 .voltar:hover{
   text-decoration: none;
   color: black;
