@@ -6,41 +6,21 @@ function popup(){
     alert("paid");
 }
 
-function openCreditCardInput(){
-    const checkRadioCc = document.getElementById("radio-cc")
+function showDiv(event) {
+    
     const creditCardInput = document.getElementById("credit-card-input")
-    if(checkRadioCc.checked){
-        creditCardInput.style.display = "block";
-    }
-    else{
-        creditCardInput.style.display = "none";
-    }
-}
-
-function openMbWayInput(){
-    const checkRadioMb = document.getElementById("radio-mbway")
+    creditCardInput.style.display = "none"
     const mbwayInput = document.getElementById("mbway-input")
-    if(checkRadioMb.checked){
-        mbwayInput.style.display = "block";
-    }
-} 
-
-function openPayPalInput(){
-    const checkRadioPayPal = document.getElementById("radio-paypal")
+    mbwayInput.style.display = "none"
     const paypalInput = document.getElementById("paypal-input")
-    if(checkRadioPayPal.checked){
-        paypalInput.style.display = "block";
-    }
-}
-
-function openCryptoInput(){
-    const checkRadioCrypto = document.getElementById("radio-crypto")
+    paypalInput.style.display = "none"
     const cryptoInput = document.getElementById("crypto-input")
-    if(checkRadioCrypto.checked){
-        cryptoInput.style.display = "block";
-    }
-}
+    cryptoInput.style.display = "none"
 
+    const div = event.target.id
+    const divShow = document.getElementsByName(div)
+    divShow[0].style.display = "block"
+}
 
 const Checkout = () => {
   return (
@@ -63,11 +43,11 @@ const Checkout = () => {
                 <img className="icon" alt="" src="img/mastercard.svg" />
                 <div className="title">Credit card</div>
             </div>
-            <input type="radio" name="radio-box" id="radio-cc" onClick={openCreditCardInput}/>
+            <input type="radio" name="radio-box" id="radio-cc" onClick={showDiv}/>
         </div> 
         
 
-        <div className="credit-card-input" id="credit-card-input" style={{display: "none"}}>
+        <div className="credit-card-input" id="credit-card-input" name="radio-cc" style={{display: "none"}}>
                 <input type="number" placeholder="Card number"/>
                 <input type="number" placeholder="Expiry"/>
                 <input type="number" placeholder="CVC"/>
@@ -79,10 +59,10 @@ const Checkout = () => {
                 <img className="icon" alt="" src="img/mbway.svg" />
                 <div className="title">MBWay</div>
             </div>
-            <input type="radio" name="radio-box" id="radio-mbway" onClick={openMbWayInput} />
+            <input type="radio" name="radio-box" id="radio-mbway" onClick={showDiv} />
         </div>
 
-        <div id="mbway-input" style={{display: "none"}}>
+        <div id="mbway-input" name="radio-mbway" style={{display: "none"}}>
             <input type="number" placeholder="Mobile number"/>
         </div>
 
@@ -91,10 +71,10 @@ const Checkout = () => {
                 <img className="icon" alt="" src="img/paypal.svg" />
                 <div className="title">PayPal</div>
             </div>
-           <input type="radio" name="radio-box" id="radio-paypal" onClick={openPayPalInput}/>
+           <input type="radio" name="radio-box" id="radio-paypal" onClick={showDiv}/>
         </div>
 
-        <div id="paypal-input" style={{display: "none"}}>
+        <div id="paypal-input" name="radio-paypal" style={{display: "none"}}>
             You will be redirected to PayPal website
         </div>
       
@@ -103,10 +83,10 @@ const Checkout = () => {
                 <img className="icon" alt="" src="img/bitcoin.svg" />
                 <div className="title">Crypto Currency</div>
             </div>
-            <input type="radio" name="radio-box" id="radio-crypto" onClick={openCryptoInput} />
+            <input type="radio" name="radio-box" id="radio-crypto" onClick={showDiv} />
         </div>
 
-        <div id="crypto-input" style={{display: "none"}}>
+        <div id="crypto-input" name="radio-crypto" style={{display: "none"}}>
             You will be redirected to Crypto website
         </div>
 

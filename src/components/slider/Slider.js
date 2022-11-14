@@ -23,10 +23,9 @@ export default function Slider() {
 
                     <ul className="uk-slider-items uk-child-width-1-2 uk-grid">
 
-                        {passeios.map(i => {
-                            console.log(i)
+                        {passeios.map((i, key) => {
                             return (
-                                <li>
+                                <li key={key}>
                                     <div className="uk-card-body uk-card-default" style={{padding: 0}}>
                                         <div className="uk-card-media-top">
                                             <img src={`https://contes-toten-api.herokuapp.com/passeio/get/${i.id}`} style={{width:"100%", height:"150px", borderRadius:"5px"}} alt="" />

@@ -18,9 +18,9 @@ export default function Header() {
 
                         <div className='search'>
                             <Link className='search-btn' id='search'><MagnifyingGlass /></Link>
-                            <input type="text" class="search-input" />
+                            <input type="text" className="search-input" />
 
-                            <Link to="/shoppingcart" class='shoppingcart' id='shoppingcart'><ShoppingCart /></Link>
+                            <Link to="/shoppingcart" className='shoppingcart' id='shoppingcart'><ShoppingCart /></Link>
                             <Link to="/checkout" id='checkout'><CheckoutIcon /></Link>
                             <Link to="/login" id='login'><Login /></Link>
                         </div>
