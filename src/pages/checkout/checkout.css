@@ -80,7 +80,10 @@ img{
   background: #71a847;
 }
 
-.credit-card-input, #mbway-input, #paypal-input, #crypto-input{
+.credit-card-input, 
+#mbway-input, 
+#paypal-input, 
+#crypto-input{
   width: 90%;
   display: flex;
   margin-bottom: 25px;
@@ -93,7 +96,8 @@ img{
 .credit-card-input input:nth-child(1){
   width: 180px;
 }
-.credit-card-input input:nth-child(2),.credit-card-input input:nth-child(3){
+.credit-card-input input:nth-child(2),
+.credit-card-input input:nth-child(3){
   width:  80px;
 }
 
@@ -110,3 +114,24 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
+.form-floating{
+  margin: 0;
+
+}
+
+#exp,
+#cvc-number{
+  width: 80px;
+}
+.exp-label,
+.number-label,
+.cvc-label{
+  margin: 0;
+  padding: 0;
+  color: black;
+  font-weight: 100;
+}
+
+.form-control{
+  padding: 0;
+}
