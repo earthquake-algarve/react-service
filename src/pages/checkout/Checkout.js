@@ -131,8 +131,9 @@ const Checkout = () => {
                 <input type="radio" name="radio-box" id="radio-mbway" onClick={showDiv} />
             </div>
 
-            <div id="mbway-input" name="radio-mbway" style={{ display: "none" }}>
-                <input type="number" placeholder="Mobile nº" />
+            <div className="form-floating" id="mbway-input" name="radio-mbway" style={{ display: "none" }}>
+                <input type="number" className="form-control" id="mobile-input" placeholder="Mobile nº" />
+                <label className="mobile-label" htmlFor="mobile-input">Mobile nº</label>
             </div>
 
             <div className="paypal">

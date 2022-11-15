@@ -114,24 +114,16 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-.form-floating{
-  margin: 0;
-
-}
-
 #exp,
 #cvc-number{
   width: 80px;
 }
 .exp-label,
 .number-label,
-.cvc-label{
+.cvc-label,
+.mobile-label{
   margin: 0;
   padding: 0;
-  color: black;
+  color: gray;
   font-weight: 100;
-}
-
-.form-control{
-  padding: 0;
 }
