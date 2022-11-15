@@ -127,3 +127,7 @@ input::-webkit-inner-spin-button {
   color: gray;
   font-weight: 100;
 }
+
+.form-control#mobile-input{
+  width: 110px;
+}

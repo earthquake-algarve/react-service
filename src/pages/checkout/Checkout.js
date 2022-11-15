@@ -132,7 +132,7 @@ const Checkout = () => {
             </div>
 
             <div className="form-floating" id="mbway-input" name="radio-mbway" style={{ display: "none" }}>
-                <input type="number" className="form-control" id="mobile-input" placeholder="Mobile nº" />
+                <input type="text" className="form-control" id="mobile-input" placeholder="Mobile nº" size="9" minLength="9" maxLength="9" pattern="^9\d\d{7}$"/>
                 <label className="mobile-label" htmlFor="mobile-input">Mobile nº</label>
             </div>
 
