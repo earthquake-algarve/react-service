@@ -22,6 +22,58 @@ function showDiv(event) {
     divShow[0].style.display = "block"
 }
 
+function formatCardNumber(){
+    var cardNum = document.getElementById('cr_no');
+    cardNum.onkeyup = function (e) {
+    if (this.value === this.lastValue) return;
+    var caretPosition = this.selectionStart;
+    var sanitizedValue = this.value.replace(/[^0-9]/gi, '');
+    var parts = [];
+    
+    for (let i = 0, len = sanitizedValue.length; i < len; i += 4) {
+        parts.push(sanitizedValue.substring(i, i + 4));
+    }
+    
+    for (let i = caretPosition - 1; i >= 0; i--) {
+        var c = this.value[i];
+        if (c < '0' || c > '9') {
+            caretPosition--;
+        }
+    }
+    caretPosition += Math.floor(caretPosition / 4);
+    
+    this.value = this.lastValue = parts.join(' ');
+    this.selectionStart = this.selectionEnd = caretPosition;
+}
+}
+
+function formatDate(){
+    var expDate = document.getElementById('exp');
+    expDate.onkeyup = function (e) {
+        if (this.value === this.lastValue) return;
+        var caretPosition = this.selectionStart;
+        var sanitizedValue = this.value.replace(/[^0-9]/gi, '');
+        var parts = [];
+        
+        for (let i = 0, len = sanitizedValue.length; i < len; i += 2) {
+            parts.push(sanitizedValue.substring(i, i + 2));
+        }
+        
+        for (let i = caretPosition - 1; i >= 0; i--) {
+            var c = this.value[i];
+            if (c < '0' || c > '9') {
+                caretPosition--;
+            }
+        }
+        caretPosition += Math.floor(caretPosition / 2);
+        
+        this.value = this.lastValue = parts.join('/');
+        this.selectionStart = this.selectionEnd = caretPosition;
+    }
+}
+
+
+
 const Checkout = () => {
     return (
 
@@ -50,9 +102,11 @@ const Checkout = () => {
 
 
             <div className="credit-card-input" id="credit-card-input" name="radio-cc" style={{ display: "none" }}>
-                <input type="number" placeholder="Card number" />
-                <input type="number" placeholder="Expiry" />
-                <input type="number" placeholder="CVC" />
+                <input type="text" name="card-num" placeholder="Card number" size="18" id="cr_no" minLength="19" maxLength="19" onChange={formatCardNumber}/>
+
+                <input type="text" placeholder="Expiry" size="6" id="exp" name="exp" minLength="5" maxLength="5" onChange={formatDate}/>
+
+                <input type="text" id ="cvc-number" placeholder="CVC" size="3" minLength="3" maxLength="3" pattern="^[1-9]\d\d{3}$"/>
             </div>
 
 
