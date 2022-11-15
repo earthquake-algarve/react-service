@@ -102,11 +102,21 @@ const Checkout = () => {
 
 
             <div className="credit-card-input" id="credit-card-input" name="radio-cc" style={{ display: "none" }}>
-                <input type="text" name="card-num" placeholder="Card number" size="18" id="cr_no" minLength="19" maxLength="19" onChange={formatCardNumber}/>
+                <div className="form-floating mb-3 mt-3">
+                    <input type="text" name="card-num" placeholder="Card number" size="18" id="cr_no" minLength="19" maxLength="19" className="form-control" onChange={formatCardNumber}/>
+                    <label htmlFor="cr_no">Card number</label>
+                </div>
+                
+                <div className="form-floating mb-3 mt-3">
+                    <input type="text" placeholder="Expiry" size="6" id="exp" name="exp" minLength="5" maxLength="5" className="form-control" onChange={formatDate} />
+                    <label htmlFor="exp">Expiry</label>
+                </div>
 
-                <input type="text" placeholder="Expiry" size="6" id="exp" name="exp" minLength="5" maxLength="5" onChange={formatDate}/>
 
-                <input type="text" id ="cvc-number" placeholder="CVC" size="3" minLength="3" maxLength="3" pattern="^[1-9]\d\d{3}$"/>
+                <div className="form-floating mb-3 mt-3">
+                    <input type="text" id ="cvc-number" placeholder="CVC" size="3" minLength="3" maxLength="3" pattern="^[1-9]\d\d{3}$" className="form-control"/>
+                    <label htmlFor="cvc-number">CVC</label>
+                </div>
             </div>
 
 
