@@ -35,6 +35,8 @@ const EventoDetalhes = () => {
 
                 <div className="horario">Horário: 10:30</div>
 
+                <div className="reviews">Reviews</div>
+
             </div>
 
             <div className="button-adicionar">

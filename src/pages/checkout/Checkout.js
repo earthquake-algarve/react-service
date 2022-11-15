@@ -65,7 +65,7 @@ const Checkout = () => {
             </div>
 
             <div id="mbway-input" name="radio-mbway" style={{ display: "none" }}>
-                <input type="number" placeholder="Mobile number" />
+                <input type="number" placeholder="Mobile nº" />
             </div>
 
             <div className="paypal">
