@@ -10,7 +10,7 @@ export default function SignUp() {
                 <div className="signup-title">Sign up</div>
 
                 <div className='signup-logo'>
-                    <img src="img/logo.png" alt='logo'></img>
+                    <img src="img/logoEnterTours.jfif" alt='logo'></img>
                 </div>
 
                 <div className='signup-data'>

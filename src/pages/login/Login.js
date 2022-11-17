@@ -10,7 +10,7 @@ export default function Login() {
                 <div className="login-title">Login</div>
 
                 <div className='login-logo'>
-                    <img src="img/logo.png" alt='logo'></img>
+                    <img src="img/logoEnterTours.jfif" alt='logo'></img>
                 </div>
 
                 <div className='login-data'>
@@ -23,7 +23,11 @@ export default function Login() {
 
                         <div className="button-div">
                             <input type="submit"  value="Login" className='button-submit'/>
-                        </div>                        
+                        </div> 
+
+                        <div className='forgot'>
+                            <a href="/recovery"> Forgot your password? </a>
+                        </div>                       
                     </form>
                 </div>
 

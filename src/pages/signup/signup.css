@@ -1,5 +1,5 @@
 .signup-container{
-    margin: 150px 50px 50px 50px;
+    margin: 130px 50px 50px 50px;
     border: 1px solid lightgray;
     border-radius: 15px;
 }
@@ -20,6 +20,9 @@
     margin-bottom: 50px;
     display: flex;
     justify-content: center;
+}
+.signup-logo img{
+    height: 200px;
 }
 
 form{
