@@ -9,7 +9,7 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
-  width: 350px;
+  
 }
 
 .page-title span{
@@ -22,7 +22,7 @@
 
 .item1{
   display: flex;
-  width: 350px;
+  width: 80vw;
   padding: 10px 0;
   border-top: 1px solid lightgray;
   border-bottom: 1px solid lightgray;
@@ -37,7 +37,7 @@
 }
 
 .conteudo-item1{
-  width: 200px;
+  width: 80vw;
   margin-left: 15px;
   display: flex;
   flex-direction: column;
@@ -64,7 +64,7 @@ select{
 
 
 .summary-div{
-  width: 350px;
+  width: 80vw;
 }
 
 .summary-title{
@@ -96,9 +96,4 @@ select{
   color: black;
 }
 
-@media screen and (max-width: 428px) {
-  .pagina-de-shoppingcart {
-    display: flex;
-  }
-}
   
