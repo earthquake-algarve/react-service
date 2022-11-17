@@ -75,8 +75,10 @@ img{
   border-radius: 50px;
   border: 1px solid #84c253;
   margin-top: 20px;
+  color: black;
 }
 .pay-button:hover{
+  color: black;
   background: #71a847;
 }
 
