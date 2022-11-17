@@ -9,12 +9,9 @@
 #mainCard {
     border: 1px solid #bbb;
 }
-
-
-#card-img {
-    /* width: 101%; */
-    /* width: 300; 
-    height: 240;  */
+ 
+#main-btn{
+    background-color: #72af43;
 }
 
 .card-img-overlay{

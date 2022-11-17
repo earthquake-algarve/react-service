@@ -8,7 +8,7 @@ export default function MainCard() {
       <Card.Img variant='top' id="card-img" src='https://contes-toten-api.herokuapp.com/passeio/get/1' />
 
       <Card.ImgOverlay variant="bottom">
-        <Button href="/details">Book Now</Button>
+        <Button id='main-btn' href="/details">Book Now</Button>
       </Card.ImgOverlay>
 
       <Card.Body>
