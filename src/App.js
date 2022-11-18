@@ -5,6 +5,7 @@ import Login from './pages/login/Login'
 import SignUp from './pages/signup/SignUp'
 import Home from './pages/Home' 
 import Checkout from './pages//checkout/Checkout' 
+import Footer from './components/footer/Footer' 
 import {Route , Routes} from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -21,6 +22,7 @@ export default function App() {
           <Route path='/shoppingcart' element={<ShoppingCart />} />
           <Route path='/signup' element={<SignUp />} />
           <Route path='/login' element={<Login />} />
+          <Route path='/footer' element={<Footer />} />
         </Routes>
 
       </div>
