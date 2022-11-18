@@ -58,3 +58,8 @@
     z-index: 10;
 }
 
+#logo img{
+    height: 60px;
+    width: 60px;
+}
+

@@ -14,7 +14,7 @@ export default function Header() {
             <Container fluid className='container'>
                 {[false, 'sm', 'md', 'lg', 'xl', 'xxl'].map((expand) => (
                     <Navbar key={expand} expand={expand} className="navbar-custom" variant='light' fixed='top'>
-                        <Link to="/" id='logo'>LOGO </Link>
+                        <Link to="/" id='logo'><img src='img/2.png' alt="logo"></img></Link>
 
                         <div className='search'>
                             <Link className='search-btn' id='search'><MagnifyingGlass /></Link>
