@@ -1,15 +1,18 @@
 .footer {
-    margin: 80px 30px 0;
+    margin-top: 20px;
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
     font-family: sans-serif;
     background: #D9E3DA;
+    width: 100vw;
 }
 
 .footer-links,
-.language{
+.language,
+.social-media{
     display: flex;
     flex-direction: column;
+    margin: 10px;
 }
 .footer-links span{
     font-size: 18px;
@@ -24,10 +27,6 @@
     text-decoration: none;
 }
 
-.social-media{
-    display: flex;
-    flex-direction: column;
-}
 .social-media span,
 .language span{
     margin-bottom: 10px;
@@ -49,3 +48,11 @@
     padding-left: 30px;
 }
 
+
+@media screen and (min-width: 480px) {
+    .footer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}
