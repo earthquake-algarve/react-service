@@ -14,7 +14,7 @@ export default function Header() {
             <Container fluid className='container'>
                 {[false, 'sm', 'md', 'lg', 'xl', 'xxl'].map((expand) => (
                     <Navbar key={expand} expand={expand} className="navbar-custom" variant='light' fixed='top'>
-                        <Link to="/" id='logo'><img src='img/2.png' alt="logo"></img></Link>
+                        <Link to="/" id='logo'><img src='img/2.png' alt="logo"/></Link>
 
                         <div className='search'>
                             <Link className='search-btn' id='search'><MagnifyingGlass /></Link>
@@ -32,7 +32,7 @@ export default function Header() {
                         >
                             <Offcanvas.Header closeButton>
                                 <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
-                                    LOGO
+                                    <img src='img/2.png' alt="logo" height= "00px" width= "200px"/>
                                 </Offcanvas.Title>
                             </Offcanvas.Header>
                             <Offcanvas.Body>
