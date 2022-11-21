@@ -15,16 +15,16 @@ export default function SignUp() {
 
                 <div className='signup-data'>
                     <form>
-                        <label for="name-input">Name</label>
+                        <label htmlFor="name-input">Name</label>
                         <input type="text" name="name" className='name-input' id="name-input"/>
 
-                        <label for="nationality-input">Nationality</label>
+                        <label htmlFor="nationality-input">Nationality</label>
                         <input type="text" name="nationality" className='nationality-input' id="nationality-input"/>
 
-                        <label for="email-input">E-mail</label>
+                        <label htmlFor="email-input">E-mail</label>
                         <input type="text" name="email" id="email-input " placeholder="example@example.com" className='email-input'/>
 
-                        <label for="password-input">Password</label>
+                        <label htmlFor="password-input">Password</label>
                         <input type="password" name="password" className='password-input' id="password-input"/>
                         
 

@@ -50,8 +50,8 @@ label{
     width: 115px;
     margin-top: 30px;
     border-radius: 20px;
-    background: #84C253;
-    border: 1px solid #84C253;
+    background: var(--green-button);
+    border: 1px solid var(--green-button);
     font-weight: bold;
 }
 

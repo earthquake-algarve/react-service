@@ -1,3 +1,9 @@
+:root{
+	--green-button: #84C253;
+	--hover-button: #72af43;
+}
+
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -68,9 +74,9 @@ body{
 
 .btn.btn-primary{
   font-family: sans-serif;
-  background-color: #84C253;
+  background-color: var(--green-button);
   color: black;
-  border-color: #84C253;
+  border-color: var(--green-button);
   font-weight: bold;
   border-radius: 50px;
   box-shadow: 1px 1px 5px;

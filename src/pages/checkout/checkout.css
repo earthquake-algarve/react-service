@@ -71,15 +71,15 @@
   height: 40px;
   text-align: center;
   font-weight: bold;
-  background: #84c253;
+  background: var(--green-button);
   border-radius: 50px;
-  border: 1px solid #84c253;
+  border: 1px solid var(--green-button);
   margin-top: 20px;
   color: black;
 }
 .pay-button:hover{
   color: black;
-  background: #71a847;
+  background: var(--hover-button);
 }
 
 .credit-card-input, 

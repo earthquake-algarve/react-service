@@ -79,11 +79,16 @@ select{
 }
 
 .continuar-compra, .finalizar-compra{
-  background: #84c253;
-  border:1px solid  #84c253;
+  background: var(--green-button);
+  border:1px solid  var(--green-button);
   border-radius: 50px;
   padding: 5px;
   margin-top: 5px;
+}
+
+.continuar-compra:hover,
+.finalizar-compra:hover{
+  background-color: var(--hover-button);;
 }
 
 .continuar-compra-link, .finalizar-compra-link{

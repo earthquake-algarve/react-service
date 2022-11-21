@@ -11,7 +11,7 @@
 }
  
 #main-btn{
-    background-color: #72af43;
+    background-color: var(--hover-button);
 }
 
 .card-img-overlay{

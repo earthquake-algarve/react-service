@@ -15,10 +15,10 @@ export default function Login() {
 
                 <div className='login-data'>
                     <form>
-                        <label for="email-input">E-mail</label>
+                        <label htmlFor="email-input">E-mail</label>
                         <input type="text" name="email" id="email-input " placeholder="example@example.com" className='email-input'/>
 
-                        <label for="password-input">Password</label>
+                        <label htmlFor="password-input">Password</label>
                         <input type="password" name="password" className='password-input' id="password-input"/>
 
                         <div className="button-div">

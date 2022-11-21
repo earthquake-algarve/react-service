@@ -33,12 +33,12 @@
 }
 
 .btn.btn-primary:hover{
-    background-color: #72af43;
+    background-color: var(--hover-button);
     color: black;
     border: none;
 }
 
 #btn-book-slider:focus{
-    background-color: #72af43;
+    background-color: var(--hover-button);
 
 }
