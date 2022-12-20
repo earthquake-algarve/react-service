@@ -10,10 +10,14 @@ export default function Slider() {
     const [passeios, setPasseios] = useState([])
 
     useEffect(() => {
+        showTours()
+    }, [])
+
+    async function showTours() {
         fetch('http://entertours-ofertas.us-east-1.elasticbeanstalk.com/get')
             .then(response => response.json())
             .then(data => setPasseios(data))
-    }, [])
+    }
 
     return (
         <>
