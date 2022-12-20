@@ -5,7 +5,7 @@ import './mainCard.css'
 export default function MainCard() {
   return (
     <Card id="mainCard" className='mainCard'>
-      <Card.Img variant='top' id="card-img" src='https://contes-toten-api.herokuapp.com/passeio/get/1' />
+      <Card.Img variant='top' id="card-img" src='http://entertours-ofertas.us-east-1.elasticbeanstalk.com/get/20c0adc1-3d9c-4fe7-92af-1141ccc14eee' />
 
       <Card.ImgOverlay variant="bottom">
         <Button id='main-btn' href="/details">Book Now</Button>
