@@ -1,0 +1,62 @@
+.insert-container{
+    margin: 130px 50px 50px 50px;
+    border: 1px solid lightgray;
+    border-radius: 15px;
+}
+
+.insert-title{
+    background: #555;
+    color: white;
+    font-weight: bold;
+    border: 1px solid #555;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.logo{
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+}
+.logo img{
+    height: 200px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+label{
+    margin-left: 15px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.tour-name-input , .price-input{
+    border: 1px solid lightgray;
+    border-radius: 15px;
+    height: 35px;
+    padding: 15px;
+}
+
+.file-input{
+    margin-left: 15px;
+
+}
+
+.button-div{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+.button-submit{
+    width: 115px;
+    margin-top: 30px;
+    border-radius: 20px;
+    background: var(--green-button);
+    border: 1px solid var(--green-button);
+    font-weight: bold;
+}

@@ -8,6 +8,7 @@ import Checkout from './pages//checkout/Checkout'
 import Footer from './components/footer/Footer' 
 import {Route , Routes} from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import InsertRecord from './pages/insertRecord/InsertRecord'
 
 export default function App() {
   return (
@@ -22,6 +23,7 @@ export default function App() {
           <Route path='/shoppingcart' element={<ShoppingCart />} />
           <Route path='/signup' element={<SignUp />} />
           <Route path='/login' element={<Login />} />
+          <Route path='/insertRecord' element={<InsertRecord />} />
           <Route path='/footer' element={<Footer />} />
         </Routes>
 

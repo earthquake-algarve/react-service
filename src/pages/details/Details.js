@@ -10,7 +10,7 @@ const EventoDetalhes = () => {
 
         <div className="container">
             <div className="img-div">
-                <img className="benagil-img" alt="benagil img" src="https://contes-toten-api.herokuapp.com/passeio/get/1" />
+                <img className="benagil-img" alt="benagil img" src="http://entertours-ofertas.us-east-1.elasticbeanstalk.com/get/20c0adc1-3d9c-4fe7-92af-1141ccc14eee" />
             </div>
 
             <div className="details">
