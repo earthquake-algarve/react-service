@@ -3,21 +3,10 @@ import "uikit/dist/css/uikit.min.css";
 import "uikit/dist/css/uikit-core.min.css";
 import { Button } from 'react-bootstrap'
 import './slider.css'
-import { useState, useEffect } from 'react'
 
-export default function Slider() {
 
-    const [passeios, setPasseios] = useState([])
+export default function Slider({ passeios, handlePasseio }) {
 
-    useEffect(() => {
-        showTours()
-    }, [])
-
-    async function showTours() {
-        fetch('http://entertours-ofertas.us-east-1.elasticbeanstalk.com/get')
-            .then(response => response.json())
-            .then(data => setPasseios(data))
-    }
 
     return (
         <>
@@ -34,7 +23,7 @@ export default function Slider() {
                                         <div className="uk-card-media-top">
                                             <img className="card__image" src={`http://entertours-ofertas.us-east-1.elasticbeanstalk.com/get/${i.id}`} alt="" />
                                             <p className="uk-card-title">{i.nome}</p>
-                                            <Button href="/details" id="btn-book-slider">Book now</Button>
+                                            <Button id={i.id} onClick={handlePasseio} className="btn-book-slider">Book now</Button>
                                         </div>
                                     </div>
                                 </li>
