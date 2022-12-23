@@ -21,7 +21,7 @@ export default function Home() {
 
     function handlePasseio(e) {
         e.preventDefault()
-        setMainCard(() => passeios.find( p => e.target.id === p.id && p ))
+        setMainCard(() => passeios.find( p => e.target.id === p.id ))
     }
 
     return (
