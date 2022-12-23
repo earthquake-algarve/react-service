@@ -7,6 +7,7 @@ import './slider.css'
 
 export default function Slider({ passeios, handlePasseio }) {
 
+    // console.log(passeios)
 
     return (
         <>
