@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
     font-family: sans-serif;
-    background: #D9E3DA;
+    background: #FCBE74;
     width: 100vw;
 }
 
@@ -31,7 +31,7 @@
 .language span{
     margin-bottom: 10px;
 }
-.icon{
+.icon-footer{
     height: 30px;
 }
 

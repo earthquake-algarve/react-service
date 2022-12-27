@@ -23,7 +23,7 @@ const Footer = () => {
                     <div className="social-icons">
                         <a href="/">
                             <img
-                            className="icon"
+                            className="icon-footer"
                             alt=""
                             src="/img/icons-facebook.svg"
                             />
@@ -31,7 +31,7 @@ const Footer = () => {
 
                         <a href="/">
                             <img
-                                className="icon"
+                                className="icon-footer"
                                 alt=""
                                 src="/img/icons-twitter.svg"
                             />
@@ -39,7 +39,7 @@ const Footer = () => {
 
                         <a href="/">
                             <img
-                                className="icon"
+                                className="icon-footer"
                                 alt=""
                                 src="/img/icons-pinterest.svg"
                             />
@@ -47,7 +47,7 @@ const Footer = () => {
 
                         <a href="/">
                             <img
-                                className="icon"
+                                className="icon-footer"
                                 alt=""
                                 src="/img/icons-instagram.svg"
                             />
@@ -62,7 +62,7 @@ const Footer = () => {
 
                     <div className="input-pais">
                         <img
-                        className="icon"
+                        className="icon-footer"
                         alt=""
                         src="/img/icon-flag-portugal.svg"
                         />

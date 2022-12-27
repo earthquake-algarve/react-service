@@ -1,5 +1,6 @@
 import React from 'react'
-import Header from './components/header/Header'
+//import Header from './components/header/Header'
+import Header2 from './components/header/Header2'
 import Details from './pages/details/Details'
 import ShoppingCart from './pages/shoppingCart/ShoppingCart'
 import Login from './pages/login/Login'
@@ -16,7 +17,8 @@ export default class App extends React.Component {
   render () {
     return (
       <>
-        <Header />
+        {/* <Header /> */}
+        <Header2 />
         
         <div className="App">
           <Routes>
