@@ -3,6 +3,7 @@ import React from 'react'
 //import Slider from '../components/slider/Slider'
 import Slogan from '../components/slogan/Slogan'
 import Categorias from '../components/categorias/Categorias'
+import CardTour from '../components/cardTour/CardTour'
 
 export default class Home extends React.Component {
 
@@ -42,6 +43,7 @@ export default class Home extends React.Component {
                 <Slider passeios={this.state.passeios} handlePasseio={this.handlePasseio} /> */}
                 <Slogan />
                 <Categorias />
+                <CardTour />
             </>
         )
     }
