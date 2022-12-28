@@ -13,7 +13,7 @@ export default class Home extends React.Component {
         super(props)
         this.state = {
             passeios: [],
-            mainCard: {}
+            cardTour: {}
         }
     }
 
@@ -26,7 +26,7 @@ export default class Home extends React.Component {
                 this.setState(() => (
                     {
                         passeios: passeios,
-                        mainCard: passeios[passeioIndex]
+                        cardTour: passeios[passeioIndex]
                     }
                 ))
             })
@@ -34,7 +34,7 @@ export default class Home extends React.Component {
 
     handlePasseio = e => {
         e.preventDefault()
-        this.setState(() => ({ mainCard: this.state.passeios.find(p => e.target.id === p.id) }))
+        this.setState(() => ({ cardTour: this.state.passeios.find(p => e.target.id === p.id) }))
     }
 
     render() {
@@ -45,7 +45,7 @@ export default class Home extends React.Component {
                 <Slider passeios={this.state.passeios} handlePasseio={this.handlePasseio} /> */}
                 <Slogan />
                 <Categorias />
-                <CardTour />
+                <CardTour  cardTour={this.state.cardTour} teste={this.teste}/>
                 <Testimonials />
                 <Locations />
             </>
