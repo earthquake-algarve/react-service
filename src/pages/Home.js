@@ -1,6 +1,7 @@
 import React from 'react'
 //import MainCard from '../components/mainCard/MainCard'
 //import Slider from '../components/slider/Slider'
+import Slogan from '../components/slogan/Slogan'
 
 export default class Home extends React.Component {
 
@@ -38,6 +39,7 @@ export default class Home extends React.Component {
             <>
                 {/* <MainCard mainCard={this.state.mainCard} teste={this.teste} />
                 <Slider passeios={this.state.passeios} handlePasseio={this.handlePasseio} /> */}
+                <Slogan />
             </>
         )
     }
