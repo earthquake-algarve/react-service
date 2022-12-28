@@ -3,7 +3,7 @@
     padding: 0;
 }
 .Navbar {
-    background: #FCBE74;
+    background: var(--laranja);
     display: flex;
     align-items: center;
     justify-content: space-between;

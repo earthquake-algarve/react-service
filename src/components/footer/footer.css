@@ -1,9 +1,8 @@
 .footer {
-    margin-top: 20px;
     display: flex;
     flex-direction: column;
     font-family: sans-serif;
-    background: #FCBE74;
+    background: var(--laranja);
     width: 100vw;
 }
 

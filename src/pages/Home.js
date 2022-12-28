@@ -4,6 +4,8 @@ import React from 'react'
 import Slogan from '../components/slogan/Slogan'
 import Categorias from '../components/categorias/Categorias'
 import CardTour from '../components/cardTour/CardTour'
+import Testimonials from '../components/testimonials/Testimonials'
+import Locations from '../components/locations/Locations'
 
 export default class Home extends React.Component {
 
@@ -44,6 +46,8 @@ export default class Home extends React.Component {
                 <Slogan />
                 <Categorias />
                 <CardTour />
+                <Testimonials />
+                <Locations />
             </>
         )
     }
