@@ -3,9 +3,11 @@ import React from 'react'
 //import Slider from '../components/slider/Slider'
 import Slogan from '../components/slogan/Slogan'
 import Categorias from '../components/categorias/Categorias'
-import CardTour from '../components/cardTour/CardTour'
+//import CardTour from '../components/cardTour/CardTour'
+import Slider3 from '../components/slider3/Slider3'
 import Testimonials from '../components/testimonials/Testimonials'
 import Locations from '../components/locations/Locations'
+//import Slider4 from '../components/slider4/Slider4'
 
 export default class Home extends React.Component {
 
@@ -32,10 +34,11 @@ export default class Home extends React.Component {
             })
     }
 
-    handlePasseio = e => {
+    /* handlePasseio = e => {
         e.preventDefault()
         this.setState(() => ({ cardTour: this.state.passeios.find(p => e.target.id === p.id) }))
-    }
+    } */
+
 
     render() {
 
@@ -45,7 +48,9 @@ export default class Home extends React.Component {
                 <Slider passeios={this.state.passeios} handlePasseio={this.handlePasseio} /> */}
                 <Slogan />
                 <Categorias />
-                <CardTour  cardTour={this.state.cardTour} teste={this.teste}/>
+                {/* <CardTour  cardTour={this.state.cardTour} /> */}
+                <Slider3 passeios={this.state.passeios}/>
+                {/* <Slider4 passeios={this.state.passeios}/> */}
                 <Testimonials />
                 <Locations />
             </>
