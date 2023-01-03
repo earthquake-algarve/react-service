@@ -10,11 +10,11 @@ export default function Slider3({ passeios }) {
 
     return (
         <>
-            <div className="uk-slider-container-offset" uk-slider="true">
+            <div className="uk-slider-container-offset" uk-slider="true" autoPlay={true} autoplay-interval="3000">
 
                 <div className="uk-position-relative uk-visible-toggle uk-light" tabIndex="-1">
 
-                    <ul className="uk-slider-items uk-child-width-1-4 uk-grid">
+                    <ul className="uk-slider-items uk-child-width-auto uk-grid">
 
                         {passeios.map((i, key) => {
                             return (
