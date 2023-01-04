@@ -11,10 +11,62 @@
 
 .slogan-text{
     color: #fff;
-    font-size: 60px;
     font-weight: bold;
     position: absolute;
-    max-width: 50%;
     left: 4rem;
-    top: 7rem;
+    top: 6.5rem;
 }
+
+@media screen and (min-width: 1024px) {
+    .slogan-text{
+        max-width: 40%;
+        font-size: 80px;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .slogan-text{
+        max-width: 50%;
+        font-size: 70px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .slogan-text{
+        max-width: 65%;
+        width: auto;
+        font-size: 65px;
+    }
+}
+@media screen and (min-width: 678px) {
+    .slogan-text{
+        max-width: 50%;
+        width: auto;
+        font-size: 50px;
+    }
+}
+
+@media screen and (max-width: 678px) {
+    .slogan-text{
+        max-width: 50%;
+        width: auto;
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .slogan-text{
+        max-width: 50%;
+        font-size: 25px;
+    }
+} 
+@media screen and (max-width: 380px) {
+    .slogan-text{
+        top: 4rem;
+    }
+} 
+
+@media screen and (max-width: 320px) {
+    .slogan-text{
+        font-size: 20px;
+    }
+} 

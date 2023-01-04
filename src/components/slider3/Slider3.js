@@ -61,8 +61,6 @@ export default function Slider3({ passeios }) {
                     </ul>
                 </div>
 
-                
-
             </div>
         </>
     )
