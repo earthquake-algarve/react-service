@@ -4,6 +4,7 @@
     font-family: sans-serif;
     background: var(--laranja);
     width: 100vw;
+    margin-top: 2rem;
 }
 
 .footer-links,
@@ -37,8 +38,9 @@
 .input-pais{
     display: flex;
     align-items: center;
+    position: relative;
 }
-.input-pais .icon{
+.input-pais .icon-footer{
     height: 20px;
     position: absolute;
     margin-left: 5px;

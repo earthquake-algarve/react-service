@@ -1,6 +1,7 @@
 .locations{
     display: flex;
     justify-content: space-evenly;
+    gap: 2rem;
     padding: 2rem;
     font-family: sans-serif;
 }
@@ -13,10 +14,47 @@
 
 .location img{
     height: 180px;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .location span{
     font-size: 18px;
 }
 
+
+@media screen and (max-width: 800px) {
+    .location img{
+        height: 150px;
+    }
+
+    .location span{
+        font-size: 15px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .location img{
+        height: 120px;
+    }
+
+    .location span{
+        font-size: 15px;
+    }
+}
+@media screen and (max-width: 425px) {
+    .location img{
+        height: 100px;
+    }
+
+    .location span{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 350px) {
+    .location img{
+        height: 80px;
+    }
+
+    .location span{
+        font-size: 13px;
+    }
+}
