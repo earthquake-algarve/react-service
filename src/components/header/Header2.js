@@ -28,7 +28,6 @@ export default function Header2(){
                 </div>
 
                 <div className="container-menu">
-                    {/* <div className='ham-icon' ><Menu /></div> */}
                     <button onClick={handleToggle}>{navbarOpen ?<XMark /> : <Menu />}</button>
 
                     <div>

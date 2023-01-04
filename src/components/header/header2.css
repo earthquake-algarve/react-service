@@ -74,3 +74,20 @@
   color: black;
   margin-top: 7px;
 }
+
+
+@media screen and (min-width: 1024px) {
+  .search{
+    width: 450px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .search{
+    width: 250px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .search{
+    width: 180px;
+  }
+}
