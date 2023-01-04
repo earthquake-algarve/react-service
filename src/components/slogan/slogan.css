@@ -19,8 +19,8 @@
 
 @media screen and (min-width: 1024px) {
     .slogan-text{
-        max-width: 40%;
-        font-size: 80px;
+        max-width: 50%;
+        font-size: 75px;
     }
 }
 @media screen and (max-width: 1024px) {
@@ -33,22 +33,19 @@
 @media screen and (min-width: 768px) {
     .slogan-text{
         max-width: 65%;
-        width: auto;
         font-size: 65px;
     }
 }
-@media screen and (min-width: 678px) {
+@media screen and (max-width: 768px) {
     .slogan-text{
         max-width: 50%;
-        width: auto;
         font-size: 50px;
     }
-}
+} 
 
 @media screen and (max-width: 678px) {
     .slogan-text{
-        max-width: 50%;
-        width: auto;
+        max-width: 45%;
         font-size: 30px;
     }
 }

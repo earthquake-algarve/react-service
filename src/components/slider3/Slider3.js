@@ -6,11 +6,9 @@ import './slider3.css'
 
 export default function Slider3({ passeios }) {
 
-    // console.log(passeios)
-
     return (
         <>
-            <div className="uk-slider-container-offset" uk-slider="true" autoPlay={true} autoplay-interval="3000">
+            <div className="uk-slider-container-offset" uk-slider="true" autoPlay={true}  autoplay-interval="3000">
 
                 <div className="uk-position-relative uk-visible-toggle uk-light" tabIndex="-1">
 

@@ -1,13 +1,9 @@
 import React from 'react'
-//import MainCard from '../components/mainCard/MainCard'
-//import Slider from '../components/slider/Slider'
 import Slogan from '../components/slogan/Slogan'
 import Categorias from '../components/categorias/Categorias'
-//import CardTour from '../components/cardTour/CardTour'
 import Slider3 from '../components/slider3/Slider3'
 import Testimonials from '../components/testimonials/Testimonials'
 import Locations from '../components/locations/Locations'
-//import Slider4 from '../components/slider4/Slider4'
 
 export default class Home extends React.Component {
 
