@@ -17,8 +17,14 @@ export default function InsertRecord () {
                         <label htmlFor="tour-name-input">Tour's Name</label>
                         <input type="text" id="tour-name-input " className='tour-name-input'/>
 
+                        <label htmlFor="localizacao-input">Localização</label>
+                        <input type="text" className='localizacao-input' id="price-input"/>
+                        
                         <label htmlFor="price-input">Price</label>
                         <input type="number" className='price-input' id="price-input"/>
+
+                        <label htmlFor="duracao-input">Duration</label>
+                        <input type="text" className='duracao-input' id="price-input"/>
 
                         <label htmlFor="file-input">Tour's image</label>
                         <input type="file"  className='file-input' id="file-input"/>

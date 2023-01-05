@@ -1,14 +1,14 @@
 .login-container{
-    margin: 130px 50px 50px 50px;
-    border: 1px solid lightgray;
+    margin: 2rem auto;
+    border: 1px solid #d3d3d3;
     border-radius: 15px;
+    width: 70%;
 }
 
 .login-title{
-    background: #555;
-    color: white;
+    background: var(--laranja);
+    color: #000;
     font-weight: bold;
-    border: 1px solid #555;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     display: flex;
@@ -17,7 +17,6 @@
 }
 
 .login-logo{
-    margin-bottom: 50px;
     display: flex;
     justify-content: center;
 }
@@ -36,7 +35,7 @@ label{
 }
 
 .email-input , .password-input{
-    border: 1px solid lightgray;
+    border: 1px solid #d3d3d3;
     border-radius: 15px;
     height: 35px;
     padding: 15px;
@@ -50,8 +49,8 @@ label{
     width: 115px;
     margin-top: 30px;
     border-radius: 20px;
-    background: var(--green-button);
-    border: 1px solid var(--green-button);
+    background: var(--laranja);
+    border: 1px solid var(--laranja);
     font-weight: bold;
 }
 
@@ -64,7 +63,7 @@ label{
 
 .signup-redirect{
     margin: 20px 0;
-    border-top: 1px solid lightgray;
+    border-top: 1px solid #d3d3d3;
     padding-top: 15px;
     font-size: 14px;
     display: flex;
@@ -73,9 +72,9 @@ label{
 }
 .signup-redirect a{
     text-decoration: none;
-    color: black;
+    color: #000000;
 }
 
 .signup-redirect a:hover{
-    color: black;
+    color: #000000;
 }

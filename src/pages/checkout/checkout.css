@@ -2,8 +2,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 80px;
-  margin-left: 5%;
+  margin: 2rem auto;
   width: 90vw;
   align-items: center;
   font-family: sans-serif;
@@ -24,7 +23,7 @@
 
 .voltar:hover{
   text-decoration: none;
-  color: black;
+  color: #000;
 }
 
 .resumo-top{
@@ -36,7 +35,7 @@
 }
 
 .items span:nth-child(1){
-  color: rgb(73, 73, 73)
+  color: #494949
 }
 
 .payment-div{
@@ -71,15 +70,15 @@
   height: 40px;
   text-align: center;
   font-weight: bold;
-  background: var(--green-button);
+  background: var(--laranja);
   border-radius: 50px;
-  border: 1px solid var(--green-button);
+  border: 1px solid var(--laranja);
   margin-top: 20px;
   color: black;
 }
 .pay-button:hover{
   color: black;
-  background: var(--hover-button);
+  background: var(--laranja-hover);
 }
 
 .credit-card-input, 
@@ -91,7 +90,7 @@
   margin-bottom: 25px;
 }
 .credit-card-input input{
-  border: 1px solid lightgray;
+  border: 1px solid #d3d3d3;
   border-radius: 10px;
   margin-right: 5px;
 }
@@ -104,7 +103,7 @@
 }
 
 #mbway-input input{
-  border: 1px solid lightgray;
+  border: 1px solid #d3d3d3;
   border-radius: 10px;
   margin-right: 5px;
   width: 100px;

@@ -26,7 +26,7 @@ export default function Login() {
                         </div> 
 
                         <div className='forgot'>
-                            <a href="/recovery"> Forgot your password? </a>
+                            <a href="/recoverpass"> Forgot your password? </a>
                         </div>                       
                     </form>
                 </div>

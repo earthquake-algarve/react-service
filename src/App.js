@@ -4,6 +4,7 @@ import Header2 from './components/header/Header2'
 import Details from './pages/details/Details'
 import ShoppingCart from './pages/shoppingCart/ShoppingCart'
 import Login from './pages/login/Login'
+import RecoverPass from './pages/recover/RecoverPass'
 import SignUp from './pages/signup/SignUp'
 import Home from './pages/Home' 
 import Checkout from './pages//checkout/Checkout' 
@@ -28,6 +29,7 @@ export default class App extends React.Component {
             <Route path='/shoppingcart' element={<ShoppingCart />} />
             <Route path='/signup' element={<SignUp />} />
             <Route path='/login' element={<Login />} />
+            <Route path='/recoverpass' element={<RecoverPass />} />
             <Route path='/insertRecord' element={<InsertRecord />} />
             <Route path='/footer' element={<Footer />} />
           </Routes>

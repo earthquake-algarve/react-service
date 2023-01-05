@@ -1,13 +1,13 @@
-.signup-container{
+.recover-container{
     margin: 2rem auto;
     border: 1px solid #d3d3d3;
     border-radius: 15px;
     width: 70%;
 }
 
-.signup-title{
+.recover-title{
     background: var(--laranja);
-    color: #000000;
+    color: #000;
     font-weight: bold;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
@@ -16,11 +16,11 @@
     margin-bottom: 30px;
 }
 
-.signup-logo{
+.recover-logo{
     display: flex;
     justify-content: center;
 }
-.signup-logo img{
+.recover-logo img{
     height: 200px;
 }
 
@@ -34,7 +34,7 @@ label{
     font-weight: bold;
 }
 
-.email-input , .password-input, .name-input, .nationality-input{
+.email-input {
     border: 1px solid #d3d3d3;
     border-radius: 15px;
     height: 35px;
@@ -54,20 +54,10 @@ label{
     font-weight: bold;
 }
 
-.signup-redirect{
-    margin: 20px 0;
-    border-top: 1px solid #d3d3d3;
-    padding-top: 15px;
-    font-size: 14px;
+.back-login{
     display: flex;
     justify-content: center;
-    align-items: center;
-}
-.signup-redirect a{
-    text-decoration: none;
-    color: black;
-}
-
-.signup-redirect a:hover{
-    color: black;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    font-size: 14px;
 }

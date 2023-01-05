@@ -54,7 +54,7 @@
 }
 
 @media screen and (max-width: 440px) {
-    .location:nth-child(4){
+    .location:nth-child(4),.location:nth-child(3){
         display: none;
     }
 

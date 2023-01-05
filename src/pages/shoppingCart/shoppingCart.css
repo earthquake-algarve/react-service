@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 80px;
+  margin: 2rem auto;
 }
 
 .resumo-top{
@@ -17,15 +17,15 @@
   font-weight: 550;
 }
 .items-price span:nth-child(1){
-  color: rgb(73, 73, 73)
+  color: #494949
 }
 
 .item1{
   display: flex;
   width: 80vw;
   padding: 10px 0;
-  border-top: 1px solid lightgray;
-  border-bottom: 1px solid lightgray;
+  border-top: 1px solid #d3d3d3;
+  border-bottom: 1px solid #d3d3d3;
 }
 
 .img1{
@@ -79,8 +79,8 @@ select{
 }
 
 .continuar-compra, .finalizar-compra{
-  background: var(--green-button);
-  border:1px solid  var(--green-button);
+  background: var(--laranja);
+  border:1px solid  var(--laranja);
   border-radius: 50px;
   padding: 5px;
   margin-top: 5px;
@@ -88,17 +88,17 @@ select{
 
 .continuar-compra:hover,
 .finalizar-compra:hover{
-  background-color: var(--hover-button);;
+  background-color: var(--laranja-hover);;
 }
 
 .continuar-compra-link, .finalizar-compra-link{
   text-decoration: none;
-  color: black;
+  color: #000000;
   font-weight: bold;
 }
 .continuar-compra-link:hover, .finalizar-compra-link:hover{
   text-decoration: none;
-  color: black;
+  color: #000000;
 }
 
   
