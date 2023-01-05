@@ -8,7 +8,7 @@ export default function Slider3({ passeios }) {
 
     return (
         <>
-            <div className="uk-slider-container-offset" uk-slider="true" autoPlay={true}  autoplay-interval="3000">
+            <div className="uk-slider-container-offset" uk-slider="true" autoPlay={true}  autoplay-interval="6000">
 
                 <div className="uk-position-relative uk-visible-toggle uk-light" tabIndex="-1">
 

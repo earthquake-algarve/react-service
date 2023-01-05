@@ -6,7 +6,7 @@
     width: 100%;
     opacity: 0.8;
     position: relative;
-    max-height: 500px;
+    max-height: 400px;
 }
 
 .slogan-text{
@@ -50,7 +50,7 @@
     }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 448px) {
     .slogan-text{
         max-width: 50%;
         font-size: 25px;
