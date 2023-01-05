@@ -1,4 +1,5 @@
 import './locations.css'
+import { ArrowRight } from '../../Icons'
 
 export default function Locations(){
     return(
@@ -21,6 +22,11 @@ export default function Locations(){
                     <span><b>Lisboa</b></span>
                 </div>
             </div>
+
+            <button className='redirect-all-locations'>
+                <a href='/allDestinations'><b>Ver todos os destinos</b></a>
+                <ArrowRight />
+            </button>
         </>
     )
 }
