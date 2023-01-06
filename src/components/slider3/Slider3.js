@@ -17,7 +17,8 @@ export default function Slider3({ passeios }) {
                         {passeios.map((i, key) => {
                             return (
                                 <li key={key}>
-                                    <div className="uk-card-body uk-card-default" style={{ padding: 0 }}>
+                                    {/* Tiramos essa div para resolver a responsividade dos cards em telefones pequenos */}
+                                    {/* <div className="uk-card-body uk-card-default" > */}
                                         <div className="uk-card-media-top">
                                             <img className="card__image" src={`http://entertours-ofertas.us-east-1.elasticbeanstalk.com/get/${i.id}`} alt="" />
                                             
@@ -51,7 +52,7 @@ export default function Slider3({ passeios }) {
                                             </div>
                                             
                                         </div>
-                                    </div>
+                                    {/* </div> */}
                                 </li>
                             )
                         })}

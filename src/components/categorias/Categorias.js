@@ -1,5 +1,7 @@
 import './categorias.css'
 
+//fazer aparecer as categorias dinamicamente
+
 export default function Categorias(){
     return (
         <>

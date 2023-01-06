@@ -14,11 +14,9 @@
     border-top-right-radius: 15px;
     display: flex;
     justify-content: center;
-    margin-bottom: 30px;
 }
 
 .logo{
-    margin-bottom: 50px;
     display: flex;
     justify-content: center;
 }
@@ -39,7 +37,9 @@ label{
 .tour-name-input ,
 .price-input,
 .localizacao-input, 
-.duracao-input{
+.duracao-input,
+.descricao-input,
+.categoria-input{
     border: 1px solid lightgray;
     border-radius: 15px;
     height: 35px;
