@@ -1,8 +1,9 @@
 import './insertRecord.css'
 import { useState, useRef } from 'react';
 
-
+//fazer validações dos campos - todos os campos devem estar preenchidos
 export default function InsertRecord () {
+
     const ref = useRef()
 
     const [name, setName] = useState("");
@@ -24,6 +25,9 @@ export default function InsertRecord () {
         formData.append("name", name)
         formData.append("price", price)
         formData.append("local", local)
+        /* formData.append("duracao", duracao)
+        formData.append("descricao", descricao)
+        formData.append("categoria", categoria) */
         formData.append('image', file)
 
         try {
@@ -38,6 +42,9 @@ export default function InsertRecord () {
                     setName("");
                     setPrice("");
                     setLocal("");
+                    /* setDuracao("");
+                    setDescricao("");
+                    setCategoria(""); */
                     setMessage("Tour created successfully");
                 } 
                 else {
@@ -80,6 +87,7 @@ export default function InsertRecord () {
                         <label htmlFor="descricao-input">Descrição</label>
                         <input type="text" className='descricao-input' id="price-input"  onChange={(e) => setDescricao(e.target.value)} />
 
+                        aqui tem que ser um select
                         <label htmlFor="categoria-input">Categoria</label>
                         <input type="text" className='categoria-input' id="price-input" onChange={(e) => setCategoria(e.target.value)} /> */}
 

@@ -14,7 +14,7 @@ export default function Header2(){
         <>
             <div className="Navbar">
                 <div>
-                    <img src='img/2.png' alt='logo' width="60" ></img>
+                    <a href='/'><img src='img/2.png' alt='logo' width="60" ></img></a>
                 </div>
 
                 <div className="wrap">
@@ -28,12 +28,12 @@ export default function Header2(){
                 </div>
 
                 <div className="container-menu">
-                    <button onClick={handleToggle}>{navbarOpen ?<XMark /> : <Menu />}</button>
+                    <button onClick={handleToggle}> {navbarOpen ?<XMark /> : <Menu />} </button>
 
                     <div>
                         <ul className={`menuNav ${navbarOpen ? " showMenu" : ""}`}>
-                            <a href='/'><Register /> Register</a>
-                            <a href='/'><Login /> Login</a>
+                            <a href='/signup'><Register /> Register</a>
+                            <a href='/login'><Login /> Login</a>
 
                         </ul>
                     </div>
