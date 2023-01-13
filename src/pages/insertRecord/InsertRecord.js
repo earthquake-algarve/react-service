@@ -81,15 +81,15 @@ export default function InsertRecord () {
                         <label htmlFor="price-input">Price</label>
                         <input type="number" className='price-input' value={price} id="price-input" onChange={(e) => setPrice(e.target.value)}/>
 
-{/*                         <label htmlFor="duracao-input">Duration</label>
-                        <input type="text" className='duracao-input' id="price-input" onChange={(e) => setDuracao(e.target.value)} />
+                         <label htmlFor="duracao-input">Duration</label>
+                        <input type="text" className='duracao-input' id="price-input" /* onChange={(e) => setDuracao(e.target.value)} */ />
 
                         <label htmlFor="descricao-input">Descrição</label>
-                        <input type="text" className='descricao-input' id="price-input"  onChange={(e) => setDescricao(e.target.value)} />
+                        <input type="text" className='descricao-input' id="price-input"  /* onChange={(e) => setDescricao(e.target.value)}  *//>
 
-                        aqui tem que ser um select
+                        {/* aqui tem que ser um select */}
                         <label htmlFor="categoria-input">Categoria</label>
-                        <input type="text" className='categoria-input' id="price-input" onChange={(e) => setCategoria(e.target.value)} /> */}
+                        <input type="text" className='categoria-input' id="price-input" /* onChange={(e) => setCategoria(e.target.value)} */ /> 
 
                         <label htmlFor="file-input">Tour's image</label>
                         <input type="file"  className='file-input'  id="file-input" onChange={(e) => setFile(e.target.files[0])}  ref={ref}/>
