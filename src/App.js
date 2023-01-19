@@ -12,6 +12,7 @@ import Footer from './components/footer/Footer'
 import {Route , Routes} from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import InsertRecord from './pages/insertRecord/InsertRecord'
+import Dashboard from './pages/dashboard/Dashboard'
 
 export default class App extends React.Component {
 
@@ -31,6 +32,7 @@ export default class App extends React.Component {
             <Route path='/login' element={<Login />} />
             <Route path='/recoverpass' element={<RecoverPass />} />
             <Route path='/insertRecord' element={<InsertRecord />} />
+            <Route path='/dashboard' element={<Dashboard />} />
             <Route path='/footer' element={<Footer />} />
           </Routes>
         </div>

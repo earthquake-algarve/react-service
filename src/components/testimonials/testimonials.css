@@ -20,20 +20,27 @@
     position: relative;
 }
 
-.img-client{
-    position: absolute;
-    top:-4rem;
-}
 .testimonial-text{
     background: #ffffff;
     border-radius: 10px;
     padding: 10px;
     width: 200px;
-    padding: 55px 10px 15px 15px;
+    padding:15px;
+    display: flex;
+    flex-direction: column;
 }
 
 .testimonial-text span{
     word-spacing: 2px;
+}
+.testimonial-text span:nth-child(1),
+.testimonial-text span:nth-child(2){
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.testimonial-text span:nth-child(1){
+    font-size: 18px;
 }
 
 .testimonial-rate{
