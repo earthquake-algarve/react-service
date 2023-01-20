@@ -10,14 +10,14 @@
     gap: 1rem;
 }
 
-.options a{
-    text-decoration: none;
-    color: #000;
+.options button{
+    background: var(--laranja);
     font-weight: bold;
     width: fit-content;
+    border: none;
 }
 
-.options a::after{
+.options button::after{
     transition: all ease-in-out .2s;
     background: none repeat scroll 0 0 #000;
     content: "";
@@ -26,7 +26,7 @@
     width: 0;
 }
 
-.options a:hover::after{
+.options button:focus::after{
     width: 100%;
 }
 

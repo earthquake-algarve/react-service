@@ -1,5 +1,4 @@
 import React from 'react'
-//import Header from './components/header/Header'
 import Header2 from './components/header/Header2'
 import Details from './pages/details/Details'
 import ShoppingCart from './pages/shoppingCart/ShoppingCart'
@@ -20,7 +19,6 @@ export default class App extends React.Component {
   render () {
     return (
       <>
-        {/* <Header /> */}
         <Header2 />
         
         <div className="App">
@@ -35,7 +33,6 @@ export default class App extends React.Component {
             <Route path='/insertRecord' element={<InsertRecord />} />
             <Route path='/dashboard' element={<Dashboard />} />
             <Route path='/meuperfil' element={<MeuPerfil />} />
-            <Route path='/footer' element={<Footer />} />
           </Routes>
         </div>
         <Footer/>

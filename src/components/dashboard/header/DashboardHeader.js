@@ -1,15 +1,34 @@
-import React from "react";
+import React/* , {useState} */ from "react";
 import "./DashboardHeader.css";
+//import MeuPerfil from "../meuPerfil/MeuPerfil";
 
 export default function DashboardHeader() {
+
+/*     const [meuPerfilOpen, setMeuPerfilOpen] = useState(false);
+
+    const handleClick = () => {
+      setMeuPerfilOpen(!meuPerfilOpen);
+    }; */
+
+
   return (
-    
     <ul className="options">
-      <li><a href="/servicos">Serviços</a></li>
-      <li><a href="/compras">Compras</a></li>
-      <li><a href="/vendas">Vendas</a></li>
-      <li><a href="/favoritos">Favoritos</a></li>
-      <li><a href="/meuPerfil">Meu perfil</a></li>
+      <li>
+        <button>Serviços</button>
+      </li>
+      <li>
+        <button>Compras</button>
+      </li>
+      <li>
+        <button>Vendas</button>
+      </li>
+      <li>
+        <button>Favoritos</button>
+      </li>
+      <li>
+        <button  /* onClick={handleClick} */>Meu perfil</button>
+        {/* {meuPerfilOpen ? <MeuPerfil /> : ""} */}
+      </li>
     </ul>
   );
 }

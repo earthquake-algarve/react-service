@@ -1,0 +1,39 @@
+.wrap-search{
+    margin: 0 2rem;
+}
+
+.search-dashboard{
+    display: flex;
+    align-items: center;
+}
+
+.buscar-titulo{
+    width: 20rem;
+    height: 2rem;
+    border: none;
+    border-right: 4px solid rgb(187, 187, 187);
+    padding: 0.5rem;
+    outline: none;
+    padding-left: 1rem;
+}
+
+.buscar-categoria{
+    width: 10rem;
+    height: 2rem;
+    outline: none;
+    padding-left: 1rem;
+}
+
+
+
+
+.searchButton {
+    width: 40px;
+    height: 36px;
+    border: none;
+    background: #fff;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+    font-size: 20px;
+    padding-bottom: 15px;
+}

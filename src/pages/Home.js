@@ -46,7 +46,6 @@ export default class Home extends React.Component {
                 <Categorias />
                 {/* <CardTour  cardTour={this.state.cardTour} /> */}
                 <Slider3 passeios={this.state.passeios}/>
-                {/* <Slider4 passeios={this.state.passeios}/> */}
                 <Testimonials />
                 <Locations />
             </>
