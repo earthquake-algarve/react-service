@@ -34,3 +34,7 @@
 .submenu button:focus::after{
     width: 100%;
 }
+
+.tab-servicos{
+    margin-top: 1rem;
+}
