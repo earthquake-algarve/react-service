@@ -17,10 +17,16 @@ const SubMenuServicos = () => {
                 <li><button>Adicionar</button></li>
                 <li><button>Excluir</button></li>
             </ul> */}
-				<Tabs defaultActiveKey='ativos' className="mb-3 tab-servicos" /* tem a variante tabs(default) */variant="pills">
+				<Tabs
+					defaultActiveKey='ativos'
+					className='mb-3 tab-servicos '
+					/* tem a variant pills */ variant='tabs'
+				>
 					<Tab
 						eventKey='ativos'
 						title='Ativos'
+            			className="tab-ativos"
+						
 					>
 						<SearchBar />
 						<Ativos />
@@ -36,7 +42,7 @@ const SubMenuServicos = () => {
 						title='Excluir'
 					>
 						<SearchBar />
-            <Excluir />
+						<Excluir />
 					</Tab>
 				</Tabs>
 			</div>

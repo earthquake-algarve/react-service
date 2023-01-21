@@ -1,18 +1,17 @@
 import React/* , {useState} */ from "react";
 import "./DashboardHeader.css";
-//import MeuPerfil from "../meuPerfil/MeuPerfil";
+import Tab from 'react-bootstrap/Tab';
+import Tabs from 'react-bootstrap/Tabs';
+import SubMenuServicos from "../servicos/subMenu/SubMenuServicos";
+import Compras from '../compras/Compras'
+import Vendas from "../vendas/Vendas";
+import Favoritos from '../favoritos/Favoritos'
+import MeuPerfil from "../meuPerfil/MeuPerfil";
 
 export default function DashboardHeader() {
 
-/*     const [meuPerfilOpen, setMeuPerfilOpen] = useState(false);
-
-    const handleClick = () => {
-      setMeuPerfilOpen(!meuPerfilOpen);
-    }; */
-
-
   return (
-    <ul className="options">
+		/*     <ul className="options">
       <li>
         <button>Serviços</button>
       </li>
@@ -26,9 +25,47 @@ export default function DashboardHeader() {
         <button>Favoritos</button>
       </li>
       <li>
-        <button  /* onClick={handleClick} */>Meu perfil</button>
-        {/* {meuPerfilOpen ? <MeuPerfil /> : ""} */}
+        <button>Meu perfil</button>
       </li>
-    </ul>
+    </ul> */
+
+		<Tabs
+			defaultActiveKey='servicos'
+			className='mb-3 tab-servicos '
+			/* tem a variant pills */ variant='tabs'
+		>
+			<Tab
+				eventKey='servicos'
+				title='Serviços'
+				className='tab-ativos'
+			>
+				<SubMenuServicos />
+
+			</Tab>
+			<Tab
+				eventKey='compras'
+				title='Compras'
+			>
+				<Compras />
+			</Tab>
+			<Tab
+				eventKey='vendas'
+				title='Vendas'
+			>
+				<Vendas />
+			</Tab>
+			<Tab
+				eventKey='favoritos'
+				title='Favoritos'
+			>
+				<Favoritos />
+			</Tab>
+			<Tab
+				eventKey='meuperfil'
+				title='Meu Perfil'
+			>
+				<MeuPerfil />
+			</Tab>
+		</Tabs>
   );
 }

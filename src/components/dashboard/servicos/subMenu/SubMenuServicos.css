@@ -38,3 +38,12 @@
 .tab-servicos{
     margin-top: 1rem;
 }
+
+/* muda a cor das tabs mas quando clica fora das tabs volta para default */
+/* .nav-link{
+    color: #000!important;
+}
+.nav-link:focus{
+    background: #000!important;
+    color: #fff!important;
+} */
