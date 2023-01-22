@@ -3,7 +3,7 @@ import "./DashboardHeader.css";
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import SubMenuServicos from "../servicos/subMenu/SubMenuServicos";
-import Vendas from "../vendas/Vendas";
+import SubMenuVendas from "../vendas/submenu/SubMenuVendas";
 import Favoritos from '../favoritos/Favoritos'
 import MeuPerfil from "../meuPerfil/MeuPerfil";
 import SubMenuCompras from "../compras/submenu/SubMenuCompras";
@@ -52,7 +52,7 @@ export default function DashboardHeader() {
 				eventKey='vendas'
 				title='Vendas'
 			>
-				<Vendas />
+				<SubMenuVendas />
 			</Tab>
 			<Tab
 				eventKey='favoritos'
