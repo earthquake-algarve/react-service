@@ -27,12 +27,17 @@
     text-decoration: none;
 }
 
+
 .social-media span,
 .language span{
     margin-bottom: 10px;
 }
+.social-icons{
+    display: flex;
+    gap: 1rem;
+}
 .icon-footer{
-    height: 30px;
+    height: 1.75rem;
 }
 
 .input-pais{
