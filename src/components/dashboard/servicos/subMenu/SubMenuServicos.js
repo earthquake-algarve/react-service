@@ -4,7 +4,7 @@ import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import SearchBar from "../../searchbar/SearchBar";
 //import Ativos from "../ativos/Ativos";
-import InsertRecord from "../../../../pages/insertRecord/InsertRecord";
+import InsertRecord from "../insertRecord/InsertRecord";
 //import Excluir from "../excluir/Excluir";
 import DashboardCard from "../../dashboardCard/DashboardCard";
 import { BinIcon, EyeIcon } from "../../../../Icons";

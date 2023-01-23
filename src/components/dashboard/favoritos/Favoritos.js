@@ -12,8 +12,8 @@ export default function Favoritos() {
 			<DashboardCard
 				tour='Praia de Jeri'
 				preco='35'
-				meetingPoint="Localização"
-				locationGoogle="Jericoacara"
+				localizacao="Localização"
+				city="Jericoacara"
 				showIcons={true}
 				eyeIcon={<EyeIcon />}
 				binIcon={<BinIcon />}

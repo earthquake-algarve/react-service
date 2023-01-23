@@ -60,6 +60,11 @@ body{
   display: standalone;
   overflow-x: hidden;
 }
+container{
+	display: flex;
+	flex-direction: column;
+	/* justify-content: space-between; */
+}
 
 /* #logo, #search, #favorites,#checkout, #shoppingcart, #login, #news, #about, #contact{
   text-decoration: none;

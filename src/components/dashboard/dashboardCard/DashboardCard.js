@@ -27,39 +27,43 @@ export default function DashboardCard(props) {
 									<span>{props.dias}</span>
 								</div>
 
+								<div className='data-cima'>
+									<span>{props.data}</span>
+									<span>{props.numeroData}</span>
+								</div>
+
 								<div className='horarios-cima'>
 									<span>{props.horarios}</span>
 									<span>{props.horas}</span>
 								</div>
 							</div>
 							<div className='details-baixo'>
-								<span>{props.meetingPoint}</span>
-								<span>
-									{props.locationGoogle}
-								</span>
+								<div className='meeting-point'>
+									<span>{props.meetingPoint}</span>
+									<span>{props.locationGoogle}</span>
+								</div>
+
+								<div className='localizacao'>
+									<span>{props.localizacao}</span>
+									<span>{props.city}</span>
+								</div>
 							</div>
 						</div>
 					</div>
 
 					<div className='icons-button-ativo'>
 						{props.showIcons && (
+							<div className='icons-cima'>
+								<button>{props.eyeIcon}</button>
+								<button>{props.binIcon}</button>
+							</div>
+						)}
 
-                            <div className='icons-cima'>
-                                <button>
-                                    {props.eyeIcon}
-                                </button>
-                                <button>
-                                    {props.binIcon}
-                                </button>
-                            </div>
-                        )}
-
-                        {props.showButton && (
-
-                            <div className='button-baixo'>
-                                <button>{props.buttonText}</button>
-                            </div>
-                        )}
+						{props.showButton && (
+							<div className='button-baixo'>
+								<button>{props.buttonText}</button>
+							</div>
+						)}
 					</div>
 				</div>
 			</div>

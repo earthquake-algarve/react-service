@@ -6,6 +6,7 @@ import SearchBar from '../../searchbar/SearchBar';
 //import HistoricoDeVendas from '../historico/HistoricoDeVendas';
 import DashboardCard from '../../dashboardCard/DashboardCard';
 import { EyeIcon } from '../../../../Icons';
+import TotalVendas from '../totalVendas/TotalVendas';
 
 export default function SubMenuVendas() {
   return (
@@ -19,12 +20,13 @@ export default function SubMenuVendas() {
 				title='Histórico de Vendas'
 			>
 				<SearchBar />
-{/* 				<HistoricoDeVendas /> */}
+				{/* 				<HistoricoDeVendas /> */}
+				<TotalVendas totalVendas = "219"/>
 				<DashboardCard
 					tour='Praia de Jeri'
 					preco='35'
-					disponibilidade='Disponibilidade'
-					dias='seg - sex'
+					localizacao='Localização'
+					city='Jericoacara'
 					horarios='Data'
 					horas='10/10/2022 18:00'
 					showIcons={true}

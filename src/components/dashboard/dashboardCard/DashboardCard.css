@@ -34,7 +34,10 @@
 .tour-preco,
 .disponibilidade-cima,
 .horarios-cima,
-.details-baixo {
+.details-baixo,
+.meeting-point,
+.localizacao,
+.data-cima {
     display: flex;
     flex-direction: column;
     align-items: left;

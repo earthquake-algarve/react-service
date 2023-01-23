@@ -21,14 +21,14 @@ export default function SubMenuCompras() {
 				className='tab-gerenciamento'
 			>
 				<SearchBar />
-{/* 				<Gerenciamento /> */}
+				{/* 				<Gerenciamento /> */}
 				<DashboardCard
 					tour='Praia de Jeri'
 					preco='35'
-					disponibilidade='Disponibilidade'
-					dias='seg - sex'
-					horarios='Data'
-					horas='10/10/2022 18:00'
+					localizacao='Localização'
+					city='Jericoacara'
+					data='Data'
+					numeroData='10/10/2022 10:30'
 					showButton={true}
 					buttonText='Editar'
 				/>
@@ -38,7 +38,7 @@ export default function SubMenuCompras() {
 				title='Review'
 			>
 				<SearchBar />
-{/* 				<Review /> */}
+				{/* 				<Review /> */}
 				<DashboardCard
 					tour='Praia de Jeri'
 					preco='10/10/2022 10:30'
@@ -51,24 +51,24 @@ export default function SubMenuCompras() {
 				title='Histórico de Compras'
 			>
 				<SearchBar />
-{/* 				<HistoricoDeCompras /> */}
+				{/* 				<HistoricoDeCompras /> */}
 				<DashboardCard
 					tour='Praia de Jeri'
 					preco='35'
-					disponibilidade='Disponibilidade'
-					dias='seg - sex'
-					horarios='Data'
-					horas='10/10/2022 18:00'
+					localizacao='Localização'
+					city='Jericoacara'
+					data='Data'
+					numeroData='10/10/2022 10:30'
 					showButton={true}
 					buttonText='Editar'
 				/>
 				<DashboardCard
 					tour='Praia de Jeri'
 					preco='35'
-					disponibilidade='Disponibilidade'
-					dias='seg - sex'
-					horarios='Data'
-					horas='1/10/2022 18:00'
+					localizacao='Localização'
+					city='Jericoacara'
+					data='Data'
+					numeroData='10/10/2022 10:30'
 				/>
 			</Tab>
 		</Tabs>
