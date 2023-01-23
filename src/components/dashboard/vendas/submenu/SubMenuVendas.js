@@ -3,7 +3,9 @@ import './SubMenuVendas.css'
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import SearchBar from '../../searchbar/SearchBar';
-import HistoricoDeVendas from '../historico/HistoricoDeVendas';
+//import HistoricoDeVendas from '../historico/HistoricoDeVendas';
+import DashboardCard from '../../dashboardCard/DashboardCard';
+import { EyeIcon } from '../../../../Icons';
 
 export default function SubMenuVendas() {
   return (
@@ -17,7 +19,17 @@ export default function SubMenuVendas() {
 				title='Histórico de Vendas'
 			>
 				<SearchBar />
-				<HistoricoDeVendas />
+{/* 				<HistoricoDeVendas /> */}
+				<DashboardCard
+					tour='Praia de Jeri'
+					preco='35'
+					disponibilidade='Disponibilidade'
+					dias='seg - sex'
+					horarios='Data'
+					horas='10/10/2022 18:00'
+					showIcons={true}
+					eyeIcon={<EyeIcon />}
+				/>
 			</Tab>
 			<Tab
 				eventKey='financeiro'
@@ -26,7 +38,6 @@ export default function SubMenuVendas() {
 				{/* <SearchBar /> */}
 				{/* <Review /> */}
 			</Tab>
-
 		</Tabs>
   );
 }
