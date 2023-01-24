@@ -5,16 +5,19 @@ export default function TotalVendas(props) {
   return (
     <>
         <table>
-            <tr>
-                <th>
-                    Total de vendas
-                </th>
-            </tr>
-            <tr>
-                <td>
-                    {props.totalVendas}
-                </td>
-            </tr>
+            <tbody>
+
+                <tr>
+                    <th>
+                        Total de vendas
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        {props.totalVendas}
+                    </td>
+                </tr>
+            </tbody>
         </table>
     </>
   )

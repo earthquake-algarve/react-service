@@ -2,7 +2,7 @@
     margin: 0 2rem;
 }
 
-.submenu{
+/* .submenu{
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -37,7 +37,7 @@
 
 .tab-servicos{
     margin-top: 1rem;
-}
+} */
 
 /* muda a cor das tabs mas quando clica fora das tabs volta para default */
 /* .nav-link{

@@ -17,15 +17,15 @@ const SearchBar = () => {
               placeholder="Pesquisar por título"
             />
 
-            <select className='buscar-categoria'>
-              <option value="default" disabled selected>
+            <select defaultValue="categoria" className='buscar-categoria'>
+              <option value="categoria" disabled >
                 Categoria
               </option>
-              <option value="coffee">Barcos</option>
-              <option value="coffee">Surf</option>
-              <option value="tea">Kayak</option>
-              <option value="milk">Trilhas</option>
-              <option value="milk">City Tour</option>
+              <option value="barcos">Barcos</option>
+              <option value="surf">Surf</option>
+              <option value="kayak">Kayak</option>
+              <option value="trilhas">Trilhas</option>
+              <option value="citytour">City Tour</option>
             </select>
 
           </div>

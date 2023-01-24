@@ -14,20 +14,15 @@ const SubMenuServicos = () => {
   return (
 		<>
 			<div className='wrap-submenu'>
-				{/*             <ul className="submenu">
-                <li><button>Ativos</button></li>
-                <li><button>Adicionar</button></li>
-                <li><button>Excluir</button></li>
-            </ul> */}
 				<Tabs
 					defaultActiveKey='ativos'
-					className='mb-3 tab-servicos '
-					/* tem a variant pills */ variant='tabs'
+					className='mb-3 main-tabs'
+					/* tem a variant tabs */ variant='pills'
 				>
 					<Tab
 						eventKey='ativos'
 						title='Ativos'
-						className='tab-ativos'
+						
 					>
 						<SearchBar />
 {/* 						<Ativos /> */}

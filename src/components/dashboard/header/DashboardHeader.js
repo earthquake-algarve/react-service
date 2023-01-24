@@ -31,13 +31,12 @@ export default function DashboardHeader() {
 
 		<Tabs
 			defaultActiveKey='servicos'
-			className='mb-3 tab-servicos '
-			/* tem a variant pills */ variant='tabs'
+			className='mb-3 main-tabs'
+			/* tem a variant pills */ variant='pills'
 		>
 			<Tab
 				eventKey='servicos'
 				title='Serviços'
-				className='tab-ativos'
 			>
 				<SubMenuServicos />
 

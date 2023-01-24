@@ -19,7 +19,6 @@ export default class App extends React.Component {
   render () {
     return (
       <>
-      <container>
           <Header2 />
           
           <div className="App">
@@ -36,9 +35,8 @@ export default class App extends React.Component {
               <Route path='/meuperfil' element={<MeuPerfil />} />
             </Routes>
           </div>
+          
           <Footer/>
-
-      </container>
       </>
     )
   }

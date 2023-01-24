@@ -10,36 +10,38 @@ import TotalVendas from '../totalVendas/TotalVendas';
 
 export default function SubMenuVendas() {
   return (
-		<Tabs
-			defaultActiveKey='historico'
-			className='mb-3 tab-vendas '
-			/* tem a variant pills */ variant='tabs'
-		>
-			<Tab
-				eventKey='historico'
-				title='Histórico de Vendas'
+		<div className='wrap-submenu'>
+			<Tabs
+				defaultActiveKey='historico'
+				className='mb-3 main-tabs'
+				/* tem a variant tabs */ variant='pills'
 			>
-				<SearchBar />
-				{/* 				<HistoricoDeVendas /> */}
-				<TotalVendas totalVendas = "219"/>
-				<DashboardCard
-					tour='Praia de Jeri'
-					preco='35'
-					localizacao='Localização'
-					city='Jericoacara'
-					horarios='Data'
-					horas='10/10/2022 18:00'
-					showIcons={true}
-					eyeIcon={<EyeIcon />}
-				/>
-			</Tab>
-			<Tab
-				eventKey='financeiro'
-				title='Financeiro'
-			>
-				{/* <SearchBar /> */}
-				{/* <Review /> */}
-			</Tab>
-		</Tabs>
+				<Tab
+					eventKey='historico'
+					title='Histórico de Vendas'
+				>
+					<SearchBar />
+					{/* 				<HistoricoDeVendas /> */}
+					<TotalVendas totalVendas='219' />
+					<DashboardCard
+						tour='Praia de Jeri'
+						preco='35'
+						localizacao='Localização'
+						city='Jericoacara'
+						horarios='Data'
+						horas='10/10/2022 18:00'
+						showIcons={true}
+						eyeIcon={<EyeIcon />}
+					/>
+				</Tab>
+				<Tab
+					eventKey='financeiro'
+					title='Financeiro'
+				>
+					{/* <SearchBar /> */}
+					{/* <Review /> */}
+				</Tab>
+			</Tabs>
+		</div>
   );
 }

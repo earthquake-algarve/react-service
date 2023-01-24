@@ -1,4 +1,4 @@
-.options{
+/* .options{
     padding: 0;
     margin: 0;
     margin-top: 3rem;
@@ -28,7 +28,46 @@
 
 .options button:focus::after{
     width: 100%;
+} */
+
+.main-tabs{
+    margin: 2rem 1rem;
+/*     border: none; */
+
 }
 
+.nav-link{
+    color: #000;
+    border: none;
 
+}
+
+/*.nav-tabs:hover */.nav-link:hover{
+    font-weight: bold;
+    /* border: none; */
+    color: #000;
+}
+
+.nav.nav-pills .nav-link.active {
+    background: var(--laranja);
+    color: #000;
+    font-weight: bold;
+
+}
+
+/* .nav .nav-pills .nav-link.active:active,
+.nav .nav-tabs .nav-link.active:active{
+    color: #000;
+    font-weight: bold;
+    border: none;
+    background: var(--laranja);
+} */
+
+/* .nav-tab.active:active,
+.nav-link.active:active{
+    color: #000;
+    font-weight: bold;
+    border: none;
+    background: var(--laranja);
+} */
 

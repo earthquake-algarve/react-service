@@ -10,15 +10,16 @@ import DashboardCard from '../../dashboardCard/DashboardCard';
 
 export default function SubMenuCompras() {
   return (
+	<div className='wrap-submenu'>
+
 		<Tabs
 			defaultActiveKey='gerenciamento'
-			className='mb-3 tab-servicos '
-			/* tem a variant pills */ variant='tabs'
+			className='mb-3 main-tabs '
+			/* tem a variant tabs */ variant='pills'
 		>
 			<Tab
 				eventKey='gerenciamento'
 				title='Gerenciamento'
-				className='tab-gerenciamento'
 			>
 				<SearchBar />
 				{/* 				<Gerenciamento /> */}
@@ -72,5 +73,6 @@ export default function SubMenuCompras() {
 				/>
 			</Tab>
 		</Tabs>
+	</div>
   );
 }

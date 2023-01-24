@@ -60,34 +60,6 @@ body{
   display: standalone;
   overflow-x: hidden;
 }
-container{
-	display: flex;
-	flex-direction: column;
-	/* justify-content: space-between; */
-}
 
-/* #logo, #search, #favorites,#checkout, #shoppingcart, #login, #news, #about, #contact{
-  text-decoration: none;
-  color: black;
-}
-
-#logo{
-  margin-left: 1rem;
-}
-
-.navbar-custom {
-  background-color: #D9E3DA;
-}
-
-
-.btn.btn-primary{
-  font-family: sans-serif;
-  background-color: var(--green-button);
-  color: black;
-  border-color: var(--green-button);
-  font-weight: bold;
-  border-radius: 50px;
-  box-shadow: 1px 1px 5px;
-} */
 
 
