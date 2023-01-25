@@ -5,12 +5,12 @@ import { useState, useRef, useEffect } from 'react';
 export default function InsertRecord() {
 	const [name, setName] = useState('');
 	const [localidades, setLocalidades] = useState([]);
-	const [local, setLocal] = useState('');
+	const [local, setLocal] = useState('localidade');
 	const [price, setPrice] = useState('');
 	const [file, setFile] = useState();
 	const [duracao, setDuracao] = useState('');
 	const [descricao, setDescricao] = useState('');
-	const [categoria, setCategoria] = useState('');
+	const [categoria, setCategoria] = useState('categoria');
 	const [categorias, setCategorias] = useState([]);
 	const [message, setMessage] = useState('');
 
@@ -40,15 +40,27 @@ export default function InsertRecord() {
 
 		formData.append('nome', name);
 		formData.append('valor', price);
-		formData.append('local', local);
+
+		const localId = localidades.filter(l => l.localidade === local)
+		if (localId.length === 0) {
+			throw Error("Undefined local")
+		}
+		formData.append('local', localId[0].id);
+
 		formData.append('duracao', duracao);
 		formData.append('descricao', descricao);
- 		formData.append('categoria', categoria); 
+
+		const catId = categorias.filter(c => c.catName === categoria)
+		if (catId.length === 0) {
+			throw Error("Undefined categoria")
+		}
+		formData.append('categoria', catId[0].id);
+
 		formData.append('images', file);
 
 		try {
 			await fetch(
-				'http://entertours-ofertas.us-east-1.elasticbeanstalk.com/passeio',
+				' http://entertours-ofertas.us-east-1.elasticbeanstalk.com/passeio',
 				{
 					method: 'POST',
 					body: formData,
@@ -74,6 +86,8 @@ export default function InsertRecord() {
 	function reset() {
 		ref.current.value = '';
 	}
+
+	// console.log(categoria);
 
 	return (
 		<>
@@ -105,7 +119,7 @@ export default function InsertRecord() {
 						<select
 							defaultValue='localizacao'
 							className=''
-							onChange={(e) => setLocal(e.target.value)}
+							onChange={e => setLocal(e.target.value)}
 						>
 							<option
 								value='localizacao'
@@ -117,7 +131,7 @@ export default function InsertRecord() {
 								return (
 									<option
 										key={key}
-										value='localidade'
+										value={i.localidade}
 									>
 										{i.localidade}
 									</option>
@@ -158,7 +172,7 @@ export default function InsertRecord() {
 							onChange={(e) => setCategoria(e.target.value)}
 						>
 							<option
-								value='categoria'
+								value={categoria}
 								disabled
 							>
 								Categoria
@@ -167,7 +181,7 @@ export default function InsertRecord() {
 								return (
 									<option
 										key={key}
-										value='categoria'
+										value={i.catName}
 									>
 										{i.catName}
 									</option>
