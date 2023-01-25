@@ -32,7 +32,7 @@ export default function DashboardHeader() {
 		<Tabs
 			defaultActiveKey='servicos'
 			className='mb-3 main-tabs'
-			/* tem a variant pills */ variant='pills'
+			/* tem a variant pills */ variant='tabs'
 		>
 			<Tab
 				eventKey='servicos'

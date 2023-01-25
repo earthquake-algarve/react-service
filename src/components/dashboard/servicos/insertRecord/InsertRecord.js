@@ -1,109 +1,206 @@
-import './insertRecord.css'
-import { useState, useRef } from 'react';
+import './insertRecord.css';
+import { useState, useRef, useEffect } from 'react';
 
 //fazer validações dos campos - todos os campos devem estar preenchidos
-export default function InsertRecord () {
+export default function InsertRecord() {
+	const [name, setName] = useState('');
+	const [localidades, setLocalidades] = useState([]);
+	const [local, setLocal] = useState('');
+	const [price, setPrice] = useState('');
+	const [file, setFile] = useState();
+	const [duracao, setDuracao] = useState('');
+	const [descricao, setDescricao] = useState('');
+	const [categoria, setCategoria] = useState('');
+	const [categorias, setCategorias] = useState([]);
+	const [message, setMessage] = useState('');
 
-    const ref = useRef()
+	const ref = useRef();
 
-    const [name, setName] = useState("");
-    const [local, setLocal] = useState("");
-    const [price, setPrice] = useState("");
-    const [file, setFile] = useState();
-    const [message, setMessage] = useState("");
-/*     const [duracao, setDuracao] = useState("");
-    const [descricao, setDescricao] = useState("");
-    const [categoria, setCategoria] = useState("");
-    
-    */
+	const URL = 'http://entertours-ofertas.us-east-1.elasticbeanstalk.com';
 
-    let handleSubmit = async (e) => {
-        e.preventDefault();
+	useEffect(() => {
+		fetch(`${URL}/localidade`)
+			.then((res) => res.json())
+			.then((response) => {
+				setLocalidades(response);
+			});
 
-        const formData = new FormData()
+		fetch(`${URL}/categoria`)
+			.then((res) => res.json())
+			.then((response) => {
+				setCategorias(response);
+			});
+	}, []);
 
-        formData.append("name", name)
-        formData.append("price", price)
-        formData.append("local", local)
-        /* formData.append("duracao", duracao)
-        formData.append("descricao", descricao)
-        formData.append("categoria", categoria) */
-        formData.append('image', file)
 
-        try {
+	let handleSubmit = async (e) => {
+		e.preventDefault();
 
-            await fetch("http://entertours-ofertas.us-east-1.elasticbeanstalk.com/save", {
-                method: "POST",
-                body:formData
-            })
-            .then(response => {
+		const formData = new FormData();
 
-                if (response.status === 200) {
-                    setName("");
-                    setPrice("");
-                    setLocal("");
-                    /* setDuracao("");
-                    setDescricao("");
-                    setCategoria(""); */
-                    setMessage("Tour created successfully");
-                } 
-                else {
-                    setMessage("Some error occured");
-                }
-            })
-        }   
-        catch (err) {
-          console.log(err);
-        }
-      };
+		formData.append('nome', name);
+		formData.append('valor', price);
+		formData.append('local', local);
+		formData.append('duracao', duracao);
+		formData.append('descricao', descricao);
+ 		formData.append('categoria', categoria); 
+		formData.append('images', file);
 
-      function reset(){
-        ref.current.value = ""
-      }
+		try {
+			await fetch(
+				'http://entertours-ofertas.us-east-1.elasticbeanstalk.com/passeio',
+				{
+					method: 'POST',
+					body: formData,
+				}
+			).then((response) => {
+				if (response.status === 200) {
+					setName('');
+					setPrice('');
+					setLocal('');
+					setDuracao('');
+					setDescricao('');
+					setCategoria('');
+					setMessage('Tour created successfully');
+				} else {
+					setMessage('Some error occured');
+				}
+			});
+		} catch (err) {
+			console.log(err);
+		}
+	};
 
-    return (
-        <>
-            <div className='insert-container'>
-                <div className="insert-title">Insert new tour</div>
+	function reset() {
+		ref.current.value = '';
+	}
 
-                <div className='logo'>
-                    <img src="img/logoEnterTours.jfif" alt='logo'></img>
-                </div>
+	return (
+		<>
+			<div className='insert-container'>
+				<div className='insert-title'>Insert new tour</div>
 
-                <div className='insert-data'>
-                    <form onSubmit={handleSubmit} method="POST">
-                        <label htmlFor="tour-name-input">Tour's Name</label>
-                        <input type="text" id="tour-name-input " className='tour-name-input' value={name} onChange={(e) => setName(e.target.value)}/>
+				<div className='logo'>
+					<img
+						src='img/logoEnterTours.jfif'
+						alt='logo'
+					></img>
+				</div>
 
-                        <label htmlFor="localizacao-input">Localização</label>
-                        <input type="text" className='localizacao-input' value={local} id="price-input" onChange={(e) => setLocal(e.target.value)}/>
-                        
-                        <label htmlFor="price-input">Price</label>
-                        <input type="number" className='price-input' value={price} id="price-input" onChange={(e) => setPrice(e.target.value)}/>
+				<div className='insert-data'>
+					<form
+						onSubmit={handleSubmit}
+						method='POST'
+					>
+						<label htmlFor='tour-name-input'>Nome do Tour</label>
+						<input
+							type='text'
+							id='tour-name-input '
+							className='tour-name-input'
+							value={name}
+							onChange={(e) => setName(e.target.value)}
+						/>
 
-                         <label htmlFor="duracao-input">Duration</label>
-                        <input type="text" className='duracao-input' id="price-input" /* onChange={(e) => setDuracao(e.target.value)} */ />
+						<label htmlFor='localizacao-input'>Localização</label>
+						<select
+							defaultValue='localizacao'
+							className=''
+							onChange={(e) => setLocal(e.target.value)}
+						>
+							<option
+								value='localizacao'
+								disabled
+							>
+								Localização
+							</option>
+							{localidades.map((i, key) => {
+								return (
+									<option
+										key={key}
+										value='localidade'
+									>
+										{i.localidade}
+									</option>
+								);
+							})}
+						</select>
 
-                        <label htmlFor="descricao-input">Descrição</label>
-                        <input type="text" className='descricao-input' id="price-input"  /* onChange={(e) => setDescricao(e.target.value)}  *//>
+						<label htmlFor='price-input'>Preço</label>
+						<input
+							type='number'
+							className='price-input'
+							value={price}
+							id='price-input'
+							onChange={(e) => setPrice(e.target.value)}
+						/>
 
-                        {/* aqui tem que ser um select */}
-                        <label htmlFor="categoria-input">Categoria</label>
-                        <input type="text" className='categoria-input' id="price-input" /* onChange={(e) => setCategoria(e.target.value)} */ /> 
+						<label htmlFor='duracao-input'>Duração</label>
+						<input
+							type='text'
+							className='duracao-input'
+							id='price-input'
+							onChange={(e) => setDuracao(e.target.value)}
+						/>
 
-                        <label htmlFor="file-input">Tour's image</label>
-                        <input type="file"  className='file-input'  id="file-input" onChange={(e) => setFile(e.target.files[0])}  ref={ref}/>
+						<label htmlFor='descricao-input'>Descrição</label>
+						<input
+							type='text'
+							className='descricao-input'
+							id='price-input'
+							onChange={(e) => setDescricao(e.target.value)}
+						/>
 
-                        <div className="button-div">
-                            <input type="submit"  value="Insert" className='button-submit' onClick={reset}/>
-                        </div>
-                        
-                        <div style={{margin: "0 auto"}} className="message">{message ? <p>{message}</p> : null}</div>
-                               
-                    </form>
-                </div>
+						<label htmlFor='categoria-input'>Categoria</label>
 
-            </div>
-        </>
-    )
+						<select
+							defaultValue='categoria'
+							className=''
+							onChange={(e) => setCategoria(e.target.value)}
+						>
+							<option
+								value='categoria'
+								disabled
+							>
+								Categoria
+							</option>
+							{categorias.map((i, key) => {
+								return (
+									<option
+										key={key}
+										value='categoria'
+									>
+										{i.catName}
+									</option>
+								);
+							})}
+						</select>
+
+						<label htmlFor='file-input'>Tour's image</label>
+						<input
+							type='file'
+							className='file-input'
+							id='file-input'
+							onChange={(e) => setFile(e.target.files[0])}
+							ref={ref}
+						/>
+
+						<div className='button-div'>
+							<input
+								type='submit'
+								value='Insert'
+								className='button-submit'
+								onClick={reset}
+							/>
+						</div>
+
+						<div
+							className='message'
+						>
+							{message ? <p>{message}</p> : null}
+						</div>
+					</form>
+				</div>
+			</div>
+		</>
+	);
 }

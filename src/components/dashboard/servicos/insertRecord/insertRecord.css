@@ -67,3 +67,7 @@ label{
 .button-submit:hover {
     background: var(--laranja-hover);
 }
+
+.message{
+    margin: 0 auto;
+}

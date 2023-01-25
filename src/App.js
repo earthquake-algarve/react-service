@@ -24,7 +24,7 @@ export default class App extends React.Component {
           <div className="App">
             <Routes>
               <Route path='/' element={<Home />} />
-              <Route path='/details' element={<Details />} />
+              <Route path='/details/:id' element={<Details />} />
               <Route path='/checkout' element={<Checkout />} />
               <Route path='/shoppingcart' element={<ShoppingCart />} />
               <Route path='/signup' element={<SignUp />} />

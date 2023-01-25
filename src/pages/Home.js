@@ -16,7 +16,7 @@ export default class Home extends React.Component {
     }
 
     componentDidMount() {
-        fetch('http://entertours-ofertas.us-east-1.elasticbeanstalk.com/get')
+        fetch('http://entertours-ofertas.us-east-1.elasticbeanstalk.com/passeio')
             .then(response => response.json())
             .then(passeios => {
                 let qtdPasseios = passeios.length
@@ -30,7 +30,7 @@ export default class Home extends React.Component {
             })
     }
 
-    /* handlePasseio = e => {
+/*     handlePasseio = e => {
         e.preventDefault()
         this.setState(() => ({ cardTour: this.state.passeios.find(p => e.target.id === p.id) }))
     } */
@@ -39,16 +39,19 @@ export default class Home extends React.Component {
     render() {
 
         return (
-            <>
-                {/* <MainCard mainCard={this.state.mainCard} teste={this.teste} />
+			<>
+				{/* <MainCard mainCard={this.state.mainCard} teste={this.teste} />
                 <Slider passeios={this.state.passeios} handlePasseio={this.handlePasseio} /> */}
-                <Slogan />
-                <Categorias />
-                {/* <CardTour  cardTour={this.state.cardTour} /> */}
-                <Slider3 passeios={this.state.passeios}/>
-                <Testimonials />
-                <Locations />
-            </>
-        )
+				<Slogan />
+				<Categorias />
+				{/* <CardTour  cardTour={this.state.cardTour} /> */}
+				<Slider3
+					passeios={this.state.passeios}
+					/* handlePasseio={this.handlePasseio} */
+				/>
+				<Testimonials />
+				<Locations />
+			</>
+		);
     }
 }

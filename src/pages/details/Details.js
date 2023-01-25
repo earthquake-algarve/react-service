@@ -1,52 +1,89 @@
-import React from 'react'
-import "./details.css";
+import React from 'react';
+import './details.css';
 import { ArrowLeft, Calendar } from '../../Icons';
+import { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 
-const EventoDetalhes = () => {
-  return (
-    <div className="details-page">
-        
-        <a className="back" href='/'><ArrowLeft/></a>
+const EventoDetalhes = (/*  passeios  */ props) => {
+	const [data, setData] = useState([]);
 
-        <div className="container">
-            <div className="img-div">
-                <img className="benagil-img" alt="benagil img" src="http://entertours-ofertas.us-east-1.elasticbeanstalk.com/get/20c0adc1-3d9c-4fe7-92af-1141ccc14eee" />
-            </div>
+	const { id } = useParams();
 
-            <div className="details">
-                <div className='title-price-div'>
-                    <div className="title">Título do passeio</div>
-                    <div className="price">€</div>
-                </div>
+	useEffect(() => {
+		fetch(
+			`http://entertours-ofertas.us-east-1.elasticbeanstalk.com/passeio/${id}`
+		)
+			.then((response) => response.json())
+			.then((data) => {
+				setData(data);
+				/* console.log(data) */
+			});
 
-                
-                <div className="description">Description</div>
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, []);
 
-                <div className="duration">Duração: 1h 25min</div>
+	return (
+		<div className='details-page'>
+			<a
+				className='back'
+				href='/'
+			>
+				<ArrowLeft />
+			</a>
 
-                <div className="localidade">Localidade</div>
+			{data.map((i, key) => {
+				return (
+					<div
+						key={key}
+						className='container'
+					>
+						<div className='img-div'>
+							<img
+								className='benagil-img'
+								alt='benagil img'
+								src={`${process.env.REACT_APP_URL_IMG}${i.fotoId}`}
+							/>
+						</div>
 
-                <div className="date-div">
+						<div className='details'>
+							<div className='title-price-div'>
+								<div className='title'>{i.nome}</div>
+								<div className='price'>{i.valor}€</div>
+							</div>
 
-                    Data: 02/11/2022
-                    <button className="calendar"><Calendar /></button>
-                    
-                </div>
+							<div className='description'>{i.descricao}</div>
 
-                <div className="horario">Horário: 10:30</div>
+							<div className='duration'>{i.duracao} minutos</div>
 
-                <div className="reviews">Reviews</div>
+							<div className='localidade'>
+								{i.local.localidade}
+							</div>
 
-            </div>
+							<div className='date-div'>
+								Data: 02/11/2022
+								<button className='calendar'>
+									<Calendar />
+								</button>
+							</div>
 
-            <div className="button-adicionar">
-                <a  href="/shoppingcart" className="add-to-cart">Adicionar ao carrinho</a>
-            </div>
-        </div>
+							<div className='horario'>Horário: 10:30</div>
 
-    </div>
-  );
+							<div className='reviews'>Reviews</div>
+						</div>
+
+						<div className='button-adicionar'>
+							<a
+								href='/shoppingcart'
+								className='add-to-cart'
+							>
+								Adicionar ao carrinho
+							</a>
+						</div>
+					</div>
+				);
+			})}
+		</div>
+	);
 };
 
 export default EventoDetalhes;
-

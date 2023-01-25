@@ -48,7 +48,7 @@
     color: #000;
 }
 
-.nav.nav-pills .nav-link.active {
+.nav.nav-tabs .nav-link.active {
     background: var(--laranja);
     color: #000;
     font-weight: bold;

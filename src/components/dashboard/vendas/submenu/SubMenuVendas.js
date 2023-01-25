@@ -14,7 +14,7 @@ export default function SubMenuVendas() {
 			<Tabs
 				defaultActiveKey='historico'
 				className='mb-3 main-tabs'
-				/* tem a variant tabs */ variant='pills'
+				/* tem a variant pills */ variant='tabs'
 			>
 				<Tab
 					eventKey='historico'
