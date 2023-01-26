@@ -1,36 +1,44 @@
-import './categorias.css'
+import './categorias.css';
+import { useState, useEffect } from 'react';
 
-//fazer aparecer as categorias dinamicamente
+export default function Categorias() {
+	const [categoria, setCategoria] = useState([]);
+/* 	const [icons, setIcons] = useState(); */
 
-export default function Categorias(){
-    return (
-        <>
-            <div className='categorias'>
-                <div className='barcos'>
-                    <b>Barcos</b>
-                    <img src='img/boat-icon.svg' alt="boat"></img>
-                </div>
+	useEffect(() => {
+		fetch(`${process.env.REACT_APP_URL}/categoria`)
+			.then((res) => res.json())
+			.then((response) => {
+				setCategoria(response);
+			});
+	}, []);
 
-                <div className='surf'>
-                    <b>Surf</b>
-                    <img src='img/surf-icon.svg' alt="boat"></img>
-                </div>
+    console.log(categoria[0])
 
-                <div className='kayak'>
-                    <b>Kayak</b>
-                    <img src='img/kayak-icon.svg' alt="boat"></img>
-                </div>
+/* 	fetch(`${process.env.REACT_APP_URL}/categoria/icon/${categorias.id}`)
+		.then((res) => res.json())
+		.then((response) => {
+			setCategorias(response);
+		}); */
 
-                <div className='trilhas'>
-                    <b>Trilhas</b>
-                    <img src='img/hike-icon.svg' alt="boat"></img>
-                </div>
-
-                <div className='city'>
-                    <b>City-Tours</b>
-                    <img src='img/bus-icon.svg' alt="boat"></img>
-                </div>
-            </div>
-        </>
-    )
+	return (
+		<>
+			<div className='categorias'>
+				{categoria.map((i, key) => {
+					return (
+						<div
+							key={key}
+							className={categoria}
+						>
+							<b>{i.catName}</b>
+							<img
+								src={`${process.env.REACT_APP_URL}/categoria/icon/${i.id}`}
+								alt={i.catName}
+							></img>
+						</div>
+					);
+				})}
+			</div>
+		</>
+	);
 }

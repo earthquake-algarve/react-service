@@ -40,10 +40,11 @@ label{
 .duracao-input,
 .descricao-input,
 .categoria-input{
-    border: 1px solid lightgray;
+    border: 1px solid #d3d3d3;
     border-radius: 15px;
     height: 35px;
     padding: 15px;
+    outline: none;
 }
 
 .file-input{
@@ -70,4 +71,12 @@ label{
 
 .message{
     margin: 0 auto;
+}
+
+.insert-data select{
+    border: 1px solid #d3d3d3;
+    border-radius: 15px;
+    height: 35px;
+    padding-left: 1rem;
+    outline: none;
 }

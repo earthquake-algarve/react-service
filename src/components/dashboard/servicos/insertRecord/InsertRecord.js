@@ -69,7 +69,7 @@ export default function InsertRecord() {
 				if (response.status === 200) {
 					setName('');
 					setPrice('');
-					setLocal('');
+					setLocal('Localização');
 					setDuracao('');
 					setDescricao('');
 					setCategoria('');
@@ -83,7 +83,7 @@ export default function InsertRecord() {
 		}
 	};
 
-	function reset() {
+	function resetFileInput() {
 		ref.current.value = '';
 	}
 
@@ -119,7 +119,8 @@ export default function InsertRecord() {
 						<select
 							defaultValue='localizacao'
 							className=''
-							onChange={e => setLocal(e.target.value)}
+							onChange={(e) => setLocal(e.target.value)}
+							ref={ref}
 						>
 							<option
 								value='localizacao'
@@ -153,6 +154,7 @@ export default function InsertRecord() {
 							type='text'
 							className='duracao-input'
 							id='price-input'
+							value={duracao}
 							onChange={(e) => setDuracao(e.target.value)}
 						/>
 
@@ -161,6 +163,7 @@ export default function InsertRecord() {
 							type='text'
 							className='descricao-input'
 							id='price-input'
+							value={descricao}
 							onChange={(e) => setDescricao(e.target.value)}
 						/>
 
@@ -170,6 +173,7 @@ export default function InsertRecord() {
 							defaultValue='categoria'
 							className=''
 							onChange={(e) => setCategoria(e.target.value)}
+							ref={ref}
 						>
 							<option
 								value={categoria}
@@ -203,13 +207,11 @@ export default function InsertRecord() {
 								type='submit'
 								value='Insert'
 								className='button-submit'
-								onClick={reset}
+								onClick={resetFileInput}
 							/>
 						</div>
 
-						<div
-							className='message'
-						>
+						<div className='message'>
 							{message ? <p>{message}</p> : null}
 						</div>
 					</form>
