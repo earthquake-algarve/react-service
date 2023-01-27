@@ -3,65 +3,54 @@ import { useState, useEffect } from 'react';
 
 export default function Categorias() {
 	const [categoria, setCategoria] = useState([]);
-	
 
 	useEffect(() => {
-		fetch(`${process.env.REACT_APP_URL}/categoria`)
-			.then((res) => res.json())
-			.then((response) => {
-				setCategoria(getIcon(response));
-			});
-
-		/* getIcon(categoria) */	
+		fetch(`http://entertours-ofertas.us-east-1.elasticbeanstalk.com/categoria`)
+			.then(res => res.json())
+			.then(response => getIcon(response))
 	}, []);
 
-	function getIcon(categoria) {
-		return categoria.map(async (i) => {
-			const id = i.id
+	function getIcon(info) {
+		info.map(async i => {
 
-			const name = i.catName
+			fetch(
+				`http://entertours-ofertas.us-east-1.elasticbeanstalk.com/categoria/icon/${i.id}`)
+				.then(res => res.blob())
+				.then(blob => {
+					let iconDetails = []
 
-			const iconUrl = await fetch(
-							`${process.env.REACT_APP_URL}/categoria/icon/${i.id}`)
-							.then((res) => res.blob())
-							.then((blob) =>	URL.createObjectURL(blob)
-							)	
-							
-						return {id, iconUrl, name} 
+					const fr = new FileReader()
+					fr.readAsDataURL(blob)
+					fr.addEventListener('load', () => {
+						iconDetails.push(fr.result)
+						iconDetails.push(i.id)
+						iconDetails.push(i.catName)
+						categoria.push(iconDetails)
+					})
 				})
-	} 
+		})
+	}
 
-/* 	categoria.map(categoria  => console.log(categoria)) */
-/* console.log(typeof(categoria)) */
-/* console.log(categoria[0]) */
 	return (
 		<>
-			 <div className='categorias'>
- 				{Object.keys(categoria).forEach((key) => {
-					const key1 = categoria[key]
-					for (const [key,value] of Object.entries(categoria[key1])){
-						console.log(key);
-					}
-					/* console.log(categoria[key]);  */
-					
-					/* return(
+			<div className='categorias'>
+				{categoria.map((cat, i) => {
 
-						 <div
-							key={i.id}
-							className={i.name}
-						>
-							<b>{i.name}</b>
-							<img
-								src={i.iconUrl}
-								alt={i.name}
-							></img>
+					return (
+						<div key={i} className="categoria">
+							<b>{cat[2]}</b>
+							<Image image={cat[0]} />
 						</div>
+					)
+				})}
 
-					) */
-				})
-				}
-				
 			</div>
 		</>
 	);
+}
+
+function Image({ image }) {
+	return (
+		<img src={image} alt="teste"></img>
+	)
 }
