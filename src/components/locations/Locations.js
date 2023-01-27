@@ -21,7 +21,7 @@ export default function Locations(){
                     return(
 
                     <div key={key} className='location'>
-                        <img src={`${process.env.REACT_APP_URL}/localidade/${i.id}`} alt={i.localidade}></img>
+                        <img src={`${process.env.REACT_APP_URL}/localidade/image/${i.id}`} alt={i.localidade}></img>
                         <span><b>{i.localidade}</b></span>
                     </div>
                     )

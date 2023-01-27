@@ -4,7 +4,7 @@ import { ArrowLeft, Calendar } from '../../Icons';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
-const EventoDetalhes = (/*  passeios  */ props) => {
+const Details = (/*  passeios  */ props) => {
 	const [data, setData] = useState([]);
 
 	const { id } = useParams();
@@ -86,4 +86,4 @@ const EventoDetalhes = (/*  passeios  */ props) => {
 	);
 };
 
-export default EventoDetalhes;
+export default Details;

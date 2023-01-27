@@ -3,41 +3,64 @@ import { useState, useEffect } from 'react';
 
 export default function Categorias() {
 	const [categoria, setCategoria] = useState([]);
-/* 	const [icons, setIcons] = useState(); */
+	
 
 	useEffect(() => {
 		fetch(`${process.env.REACT_APP_URL}/categoria`)
 			.then((res) => res.json())
 			.then((response) => {
-				setCategoria(response);
+				setCategoria(getIcon(response));
 			});
+
+		/* getIcon(categoria) */	
 	}, []);
 
-    console.log(categoria[0])
+	function getIcon(categoria) {
+		return categoria.map(async (i) => {
+			const id = i.id
 
-/* 	fetch(`${process.env.REACT_APP_URL}/categoria/icon/${categorias.id}`)
-		.then((res) => res.json())
-		.then((response) => {
-			setCategorias(response);
-		}); */
+			const name = i.catName
 
+			const iconUrl = await fetch(
+							`${process.env.REACT_APP_URL}/categoria/icon/${i.id}`)
+							.then((res) => res.blob())
+							.then((blob) =>	URL.createObjectURL(blob)
+							)	
+							
+						return {id, iconUrl, name} 
+				})
+	} 
+
+/* 	categoria.map(categoria  => console.log(categoria)) */
+/* console.log(typeof(categoria)) */
+/* console.log(categoria[0]) */
 	return (
 		<>
-			<div className='categorias'>
-				{categoria.map((i, key) => {
-					return (
-						<div
-							key={key}
-							className={categoria}
+			 <div className='categorias'>
+ 				{Object.keys(categoria).forEach((key) => {
+					const key1 = categoria[key]
+					for (const [key,value] of Object.entries(categoria[key1])){
+						console.log(key);
+					}
+					/* console.log(categoria[key]);  */
+					
+					/* return(
+
+						 <div
+							key={i.id}
+							className={i.name}
 						>
-							<b>{i.catName}</b>
+							<b>{i.name}</b>
 							<img
-								src={`${process.env.REACT_APP_URL}/categoria/icon/${i.id}`}
-								alt={i.catName}
+								src={i.iconUrl}
+								alt={i.name}
 							></img>
 						</div>
-					);
-				})}
+
+					) */
+				})
+				}
+				
 			</div>
 		</>
 	);
