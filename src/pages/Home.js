@@ -16,7 +16,7 @@ export default class Home extends React.Component {
     }
 
     componentDidMount() {
-        fetch('http://entertours-ofertas.us-east-1.elasticbeanstalk.com/passeio')
+        fetch(`${process.env.REACT_APP_URL_PASSEIOS}`)
             .then(response => response.json())
             .then(passeios => {
                 let qtdPasseios = passeios.length

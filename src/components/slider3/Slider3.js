@@ -1,26 +1,28 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import 'uikit/dist/js/uikit.min.js';
 import 'uikit/dist/css/uikit.min.css';
 import 'uikit/dist/css/uikit-core.min.css';
 import './slider3.css';
-import React, { useState, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import React/* , { useState, useEffect }  */from 'react';
+import { /* Link,  */useNavigate } from 'react-router-dom';
 
 
-const Slider3 =({ passeios , props /* ,handlePasseio */}) => {
+const Slider3 =({ passeios /* ,handlePasseio */}) => {
 
-    const [isSelected, setIsSelected] = useState(false);
+/*     const [isSelected, setIsSelected] = useState(false); */
+
 
     const navigate = useNavigate();
 
 		
-    useEffect(() => {
+/*     useEffect(() => {
 		setIsSelected(false);
 
         if(isSelected){
             navigate(`/details/${props.id}`);
         }
 	// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, [isSelected]);
+	}, [isSelected]); */
 
 /* 	function teste(e){
 		console.log(e.target)
@@ -44,12 +46,20 @@ const Slider3 =({ passeios , props /* ,handlePasseio */}) => {
 									key={key}
 									data-id={i.id}
 									/* onClick={teste} */
-									onClick={() => setIsSelected(!isSelected)}
+									/* onClick={() => setIsSelected(!isSelected)} */
 									/* onClick={handlePasseio} */
 								>
 									{/* Tiramos essa div para resolver a responsividade dos cards em telefones pequenos */}
 									{/* <div className="uk-card-body uk-card-default" > */}
-									<Link to={`/details/${i.id}`}>
+									
+									<a onClick={() => {
+												navigate('/details', {
+													state: {
+														id: i.id,
+														fotoId: i.fotoId
+													},
+												});
+									}}>
 										<div className='uk-card-media-top'>
 											<img
 												className='card__image'
@@ -101,7 +111,7 @@ const Slider3 =({ passeios , props /* ,handlePasseio */}) => {
 												</div>
 											</div>
 										</div>
-									</Link>
+									</a>
 
 									{/* </div> */}
 								</li>
