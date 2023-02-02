@@ -5,7 +5,7 @@ export default function Categorias() {
 	const [categoria, setCategoria] = useState([]);
 
 	useEffect(() => {
-		fetch(`http://entertours-ofertas.us-east-1.elasticbeanstalk.com/categoria`)
+		fetch(`http://localhost:5000/categoria`)
 			.then(res => res.json())
 			.then(response => getIcon(response))
 	}, []);
@@ -14,7 +14,7 @@ export default function Categorias() {
 		info.map(async i => {
 
 			fetch(
-				`http://entertours-ofertas.us-east-1.elasticbeanstalk.com/categoria/icon/${i.id}`)
+				`http://localhost:5000/categoria/icon/${i.id}`)
 				.then(res => res.blob())
 				.then(blob => {
 					let iconDetails = []

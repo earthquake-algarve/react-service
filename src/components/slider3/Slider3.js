@@ -3,30 +3,14 @@ import 'uikit/dist/js/uikit.min.js';
 import 'uikit/dist/css/uikit.min.css';
 import 'uikit/dist/css/uikit-core.min.css';
 import './slider3.css';
-import React/* , { useState, useEffect }  */from 'react';
-import { /* Link,  */useNavigate } from 'react-router-dom';
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 
-const Slider3 =({ passeios /* ,handlePasseio */}) => {
-
-/*     const [isSelected, setIsSelected] = useState(false); */
-
-
+const Slider3 =({ passeios }) => {
     const navigate = useNavigate();
 
-		
-/*     useEffect(() => {
-		setIsSelected(false);
 
-        if(isSelected){
-            navigate(`/details/${props.id}`);
-        }
-	// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, [isSelected]); */
-
-/* 	function teste(e){
-		console.log(e.target)
-	} */
 	return (
 		<>
 			<div
@@ -45,21 +29,24 @@ const Slider3 =({ passeios /* ,handlePasseio */}) => {
 								<li
 									key={key}
 									data-id={i.id}
-									/* onClick={teste} */
-									/* onClick={() => setIsSelected(!isSelected)} */
-									/* onClick={handlePasseio} */
 								>
 									{/* Tiramos essa div para resolver a responsividade dos cards em telefones pequenos */}
 									{/* <div className="uk-card-body uk-card-default" > */}
-									
-									<a onClick={() => {
-												navigate('/details', {
-													state: {
-														id: i.id,
-														fotoId: i.fotoId
-													},
-												});
-									}}>
+
+									<a
+										onClick={() => {
+											navigate('/details', {
+												state: {
+													id: i.id,
+													fotoId: i.fotoId,
+													nome: i.nome,
+													valor:i.valor,
+													descricao: i.descricao,
+													duracao: i.duracao,
+												},
+											});
+										}}
+									>
 										<div className='uk-card-media-top'>
 											<img
 												className='card__image'
@@ -119,6 +106,8 @@ const Slider3 =({ passeios /* ,handlePasseio */}) => {
 						})}
 					</ul>
 				</div>
+				
+				<ul className='uk-slider-nav uk-dotnav uk-flex-center uk-margin'></ul>
 			</div>
 		</>
 	);

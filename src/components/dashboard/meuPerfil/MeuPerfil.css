@@ -6,11 +6,42 @@
     margin: 3rem auto;
 }
 
+.user-photo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+    gap: 1rem;
+}
+
+.photo img{
+    height: 10rem;
+    /* border-radius: 50%; */ /* a foto que to usando já tem um border radius padrao, mas depois tem que descomentar essa linha */
+}
+
+.edit-photo{
+    width: fit-content;
+}
+.edit-photo button{
+    background: var(--laranja);
+    font-weight: bold;
+    border-radius: 5px;
+    border: 1px solid var(--laranja);
+    padding: .25rem;
+}
+
+.edit-photo button:hover {
+    background: var(--laranja-hover);
+}
+
+
 .dados-Nome,
-.dados-Email,
-.dados-Password,
+.dados-NIF,
+.dados-Morada,
 .dados-Nacionalidade,
-.dados-Fornecedor{
+.dados-Fornecedor,
+.dados-IBAN{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -20,9 +51,10 @@
 }
 
 .dados-Nome,
-.dados-Email,
-.dados-Password,
-.dados-Nacionalidade{
+.dados-NIF,
+.dados-Morada,
+.dados-Nacionalidade,
+.dados-Fornecedor{
     border-bottom: none;
 }
 
