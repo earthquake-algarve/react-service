@@ -15,10 +15,14 @@
     gap: 1rem;
 }
 
-.photo img{
+.photo{
     height: 10rem;
-    /* border-radius: 50%; */ /* a foto que to usando já tem um border radius padrao, mas depois tem que descomentar essa linha */
+    width: 10rem;
 }
+
+/* .photo img{
+     border-radius: 50%;  a foto que to usando já tem um border radius padrao, mas depois tem que descomentar essa linha 
+} */
 
 .edit-photo{
     width: fit-content;

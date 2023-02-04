@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './MeuPerfil.css';
 
 const data = {
@@ -11,18 +11,44 @@ const data = {
 };
 
 export default function MeuPerfil() {
+/* 
+	const [img, setImg] = useState('')
+
+	const handleUpload = () =>{
+		
+		const { files } = document.querySelector('.upload-input');
+
+		const formData = new FormData()
+		formData.append("upload", files[0]) /upload é o nome que dei na minha db de teste 
+
+		const options = {
+			method: "POST",
+			body: formData,
+		}
+
+		return fetch(`http://localhost:3306/teste_foto_perfil`, options)
+			.then((res) => res.json())
+			.then((res) => {
+				setImg(res);
+			})
+			.catch((err) => console.log(err));
+	}
+ */
+
 	return (
 		<>
 			<div className='dados-cadastrais'>
 				<div className='user-photo'>
 					<div className='photo'>
-						<img
-							src='img/user-image.png'
-							alt='profile'
+						<input
+							type="file" 
+							accept="image"
+							className='upload-input'
+
 						/>
 					</div>
 					<div className='edit-photo'>
-						<button>Editar foto</button>
+						<button /* onClick={handleUpload} */>Inserir foto</button>
 					</div>
 				</div>
 

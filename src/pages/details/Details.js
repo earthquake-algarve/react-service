@@ -1,14 +1,16 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import Carousel from 'react-bootstrap/Carousel';
 import React from 'react';
 import './details.css';
 import { ArrowLeft, Calendar } from '../../Icons';
 import { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const Details = () => {
 	const [dataPasseio, setDataPasseio] = useState({});
 	const [dataImg, setDataImg] = useState([]);
 
+	const navigate = useNavigate();
 	const location = useLocation();
 	/* console.log(location); */
 
@@ -21,8 +23,8 @@ const Details = () => {
 
 			});
 
-		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, []);
+		
+	}, [location.state.id]);
 
 
 	return (
@@ -39,9 +41,7 @@ const Details = () => {
 						{dataImg.map((i, key) => {
 							return (
 								<Carousel.Item key={key}>
-								
 									<img
-										
 										alt={location.state.nome}
 										src={`${process.env.REACT_APP_URL_IMG}${i.id}`}
 									/>
@@ -78,8 +78,13 @@ const Details = () => {
 				</div>
 
 				<div className='button-adicionar'>
+					
 					<a
-						href='/shoppingcart'
+						onClick={() => {
+							navigate('/shoppingcart', {
+								state: { dataPasseio },
+							});
+						}}
 						className='add-to-cart'
 					>
 						Adicionar ao carrinho
