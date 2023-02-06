@@ -1,5 +1,34 @@
 import './insertRecord.css';
+
 import { useState, useRef, useEffect } from 'react';
+
+import Box from '@mui/material/Box';
+import OutlinedInput from '@mui/material/OutlinedInput';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
+import Chip from '@mui/material/Chip';
+
+const ITEM_HEIGHT = 48;
+const ITEM_PADDING_TOP = 8;
+const MenuProps = {
+	PaperProps: {
+		style: {
+			maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
+			width: 250,
+		},
+	},
+};
+
+const diasSemana = [
+	'Segunda-feira',
+	'Terça-feira',
+	'Quarta-feira',
+	'Quinta-feira',
+	'Sexta-feira',
+	'Sábado',
+	'Domingo',
+];
 
 //fazer validações dos campos - todos os campos devem estar preenchidos
 export default function InsertRecord() {
@@ -7,16 +36,30 @@ export default function InsertRecord() {
 	const [localidades, setLocalidades] = useState([]);
 	const [local, setLocal] = useState('localidade');
 	const [price, setPrice] = useState('');
-	const [file, setFile] = useState();
+	const [fileList, setFileList] = useState([]);
 	const [duracao, setDuracao] = useState('');
 	const [descricao, setDescricao] = useState('');
 	const [categoria, setCategoria] = useState('categoria');
 	const [categorias, setCategorias] = useState([]);
+	const [dia, setDia] = useState([]);
+	const [weekDay, setWeekDay] = useState([]);
+	const [horarios, setHorarios] = useState('');
 	const [message, setMessage] = useState('');
+
+	
+	const handleMultipleSelect = (event) => {
+		const {
+			target: { value },
+		} = event;
+		setWeekDay(
+			// On autofill we get a stringified value.
+			typeof value === 'string' ? value.split(',') : value,
+		);
+	};
 
 	const ref = useRef();
 
-	const URL = 'http://entertours-ofertas.us-east-1.elasticbeanstalk.com';
+	const URL = `${process.env.REACT_APP_URL}`;
 
 	useEffect(() => {
 		fetch(`${URL}/localidade`)
@@ -30,8 +73,13 @@ export default function InsertRecord() {
 			.then((response) => {
 				setCategorias(response);
 			});
+		/* fetch(`${URL}/calendario`)
+			.then((res) => res.json())
+			.then((response) => {
+				setHorario(response);
+			}); */
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
-
 
 	let handleSubmit = async (e) => {
 		e.preventDefault();
@@ -41,31 +89,52 @@ export default function InsertRecord() {
 		formData.append('nome', name);
 		formData.append('valor', price);
 
-		const localId = localidades.filter(l => l.localidade === local)
+		const localId = localidades.filter((l) => l.localidade === local);
 		if (localId.length === 0) {
-			throw Error("Undefined local")
+			throw Error('Undefined local');
 		}
 		formData.append('local', localId[0].id);
 
 		formData.append('duracao', duracao);
 		formData.append('descricao', descricao);
 
-		const catId = categorias.filter(c => c.catName === categoria)
+		const catId = categorias.filter((c) => c.catName === categoria);
 		if (catId.length === 0) {
-			throw Error("Undefined categoria")
+			throw Error('Undefined categoria');
 		}
 		formData.append('categoria', catId[0].id);
 
-		formData.append('images', file);
+		let day = weekDay.map((dia) => ({
+			week: dia,
+				hours: [
+					horarios
+				]
+		}))
+
+		console.log(day)
+
+		setDia(day)
+
+		formData.append('day', dia);
+
+
+		
+
+		/* fileList.forEach((file, i) => {
+			formData.append(`file-${i}`, file, file.name)
+		}) */
+		/* formData.append('images', file); */
+		
+		formData.append('images', fileList);
+		
+		console.log(formData);
 
 		try {
-			await fetch(
-				' http://entertours-ofertas.us-east-1.elasticbeanstalk.com/passeio',
-				{
-					method: 'POST',
-					body: formData,
-				}
-			).then((response) => {
+			await fetch(`${process.env.REACT_APP_URL_PASSEIOS}`, {
+				method: 'POST',
+				body: formData,
+			})
+			.then((response) => {
 				if (response.status === 200) {
 					setName('');
 					setPrice('');
@@ -73,6 +142,7 @@ export default function InsertRecord() {
 					setDuracao('');
 					setDescricao('');
 					setCategoria('');
+					setHorarios('');
 					setMessage('Tour created successfully');
 				} else {
 					setMessage('Some error occured');
@@ -87,25 +157,17 @@ export default function InsertRecord() {
 		ref.current.value = '';
 	}
 
-	// console.log(categoria);
-
 	return (
 		<>
 			<div className='insert-container'>
 				<div className='insert-title'>Insert new tour</div>
 
 				<div className='logo'>
-					<img
-						src='img/logoEnterTours.jfif'
-						alt='logo'
-					></img>
+					<img src='img/2.png' alt='logo'></img>
 				</div>
 
 				<div className='insert-data'>
-					<form
-						onSubmit={handleSubmit}
-						method='POST'
-					>
+					<form onSubmit={handleSubmit} method='POST'>
 						<label htmlFor='tour-name-input'>Nome do Tour</label>
 						<input
 							type='text'
@@ -113,6 +175,7 @@ export default function InsertRecord() {
 							className='tour-name-input'
 							value={name}
 							onChange={(e) => setName(e.target.value)}
+							required
 						/>
 
 						<label htmlFor='localizacao-input'>Localização</label>
@@ -121,19 +184,13 @@ export default function InsertRecord() {
 							className=''
 							onChange={(e) => setLocal(e.target.value)}
 							ref={ref}
-						>
-							<option
-								value='localizacao'
-								disabled
-							>
+							required>
+							<option value='localizacao' disabled>
 								Localização
 							</option>
 							{localidades.map((i, key) => {
 								return (
-									<option
-										key={key}
-										value={i.localidade}
-									>
+									<option key={key} value={i.localidade}>
 										{i.localidade}
 									</option>
 								);
@@ -147,6 +204,7 @@ export default function InsertRecord() {
 							value={price}
 							id='price-input'
 							onChange={(e) => setPrice(e.target.value)}
+							required
 						/>
 
 						<label htmlFor='duracao-input'>Duração</label>
@@ -156,6 +214,7 @@ export default function InsertRecord() {
 							id='price-input'
 							value={duracao}
 							onChange={(e) => setDuracao(e.target.value)}
+							required
 						/>
 
 						<label htmlFor='descricao-input'>Descrição</label>
@@ -165,6 +224,7 @@ export default function InsertRecord() {
 							id='price-input'
 							value={descricao}
 							onChange={(e) => setDescricao(e.target.value)}
+							required
 						/>
 
 						<label htmlFor='categoria-input'>Categoria</label>
@@ -174,38 +234,81 @@ export default function InsertRecord() {
 							className=''
 							onChange={(e) => setCategoria(e.target.value)}
 							ref={ref}
-						>
-							<option
-								value={categoria}
-								disabled
-							>
+							required>
+							<option value={categoria} disabled>
 								Categoria
 							</option>
 							{categorias.map((i, key) => {
 								return (
-									<option
-										key={key}
-										value={i.catName}
-									>
+									<option key={key} value={i.catName}>
 										{i.catName}
 									</option>
 								);
 							})}
 						</select>
 
-						<label htmlFor='file-input'>Tour's image</label>
+						<label htmlFor='dias-input'>Dias disponíveis</label>
+
+						<FormControl sx={{ m: 1, width: 390, margin: 0 }}>
+							<Select
+								labelId='demo-multiple-chip-label'
+								id='demo-multiple-chip'
+								multiple
+								value={weekDay}
+								onChange={handleMultipleSelect}
+								input={
+									<OutlinedInput
+										id='select-multiple-chip' label='Chip'
+									/>
+								}
+								renderValue={(selected) => (
+									<Box
+										sx={{
+											display: 'flex',
+											flexWrap: 'wrap',
+											gap: 0.5,
+										}}>
+										{selected.map((value) => (
+											<Chip key={value} label={value} />
+										))}
+									</Box>
+								)}
+								MenuProps={MenuProps}>
+								{diasSemana.map((weekDay) => 
+								(
+									<MenuItem key={weekDay} value={weekDay}	>
+										{weekDay}
+									</MenuItem>
+								))}
+							</Select>
+						</FormControl>
+
+						<label htmlFor='horarios-input'>Horários</label>
+						<input
+							type='text'
+							className='horarios-input'
+							id='horarios-input'
+							value={horarios}
+							onChange={(e) => setHorarios(e.target.value)}
+							required
+							placeholder='hh:mm,'
+						/>
+
+						<label htmlFor='file-input'>Imagens do Tour</label>
 						<input
 							type='file'
 							className='file-input'
 							id='file-input'
-							onChange={(e) => setFile(e.target.files[0])}
+							onChange={(e) => setFileList(e.target.files)}
 							ref={ref}
+							multiple
+							
 						/>
 
 						<div className='button-div'>
 							<input
 								type='submit'
-								value='Insert'
+								value='Inserir'
 								className='button-submit'
 								onClick={resetFileInput}
 							/>

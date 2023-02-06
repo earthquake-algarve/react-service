@@ -83,44 +83,83 @@ class SignUp extends React.Component{
 
     render(){
         return (
-            <>
-                <div className='signup-container'>
-                    <div className="signup-title">Sign up</div>
-    
-                    <div className='signup-logo'>
-                        <img src="img/logoEnterTours.jfif" alt='logo'></img>
-                    </div>
-    
-                    <div className='signup-data'>
-                        <form onSubmit={this.handleSubmit} method="POST">
-                            <label htmlFor="name-input">Name</label>
-                            <input type="text" name="name" className='name-input' id="name-input" value={this.state.name} onChange={this.handleNameChange}/>
-    
-                            <label htmlFor="nationality-input">Nationality</label>
-                            <input type="text" name="nationality" className='nationality-input' id="nationality-input" value={this.state.nationality} onChange={this.handleNationalityChange}/>
-    
-                            <label htmlFor="email-input">E-mail</label>
-                            <input type="text" name="email" id="email-input " placeholder="example@example.com" className='email-input' value={this.state.email} onChange={this.handleEmailChange}/>
-    
-                            <label htmlFor="password-input">Password</label>
-                            <input type="password" name="password" className='password-input' id="password-input" value={this.state.password} onChange={this.handlePasswordChange}/>
-                            
-    
-                            <div className="button-div">
-                                <input type="submit"  value="Sign up" className='button-submit'/>
-                            </div>        
-    
-                            {/* <div style={{margin: "0 auto"}} className="message">{this.state.message ? <p>{this.state.message}</p> : null}</div> */}             
-                        </form>
-                    </div>
-    
-                    <div className='signup-redirect'>
-                        Already registered? <a href='/login'>Login</a>
-                    </div>
-    
-                </div>
-            </>
-        )
+			<>
+				<div className='signup-container'>
+					<div className='signup-title'>Sign up</div>
+
+					<div className='signup-logo'>
+						<img
+							src='img/2.png'
+							alt='logo'
+						></img>
+					</div>
+
+					<div className='signup-data'>
+						<form
+							onSubmit={this.handleSubmit}
+							method='POST'
+						>
+							<label htmlFor='name-input'>Name</label>
+							<input
+								type='text'
+								name='name'
+								className='name-input'
+								id='name-input'
+								value={this.state.name}
+								onChange={this.handleNameChange}
+							/>
+
+							<label htmlFor='nationality-input'>
+								Nationality
+							</label>
+							<input
+								type='text'
+								name='nationality'
+								className='nationality-input'
+								id='nationality-input'
+								value={this.state.nationality}
+								onChange={this.handleNationalityChange}
+							/>
+
+							<label htmlFor='email-input'>E-mail</label>
+							<input
+								type='text'
+								name='email'
+								id='email-input '
+								placeholder='example@example.com'
+								className='email-input'
+								value={this.state.email}
+								onChange={this.handleEmailChange}
+							/>
+
+							<label htmlFor='password-input'>Password</label>
+							<input
+								type='password'
+								name='password'
+								className='password-input'
+								id='password-input'
+								value={this.state.password}
+								onChange={this.handlePasswordChange}
+							/>
+
+							<div className='button-div'>
+								<input
+									type='submit'
+									value='Sign up'
+									className='button-submit'
+								/>
+							</div>
+
+							{/* <div style={{margin: "0 auto"}} className="message">{this.state.message ? <p>{this.state.message}</p> : null}</div> */}
+						</form>
+					</div>
+
+					<div className='signup-redirect'>
+						Already registered? <a href='/login'>Login</a>
+					</div>
+				</div>
+			</>
+		);
     }
 }
 

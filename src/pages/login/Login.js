@@ -11,7 +11,7 @@ export default function Login() {
                 <div className="login-title">Login</div>
 
                 <div className='login-logo'>
-                    <img src="img/logoEnterTours.jfif" alt='logo'></img>
+                    <img src="img/2.png" alt='logo'></img>
                 </div>
 
                 <div className='login-data'>

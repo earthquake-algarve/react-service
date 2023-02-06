@@ -1,13 +1,13 @@
 import React from 'react'
 import './shoppingCart.css'
-import { Heart,BinIcon, ArrowDown } from '../../Icons';
+import { Heart , BinIcon} from '../../Icons';
 import { useLocation } from 'react-router-dom';
 
 
 export default function ShoppingCart() {
 
     const location = useLocation()
-    /* console.log(location.state.dataPasseio.fotos[0].id) */
+    console.log(location.state.dataPasseio.fotos[0].id)
 
 
     return (
@@ -75,10 +75,6 @@ export default function ShoppingCart() {
 					<div className='summary-title'>Summary</div>
 
 					<div className='conteudo-summary'>
-						<div className='promo-code'>
-							Do you have a promo code?
-							<ArrowDown />
-						</div>
 
 						<div className='subtotal'>
 							<span>Subtotal:</span>

@@ -39,12 +39,25 @@ label{
 .localizacao-input, 
 .duracao-input,
 .descricao-input,
-.categoria-input{
+.categoria-input,
+.horarios-input{
     border: 1px solid #d3d3d3;
-    border-radius: 15px;
+    border-radius: 5px;
     height: 35px;
     padding: 15px;
     outline: none;
+    cursor: pointer;
+}
+
+.tour-name-input:hover,
+.price-input:hover,
+.localizacao-input:hover,
+.duracao-input:hover,
+.descricao-input:hover,
+.categoria-input:hover,
+.horarios-input:hover,
+.insert-data select:hover{
+    border: 1px solid #000;
 }
 
 .file-input{
@@ -75,8 +88,28 @@ label{
 
 .insert-data select{
     border: 1px solid #d3d3d3;
-    border-radius: 15px;
+    border-radius: 5px;
     height: 35px;
     padding-left: 1rem;
     outline: none;
+    cursor: pointer;
+}
+
+
+#css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input{
+    height: 35px !important;
+    height: auto;
+}
+
+.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input{
+    padding: 8px 14px !important;
+}
+
+.css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline{
+    border: 1px solid #555 !important;
+    top: 0 !important;
+}
+
+.css-14lo706{
+    display: none !important;
 }
