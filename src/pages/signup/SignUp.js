@@ -1,8 +1,10 @@
-import React from 'react'
-//import { useState } from 'react';
-import './signup.css'
+import React, { useState } from 'react';
+import './signup.css';
+/* import { useNavigate } from 'react-router-dom'; */
+import { Link, useNavigate } from 'react-router-dom';
+import { responsiveFontSizes } from '@mui/material';
 
-class SignUp extends React.Component{
+/* class SignUp extends React.Component{
     constructor(props){
         super(props);
         this.state = {
@@ -10,12 +12,12 @@ class SignUp extends React.Component{
             nationality:"",
             email:'',
             password:'',
-            /* message:'', */
+            message:'', 
         };
 
         this.handleChange = this.handleChange.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
-    }
+    } */
 
 /*     const [name, setName] = useState("");
     const [nationality, setNationality] = useState("");
@@ -23,7 +25,7 @@ class SignUp extends React.Component{
     const [password, setPassword] = useState();
     const [message, setMessage] = useState(""); */
 
-    handleChange(e){
+/*     handleChange(e){
         this.setState({value: e.target.value})
     }
 
@@ -50,10 +52,10 @@ class SignUp extends React.Component{
                     this.state.nationality("");
                     this.state.email("");
                     this.state.password("");
-                    /* this.state.message("Register created successfully");  */
+                    this.state.message("Register created successfully"); 
                 } 
                 else {
-                   /* this.state.message("Some error occured"); */
+                   this.state.message("Some error occured");
                 }
                 
             })
@@ -150,7 +152,7 @@ class SignUp extends React.Component{
 								/>
 							</div>
 
-							{/* <div style={{margin: "0 auto"}} className="message">{this.state.message ? <p>{this.state.message}</p> : null}</div> */}
+							<div style={{margin: "0 auto"}} className="message">{this.state.message ? <p>{this.state.message}</p> : null}</div> *
 						</form>
 					</div>
 
@@ -163,29 +165,118 @@ class SignUp extends React.Component{
     }
 }
 
-export default SignUp
-
-/* 
-export default function SignUp() {
-
-    const [name, setName] = useState("");
-    const [nationality, setNationality] = useState("");
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState();
-    const [message, setMessage] = useState("");
-
-    let handleSubmit = async (e) => {
-        e.preventDefault();
-
-        const formData = new FormData()
-
-        formData.append("name", name)
-        formData.append("nationality", nationality)
-        formData.append("email", email)
-        formData.append("password", password) 
-
-       
-      };
+export default SignUp */
 
 
-} */
+export default function SignUp2() {
+	const [name, setName] = useState('');
+	const [nationality, setNationality] = useState('');
+	const [email, setEmail] = useState('');
+	const [password, setPassword] = useState('');
+    const [message, setMessage] = useState('')
+
+    const navigate = useNavigate();
+
+	let handleSubmit = async (e) => {
+		e.preventDefault();
+
+		try {
+			await fetch(`http://localhost:8080/signup`, {
+				method: 'POST',
+				body:JSON.stringify({
+					name: name,
+					nationality: nationality,
+					email: email,
+					password: password,
+				}),
+				headers: { 'Content-Type': 'application/json' },
+			}).then((response) => {
+				response.json();
+                console.log("User created")
+                navigate("/")
+			});
+		} catch (err) {
+			console.log(err);
+		}
+	};
+
+	return (
+		<>
+			<div className='signup-container'>
+				<div className='signup-title'>Sign up</div>
+
+				<div className='signup-logo'>
+					<img src='img/2.png' alt='logo'></img>
+				</div>
+
+				<div className='signup-data'>
+					<form onSubmit={handleSubmit} method='POST'>
+						<label htmlFor='name-input'>Name</label>
+						<input
+							type='text'
+							name='name'
+							className='name-input'
+							id='name-input'
+							value={name}
+							onChange={(e) => setName(e.target.value)}
+                            required
+						/>
+
+						<label htmlFor='nationality-input'>Nationality</label>
+						<input
+							type='text'
+							name='nationality'
+							className='nationality-input'
+							id='nationality-input'
+							value={nationality}
+							onChange={(e) => setNationality(e.target.value)}
+                            required
+						/>
+
+						<label htmlFor='email-input'>E-mail</label>
+						<input
+							type='text'
+							name='email'
+							id='email-input '
+							placeholder='example@example.com'
+							className='email-input'
+							value={email}
+							onChange={(e) => setEmail(e.target.value)}
+                            required
+                            
+						/>
+
+						<label htmlFor='password-input'>Password</label>
+						<input
+							type='password'
+							name='password'
+							className='password-input'
+							id='password-input'
+							value={password}
+							onChange={(e) => setPassword(e.target.value)}
+                            required
+						/>
+
+						<div className='button-div'>
+							
+								<button
+									type='submit'
+									className='button-submit'
+								>Sign up</button>
+							
+						</div>
+
+						<div style={{ margin: '0 auto' }} className='message'>
+							{message ? <p>{message}</p> : null}
+						</div>
+					</form>
+				</div>
+
+				<div className='signup-redirect'>
+					Already registered? <a href='/login'>Login</a>
+				</div>
+			</div>
+		</>
+	);
+}
+

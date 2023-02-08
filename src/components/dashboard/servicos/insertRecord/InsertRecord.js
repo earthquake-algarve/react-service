@@ -104,21 +104,25 @@ export default function InsertRecord() {
 		}
 		formData.append('categoria', catId[0].id);
 
-		let day = weekDay.map((dia) => ({
-			week: dia,
-				hours: [
-					horarios
-				]
-		}))
-
-		console.log(day)
+		let day = diasSemana.map((d, i) => {
+			return(
+				{	
+					dia: d,
+					week: i,
+						hours: [
+							horarios
+						]
+				}
+			)
+		}).filter(d => {
+			return(
+				weekDay.includes(d.dia)
+			)
+		})
 
 		setDia(day)
 
 		formData.append('day', dia);
-
-
-		
 
 		/* fileList.forEach((file, i) => {
 			formData.append(`file-${i}`, file, file.name)

@@ -2,7 +2,7 @@ import './categorias.css';
 import { useState, useEffect } from 'react';
 
 export default function Categorias() {
-	const [categoria, setCategoria] = useState([]);
+	/* 	const [categoria, setCategoria] = useState([]);
 
 	useEffect(() => {
 		fetch(`http://localhost:5000/categoria`)
@@ -29,11 +29,11 @@ export default function Categorias() {
 					})
 				})
 		})
-	}
+	} */
 
 	return (
 		<>
-			<div className='categorias'>
+			{/* 			<div className='categorias'>
 				{categoria.map((cat, i) => {
 
 					return (
@@ -44,13 +44,35 @@ export default function Categorias() {
 					)
 				})}
 
+			</div> */}
+			<div className='categorias'>
+				<div className='barcos'>
+					<b>Barcos</b>
+					<img src='img/boat-icon.svg' alt='' />
+				</div>
+				<div className='kayak'>
+					<b>Kayak</b>
+					<img src='img/kayak-icon.svg' alt='' />
+				</div>
+				<div className='surf'>
+					<b>Surf</b>
+					<img src='img/surf-icon.svg' alt='' />
+				</div>
+				<div className='trilhas'>
+					<b>Trilhas</b>
+					<img src='img/hike-icon.svg' alt='' />
+				</div>
+				<div className='city'>
+					<b>City Tour</b>
+					<img src='img/bus-icon.svg' alt='' />
+				</div>
 			</div>
 		</>
 	);
 }
 
-function Image({ image }) {
+/* function Image({ image }) {
 	return (
 		<img src={image} alt="teste"></img>
 	)
-}
+} */

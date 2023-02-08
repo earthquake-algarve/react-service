@@ -4,6 +4,7 @@ import Categorias from '../components/categorias/Categorias'
 import Slider3 from '../components/slider3/Slider3'
 import Testimonials from '../components/testimonials/Testimonials'
 import Locations from '../components/locations/Locations'
+import {useLocation} from 'react-router-dom'
 
 export default class Home extends React.Component {
 
@@ -35,8 +36,9 @@ export default class Home extends React.Component {
         this.setState(() => ({ cardTour: this.state.passeios.find(p => e.target.id === p.id) }))
     } */
 
-
+    
     render() {
+        
 
         return (
 			<>

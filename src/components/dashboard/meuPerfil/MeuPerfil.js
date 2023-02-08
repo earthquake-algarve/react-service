@@ -52,6 +52,10 @@ export default function MeuPerfil() {
 					</div>
 				</div>
 
+				<div className='editar-perfil'>
+					<button>Editar perfil</button>
+				</div>
+
 				{Object.entries(data).map(([key, value]) => {
 					return (
 						<div

@@ -27,7 +27,8 @@
 .edit-photo{
     width: fit-content;
 }
-.edit-photo button{
+.edit-photo button,
+.editar-perfil button{
     background: var(--laranja);
     font-weight: bold;
     border-radius: 5px;
@@ -37,6 +38,10 @@
 
 .edit-photo button:hover {
     background: var(--laranja-hover);
+}
+
+.editar-perfil{
+    margin-bottom: 2rem;
 }
 
 
