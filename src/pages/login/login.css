@@ -77,3 +77,8 @@ form{
 .signup-redirect a:hover{
     color: #000000;
 }
+
+.invalid-email{
+    color: #ff0000;
+    margin-left: 1rem;
+}

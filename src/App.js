@@ -12,35 +12,52 @@ import {BrowserRouter as Router, Route , Routes} from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 /* import InsertRecord from './pages/insertRecord/InsertRecord' */
 import Dashboard from './pages/dashboard/Dashboard'
+import { RequireAuth } from 'react-auth-kit'
 /* import MeuPerfil from './components/dashboard/meuPerfil/MeuPerfil' */
 
 export default class App extends React.Component {
 
   render () {
     return (
-      <>
-          <Header2 />
-          
-          <div className="App">
-            <Router>
+		<>
+			<Header2 />
 
-              <Routes>
-                <Route path='/' element={<Home />} />
-                <Route path='/details' element={<Details />} />
-                <Route path='/checkout' element={<Checkout />} />
-                <Route path='/shoppingcart' element={<ShoppingCart />} />
-                <Route path='/signup' element={<SignUp />} />
-                <Route path='/login' element={<Login />} />
-                <Route path='/recoverpass' element={<RecoverPass />} />
-                {/* <Route path='/insertRecord' element={<InsertRecord />} /> */}
-                <Route path='/dashboard' element={<Dashboard />} />
-                {/* <Route path='/meuperfil' element={<MeuPerfil />} /> */}
-              </Routes>
-            </Router>
-          </div>
-          
-          <Footer/>
-      </>
-    )
+			<div className='App'>
+				<Router>
+					<Routes>
+						<Route path='/' element={<Home />} />
+						<Route path='/details' element={<Details />} />
+						<Route
+							path='/checkout'
+							element={
+								<RequireAuth loginPath='/login'>
+									<Checkout />
+								</RequireAuth>
+							}
+						/>
+						<Route
+							path='/shoppingcart'
+							element={<ShoppingCart />}
+						/>
+						<Route path='/signup' element={<SignUp />} />
+						<Route path='/login' element={<Login />} />
+						<Route path='/recoverpass' element={<RecoverPass />} />
+						{/* <Route path='/insertRecord' element={<InsertRecord />} /> */}
+						<Route
+							path='/dashboard'
+							element={
+								<RequireAuth loginPath='/login'>
+									<Dashboard />
+								</RequireAuth>
+							}
+						/>
+						{/* <Route path='/meuperfil' element={<MeuPerfil />} /> */}
+					</Routes>
+				</Router>
+			</div>
+
+			<Footer />
+		</>
+	);
   }
 }

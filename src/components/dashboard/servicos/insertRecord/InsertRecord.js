@@ -129,9 +129,10 @@ export default function InsertRecord() {
 		}) */
 		/* formData.append('images', file); */
 		
+		
+		
 		formData.append('images', fileList);
 		
-		console.log(formData);
 
 		try {
 			await fetch(`${process.env.REACT_APP_URL_PASSEIOS}`, {
@@ -148,6 +149,7 @@ export default function InsertRecord() {
 					setCategoria('');
 					setHorarios('');
 					setMessage('Tour created successfully');
+					console.log(response.json())
 				} else {
 					setMessage('Some error occured');
 				}
@@ -156,6 +158,7 @@ export default function InsertRecord() {
 			console.log(err);
 		}
 	};
+	console.log(fileList)
 
 	function resetFileInput() {
 		ref.current.value = '';
@@ -303,7 +306,7 @@ export default function InsertRecord() {
 							type='file'
 							className='file-input'
 							id='file-input'
-							onChange={(e) => setFileList(e.target.files)}
+							onChange={(e) => setFileList(e.target.files[0])}
 							ref={ref}
 							multiple
 							
