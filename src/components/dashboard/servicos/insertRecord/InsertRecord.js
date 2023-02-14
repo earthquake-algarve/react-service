@@ -124,22 +124,18 @@ export default function InsertRecord() {
 
 		formData.append('day', dia);
 
-		/* fileList.forEach((file, i) => {
-			formData.append(`file-${i}`, file, file.name)
-		}) */
-		/* formData.append('images', file); */
 		
+		for (let i = 0; i < fileList.length; i++) {
+			formData.append('images', fileList[i]);
+		}
 		
+		console.log(formData)
 		
-		formData.append('images', fileList);
-		
-
 		try {
 			await fetch(`${process.env.REACT_APP_URL_PASSEIOS}`, {
 				method: 'POST',
 				body: formData,
-			})
-			.then((response) => {
+			}).then((response) => {
 				if (response.status === 200) {
 					setName('');
 					setPrice('');
@@ -148,8 +144,9 @@ export default function InsertRecord() {
 					setDescricao('');
 					setCategoria('');
 					setHorarios('');
+					ref.current.value = '';
 					setMessage('Tour created successfully');
-					console.log(response.json())
+					console.log(response.json());
 				} else {
 					setMessage('Some error occured');
 				}
@@ -158,11 +155,11 @@ export default function InsertRecord() {
 			console.log(err);
 		}
 	};
-	console.log(fileList)
+	/* console.log(fileList) */
 
-	function resetFileInput() {
+	/* function resetFileInput() {
 		ref.current.value = '';
-	}
+	} */
 
 	return (
 		<>
@@ -304,9 +301,10 @@ export default function InsertRecord() {
 						<label htmlFor='file-input'>Imagens do Tour</label>
 						<input
 							type='file'
+							name={fileList}
 							className='file-input'
 							id='file-input'
-							onChange={(e) => setFileList(e.target.files[0])}
+							onChange={(e) => setFileList(e.target.files)}
 							ref={ref}
 							multiple
 							
@@ -317,7 +315,7 @@ export default function InsertRecord() {
 								type='submit'
 								value='Inserir'
 								className='button-submit'
-								onClick={resetFileInput}
+								/* onClick={resetFileInput} */
 							/>
 						</div>
 

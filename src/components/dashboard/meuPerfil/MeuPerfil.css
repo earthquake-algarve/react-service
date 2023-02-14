@@ -15,19 +15,23 @@
     gap: 1rem;
 }
 
-.photo{
-    height: 10rem;
-    width: 10rem;
+input.arquivo {
+    position: absolute;
+    display: none;
 }
 
-/* .photo img{
-     border-radius: 50%;  a foto que to usando já tem um border radius padrao, mas depois tem que descomentar essa linha 
-} */
-
-.edit-photo{
-    width: fit-content;
+img.picture {
+    cursor: pointer;
+    width: 150px;
+    height: 150px;
 }
-.edit-photo button,
+
+.editar-perfil{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 2rem;
+}
+
 .editar-perfil button{
     background: var(--laranja);
     font-weight: bold;
@@ -35,15 +39,6 @@
     border: 1px solid var(--laranja);
     padding: .25rem;
 }
-
-.edit-photo button:hover {
-    background: var(--laranja-hover);
-}
-
-.editar-perfil{
-    margin-bottom: 2rem;
-}
-
 
 .dados-Nome,
 .dados-NIF,

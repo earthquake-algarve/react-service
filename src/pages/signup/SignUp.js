@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './signup.css';
 import { useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
+import { useSignIn } from 'react-auth-kit';
 
 
 export default function SignUp2() {
@@ -11,11 +12,13 @@ export default function SignUp2() {
 	const [password, setPassword] = useState('');
     /* const [message, setMessage] = useState('') */
 
-		const {
-			register,
-			handleSubmit,
-			formState: { errors },
-		} = useForm();
+	const {
+		register,
+		handleSubmit,
+		formState: { errors },
+	} = useForm();
+
+	const signIn = useSignIn();
 
     const navigate = useNavigate();
 
@@ -38,7 +41,16 @@ export default function SignUp2() {
 			.then((response) => {
 				if(response.status === 200){
 					console.log('User created');
-					navigate("/")
+					signIn({
+						token: response.status,
+						expiresIn: 60,
+						tokenType: 'Bearer',
+						authState: { 
+							name: name,
+							email: email,
+						 },
+					});
+					navigate("/dashboard")
 				}
 				
 			})
