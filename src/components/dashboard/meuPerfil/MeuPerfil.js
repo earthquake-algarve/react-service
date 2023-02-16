@@ -15,19 +15,29 @@ import Form from 'react-bootstrap/Form';
 export default function MeuPerfil() {
 	const [image, setImage] = useState('img/camera.png');
 	const [click, setClick] = useState('');
-		const [data, setData] = useState([])
+	const [data, setData] = useState([])
 
+
+		//fazer fetch do id do login/registro
 		useEffect(() => {
-		fetch(`http://localhost:8082/signup/082f602c-f93a-45c0-8b10-bc6c9c662052`)
-		.then((response) => response.json())
-		.then(data => setData(data))
+		fetch(
+			`http://localhost:8082/signup/c6db9da4-a82d-4951-836c-08f33efc37a8`,
+		)
+			.then((response) => response.json())
+			.then((data) => setData(data));
 	
 	}, []);
+
+	function deletarFoto(){
+		setImage('img/camera.png');
+	}
 
 	return (
 		<>
 			<div className='dados-cadastrais'>
 				<div className='user-photo'>
+
+					{/* Mandar essa imagem pra uma db e depois no navbar fazer fetch. (olhar chatgpt*/}
 					<Figure className='my-0'>
 						<Form.Group controlId='formUser'>
 							<Form.Control
@@ -48,6 +58,7 @@ export default function MeuPerfil() {
 									click.click();
 								}}
 							/>
+							<button onClick={deletarFoto}>Excluir foto</button>
 						</Form.Group>
 					</Figure>
 				</div>

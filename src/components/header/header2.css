@@ -41,6 +41,15 @@
 
 /* MENU HAMBURGER */
 
+.container-menu{
+  display: flex;
+  gap: .5rem;
+}
+
+.avatar,
+.avatar:hover{
+  text-decoration: none;
+}
 
 .container-menu button {
     left: 40px;

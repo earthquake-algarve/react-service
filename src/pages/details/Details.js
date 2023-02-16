@@ -12,7 +12,7 @@ const Details = () => {
 
 	const navigate = useNavigate();
 	const location = useLocation();
-	/* console.log(location); */
+	/* console.log(location.state); */
 
 	useEffect(() => {
 		fetch(`${process.env.REACT_APP_URL_PASSEIOS}/${location.state.id}`)
